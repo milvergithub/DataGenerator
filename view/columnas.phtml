@@ -1,0 +1,5 @@
+<?php
+while ($regPCT = pg_fetch_assoc($resultadoPCT)) {
+    echo '<option value="'.$regPCT['column_name'].'">'.$regPCT['column_name'].'</option>';
+}
+?>
