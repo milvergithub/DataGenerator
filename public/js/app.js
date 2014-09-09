@@ -2,7 +2,8 @@ $(document).ready(function(){
    
 });
 function cargarPanelConfiguracion(identificador){
-   $("#tablaCampo").html("<div class='alert alert-warning'>"+identificador+"</div>");
+   $("#tablaCampo").html("<div class='alert alert-warning'>"+identificador+"</div>" +
+                         "<input type='hidden' name='nombre_columna' id='nombre_columna' value='"+identificador+"'/>");
    $("#formularioPersonalizado").load("view/formularioNumerico.phtml");
    
 }

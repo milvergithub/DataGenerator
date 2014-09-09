@@ -1,13 +1,13 @@
 <?php
 ?>
 <form class="form">
-   <span>cantidad de datos a generar <b><?php echo $_POST['tablaactual']; ?></b></span>
-   <input type="text" placeholder="numero de datos" class="form-control input-sm"/>
+   <span>cantidad de datos a generar  para la tabla <b><?php echo $_POST['tablaactual']; ?></b></span>
+   <input type="text" name="numerodatos" id="numerodatos" placeholder="numero de datos" class="form-control input-sm"/>
    <div id="tablaCampo">
-   
+        selecciona un atributo
    </div>
    <div id="formularioPersonalizado">
-
+        selecciona fuente
    </div>
    <input type="submit" class="btn btn-primary" value="guardar configuracion" />
 </form>
