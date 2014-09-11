@@ -33,7 +33,9 @@ class cargarModel{
     }
     public function printDetalleTable($tabla) {
       $resultadoPDT=  $this->detalleTabla($tabla);
+      print_r($resultadoPDT);
       global $var;
+      $var=null;
       for($contador=0;$contador<sizeof($resultadoPDT);$contador++){
           $var=$var."<tr>"
               . "<td><button class='btn btn-link' onclick=\"cargarPanelConfiguracion('".$tabla.".".$resultadoPDT[$contador]['column_name']."');\">".$resultadoPDT[$contador]['column_name']."</button></td>"
@@ -68,21 +70,38 @@ class cargarModel{
         while($regFT=pg_fetch_assoc($resFT)){
             $resultadoDT[]=$regFT;
         }
-        return $this->aumentarCampos($resultadoDT);
+        return $this->getTablaReducida($this->aumentarCampos($resultadoDT),$tabla);
+        //return $this->aumentarCampos($resultadoDT);
+        //return $resultadoDT;
     }
     private function aumentarCampos($reducido){
         $aumentado=insertarElementos($reducido);
         return $aumentado;
     }
-    private function getTablaReducida($tablaAumentada,$nombreTabla){
+    function getTablaReducida($tablaAumentada,$nombreTabla){
+        $tablaAum=$tablaAumentada;
         $res=$this->getReferenciasTables($nombreTabla);
-        return $res;
+        for($i=0;$i<sizeof($res);$i++){
+            $indices=explode(",",$res[$i]["referencias"]);
+            $tablaAum=$this->buscarReferenciados($tablaAum,$indices);
+        }
+        return $tablaAum;
+    }
+    function buscarReferenciados($tablaAument,$indices){
+        for($i=0;$i<sizeof($indices);$i++){
+            for($j=0;$j<sizeof($tablaAument);$j++){
+                if(trim($tablaAument[$j]["column_name"])==trim($indices[$i])){
+                    $tablaAument[$j]["es_foranea"]="true";
+                }
+            }
+        }
+        return $tablaAument;
     }
     private function getReferenciasTables($tabla){
         $resultado=array();
         $refSucio=$this->getReferencias($tabla);
         for($i=0;$i<sizeof($refSucio);$i++){
-            $array=multiexplode(array("(",")"), $refSucio[$i]);
+            $array=multiexplode(array("(",")"), $refSucio[$i]["referencias"]);
             $variable=dameImportantes($array);
             $array = ["referencias" =>$variable[0],"tabla" => $variable[1],"referenciados"=>$variable[2]];
             $resultado[$i]=$array;
@@ -120,8 +139,5 @@ class cargarModel{
        }
     }
 }
-
-
-
-
-
+// ( [column_name],[data_type],[character_maximum_length],[es_foranea],[referenciado],[tabla],[referenciados],[numeric_precision],[is_nullable],[constraint_type])
+?>

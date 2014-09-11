@@ -42,7 +42,7 @@ function insertarElementos($res){
     $arreglo=array();
     for ($i = 0; $i < count($res); $i++) {
         $a=$res[$i];
-        array_put_to_position($a,'false', 3, 'es_foranea');
+        array_put_to_position($a,"false", 3, 'es_foranea');
         array_put_to_position($a,NULL, 4, 'referenciado');
         array_put_to_position($a,NULL, 5, 'tabla');
         array_put_to_position($a,NULL,6,'referenciados');
