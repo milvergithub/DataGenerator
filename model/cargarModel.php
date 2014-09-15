@@ -33,7 +33,7 @@ class cargarModel{
     }
     public function printDetalleTable($tabla) {
       $resultadoPDT=  $this->detalleTabla($tabla);
-      print_r($resultadoPDT);
+      //print_r($resultadoPDT);
       global $var;
       $var=null;
       for($contador=0;$contador<sizeof($resultadoPDT);$contador++){
@@ -85,7 +85,25 @@ class cargarModel{
             $indices=explode(",",$res[$i]["referencias"]);
             $tablaAum=$this->buscarReferenciados($tablaAum,$indices);
         }
-        return $tablaAum;
+        return $this->getTableEstructurado($tablaAum,$res);
+    }
+/* ( [column_name],[data_type],[character_maximum_length],[es_foranea],[referenciado],[tabla],[referenciados],
+     [numeric_precision],[is_nullable],[constraint_type])*/
+    function getTableEstructurado($tabla,$referencias){
+        $retorno=array();
+        for($i=0;$i<sizeof($referencias);$i++){
+            $arreglo = ["column_name" =>$referencias[$i]["referencias"],"data_type"=>"FOREIGN","character_maximum_length"=>"",
+                        "es_foranea"=>"true","referenciado" =>$referencias[$i]["referencias"],"tabla" => $referencias[$i]["tabla"],
+                        "referenciados"=>$referencias[$i]["referenciados"],"numeric_precision"=>"","is_nullable"=>"NO",
+                        "constraint_type"=>"foraneas"];
+            $retorno[$i]=$arreglo;
+        }
+        for($k=0;$k<sizeof($tabla);$k++){
+            if($tabla[$k]["es_foranea"]=="false"){
+                $retorno[sizeof($retorno)]=$tabla[$k];
+            }
+        }
+        return $retorno;
     }
     function buscarReferenciados($tablaAument,$indices){
         for($i=0;$i<sizeof($indices);$i++){
@@ -103,8 +121,8 @@ class cargarModel{
         for($i=0;$i<sizeof($refSucio);$i++){
             $array=multiexplode(array("(",")"), $refSucio[$i]["referencias"]);
             $variable=dameImportantes($array);
-            $array = ["referencias" =>$variable[0],"tabla" => $variable[1],"referenciados"=>$variable[2]];
-            $resultado[$i]=$array;
+            $arreglo = ["referencias" =>$variable[0],"tabla" => $variable[1],"referenciados"=>$variable[2]];
+            $resultado[$i]=$arreglo;
         }
         return $resultado;
     }
