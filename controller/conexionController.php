@@ -22,7 +22,7 @@ if($basededatos=="PostgreSQL"){
     } catch (Exception $exc) {
        
     }
-    if ($cnx) {
+    if ($cnx){
       header ("Location: ../index.php?accion=cargar");
     }
     else{
