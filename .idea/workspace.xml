@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="Respaldo 2014-09-17">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/milver.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/cargarModel.php" afterPath="$PROJECT_DIR$/model/cargarModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/conexionController.php" afterPath="$PROJECT_DIR$/controller/conexionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DateGenIdioms.iws" />
@@ -28,11 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="cargarModel.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="9" selection-start="7343" selection-end="7343" vertical-scroll-proportion="4.5224624" vertical-offset="0" max-vertical-offset="3150">
-              <folding />
+            <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.094736844" vertical-offset="0" max-vertical-offset="2970">
+              <folding>
+                <marker date="1411000699066" expanded="true" signature="800:859" placeholder="SELECT table..pg_tables..." />
+                <marker date="1411000699066" expanded="false" signature="7278:7291" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +58,8 @@
         <option value="db-console:/694ae394/d624f3f2-ae89-4b00-993c-473bbd2a379a/" />
         <option value="$PROJECT_DIR$/view/cargar.phtml" />
         <option value="$PROJECT_DIR$/config/modulos.php" />
-        <option value="$PROJECT_DIR$/model/cargarModel.php" />
         <option value="$PROJECT_DIR$/public/js/validaciones.min.js" />
+        <option value="$PROJECT_DIR$/model/cargarModel.php" />
       </list>
     </option>
   </component>
@@ -67,6 +69,22 @@
     <option name="y" value="24" />
     <option name="width" value="1313" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -94,6 +112,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -112,15 +131,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DateGenIdioms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DateGenIdioms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -185,6 +217,7 @@
     <frame x="53" y="24" width="1313" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935917" sideWeight="0.4996192" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -193,19 +226,19 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22315308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27868852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935917" sideWeight="0.5003808" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3041543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Assets" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2106825" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3041543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -219,16 +252,16 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23838538" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27868852" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22315308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -240,9 +273,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Respaldo 2014-09-17" />
+    <option name="LAST_COMMIT_MESSAGE" value="Respaldo 2014-09-17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -478,17 +515,17 @@
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.evaluacion_archivos</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.foro</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.rol</node>
-            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.telefono_user</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.hora_presentacion</node>
-            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.usuario</node>
+            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.telefono_user</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.convocatoria</node>
+            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.usuario</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.telefono_integrante</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.tipo_evaluacion</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.grupo</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.documento</node>
-            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.contrato_empresa</node>
-            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.chat</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.reunion_evaluativo</node>
+            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.chat</node>
+            <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.contrato_empresa</node>
             <node x="" y="">d624f3f2-ae89-4b00-993c-473bbd2a379a.table:test.public.horario</node>
           </nodes>
           <notes />
@@ -533,18 +570,38 @@
         <state line="14" column="24" selection-start="926" selection-end="926" vertical-scroll-proportion="0.33909288" vertical-offset="95" max-vertical-offset="558" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="8" selection-start="7308" selection-end="7308" vertical-scroll-proportion="0.73044926" vertical-offset="2315" max-vertical-offset="2988" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="9" selection-start="7343" selection-end="7343" vertical-scroll-proportion="4.5224624" vertical-offset="0" max-vertical-offset="3150">
+        <state line="151" column="9" selection-start="7343" selection-end="7343" vertical-scroll-proportion="0.40821257" vertical-offset="2549" max-vertical-offset="3150">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.094736844" vertical-offset="0" max-vertical-offset="2970">
+          <folding>
+            <marker date="1411000699066" expanded="true" signature="800:859" placeholder="SELECT table..pg_tables..." />
+            <marker date="1411000699066" expanded="false" signature="7278:7291" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

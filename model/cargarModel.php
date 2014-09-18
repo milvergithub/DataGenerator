@@ -150,7 +150,7 @@ class cargarModel{
     }
     private function isPrimaryKey($cadena){
        if(trim($cadena)!= null){
-         return "<span class='glyphicon glyphicon-flash' style='color: orange'></span>";
+         return "<span class='glyphicon glyphicon-flash h6' style='color: orange'></span>";
        }
        else{
          return "";
