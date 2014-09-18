@@ -87,7 +87,7 @@ class cargarModel{
         }
         return $this->getTableEstructurado($tablaAum,$res);
     }
-/* ( [column_name],[data_type],[character_maximum_length],[es_foranea],[referenciado],[tabla],[referenciados],
+    /* ( [column_name],[data_type],[character_maximum_length],[es_foranea],[referenciado],[tabla],[referenciados],
      [numeric_precision],[is_nullable],[constraint_type])*/
     function getTableEstructurado($tabla,$referencias){
         $retorno=array();
