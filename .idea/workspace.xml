@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="Respaldo 2014-09-17">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/milver.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/cargarModel.php" afterPath="$PROJECT_DIR$/model/cargarModel.php" />
+    <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DateGenIdioms.iws" />
@@ -30,7 +28,7 @@
       <file leaf-file-name="cargarModel.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.094736844" vertical-offset="0" max-vertical-offset="2970">
+            <state line="11" column="4" selection-start="213" selection-end="213" vertical-scroll-proportion="0.52105266" vertical-offset="0" max-vertical-offset="2970">
               <folding>
                 <marker date="1411000699066" expanded="true" signature="800:859" placeholder="SELECT table..pg_tables..." />
                 <marker date="1411000699066" expanded="false" signature="7278:7291" placeholder="..." />
@@ -211,6 +209,11 @@
       <created>1409236160542</created>
       <updated>1409236160542</updated>
     </task>
+    <task id="LOCAL-00001" summary="Respaldo 2014-09-17">
+      <created>1411000971658</created>
+      <updated>1411000971658</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -579,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="58" selection-end="58" vertical-scroll-proportion="0.094736844" vertical-offset="0" max-vertical-offset="2970">
+        <state line="11" column="4" selection-start="213" selection-end="213" vertical-scroll-proportion="0.52105266" vertical-offset="0" max-vertical-offset="2970">
           <folding>
             <marker date="1411000699066" expanded="true" signature="800:859" placeholder="SELECT table..pg_tables..." />
             <marker date="1411000699066" expanded="false" signature="7278:7291" placeholder="..." />
