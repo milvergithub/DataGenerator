@@ -1,6 +1,9 @@
 $(function(){
     $("#formulariotestconn").validate({
         rules:{
+            nombre:{
+              required:true
+            },
             basededatos:{
                 required:true
             },
