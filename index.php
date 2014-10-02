@@ -9,13 +9,13 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Generacion Datos BD Idioms</title>
+    <title>Generacion Datos BD</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="public/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="public/css/bootstrap.css.map" rel="stylesheet" />
-
+-->
     <!-- Add custom CSS here -->
     <link href="public/css/sb-admin.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
@@ -38,7 +38,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Generacion Datos Idioms</a>
+          <a class="navbar-brand" href="index.php">Generacion Datos de prueba</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,7 +71,7 @@ session_start();
                 <li class="message-preview">
                   <a href="#">
                     <span class="avatar"><img src="http://placehold.it/50x50"></span>
-                    <span class="name">John Smith:</span>
+                    <span class="name">Milver flores:</span>
                     <span class="message">Hey there, I wanted to ask you something...</span>
                     <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
                   </a>
@@ -112,7 +112,7 @@ session_start();
               </ul>
             </li>
             <li class="dropdown user-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Milver flores <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>

@@ -8,14 +8,30 @@ require_once "config/modulos.php";
  */
 class cargarModel{
     private $conexion;
-    public function __construct() {
+    public function __construct($directorio) {
+        $datos=$this->getDatosConexion("projects/".$directorio."/conexion/conexion.xml");
+        //print_r($datos);
         $this->conexion=new ConexionPG(
-                                        $_SESSION['host'], 
-                                        $_SESSION['puerto'], 
-                                        $_SESSION['base'], 
-                                        $_SESSION['usuario'], 
-                                        $_SESSION['password']
+                                        $datos[1],
+                                        $datos[2],
+                                        $datos[4],
+                                        $datos[5],
+                                        $datos[6]
                                       );
+    }
+    private function getDatosConexion($url){
+        $xml = simplexml_load_file($url);
+        //print_r($xml);
+        $salida = array();
+        $datosConexion=$xml;
+            $salida[0]=$datosConexion->nombre;
+            $salida[1]=$datosConexion->host;
+            $salida[2]=$datosConexion->puerto;
+            $salida[3]=$datosConexion->motor;
+            $salida[4]=$datosConexion->base;
+            $salida[5]=$datosConexion->usuario;
+            $salida[6]=$datosConexion->password;
+        return $salida;
     }
     public function printtableSimple() {
         $resultadoPTS=  $this->printTables();
@@ -148,6 +164,25 @@ class cargarModel{
         }
         return $resultadoRef;
     }
+    private function getTablesToRefences(){
+        $resultadoRef=array();
+        $sqlRef="SELECT (SELECT relname
+                         FROM pg_catalog.pg_class c LEFT JOIN
+                              pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+                         WHERE
+                              c.oid=r.conrelid) as tablas,conname,
+                              pg_catalog.pg_get_constraintdef(oid, true) as referencias from
+                              pg_catalog.pg_constraint r WHERE r.conrelid in
+                              ( SELECT c.oid FROM pg_catalog.pg_class c LEFT JOIN
+                              pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE c.relname !~
+                              'pg_' and c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
+                              AND r.contype = 'f'";
+        $resRF=$this->conexion->Consultas($sqlRef);
+        while($regRef=pg_fetch_assoc($resRF)){
+            $resultadoRef[]=$regRef;
+        }
+        return $resultadoRef;
+    }
     private function isPrimaryKey($cadena){
        if(trim($cadena)!= null){
          return "<span class='glyphicon glyphicon-flash h6' style='color: orange'></span>";
@@ -155,6 +190,9 @@ class cargarModel{
        else{
          return "";
        }
+    }
+    public function getTablesAndReferences(){
+
     }
 }
 ?>

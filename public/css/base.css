@@ -5,3 +5,11 @@ body{
     padding: 0px;
     margin: 0px;
 }
+.nuevo{
+    background-color: rgba(54, 121, 136, 0.63);
+}
+.proyecto{
+    background-color: #245269;
+    background-size: 100% 100%;
+    background-image: url("../../public/img/base-datos.png");
+}
