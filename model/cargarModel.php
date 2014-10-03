@@ -183,6 +183,26 @@ class cargarModel{
         }
         return $resultadoRef;
     }
+    public function getCatalogatorsAndSimplex(){
+        $resultadoCAS=array();
+        $sqlCAS="SELECT tablename
+                 FROM pg_tables
+                 WHERE schemaname = 'public' AND
+                       tablename NOT IN(SELECT (SELECT relname FROM pg_catalog.pg_class c LEFT JOIN
+                       pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE
+                       c.oid=r.conrelid) as nombre
+                 FROM
+                       pg_catalog.pg_constraint r WHERE r.conrelid in
+                       ( SELECT c.oid FROM pg_catalog.pg_class c LEFT JOIN
+                                pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE c.relname !~
+                                'pg_' and c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
+                                AND r.contype = 'f')";
+        $resCAS=$this->conexion->Consultas($sqlCAS);
+        while($regCAS=pg_fetch_assoc($resCAS)){
+            $resultadoCAS[]=$regCAS;
+        }
+        return $resultadoCAS;
+    }
     private function isPrimaryKey($cadena){
        if(trim($cadena)!= null){
          return "<span class='glyphicon glyphicon-flash h6' style='color: orange'></span>";
@@ -192,6 +212,8 @@ class cargarModel{
        }
     }
     public function getTablesAndReferences(){
+        $tablasCatalogators=$this->getCatalogatorsAndSimplex();
+        $tablasReferenciadas=formatearTablasAndReferenciados($this->getTablesAndReferences());
 
     }
 }
