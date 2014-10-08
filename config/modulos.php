@@ -101,6 +101,20 @@ function array_put_to_position(&$array, $object, $position, $name = null){
     $array = $return;
     return $array;
 }
+function getDatosConexion($url){
+    $xml = simplexml_load_file($url);
+    //print_r($xml);
+    $salida = array();
+    $datosConexion=$xml;
+    $salida[0]=$datosConexion->nombre;
+    $salida[1]=$datosConexion->host;
+    $salida[2]=$datosConexion->puerto;
+    $salida[3]=$datosConexion->motor;
+    $salida[4]=$datosConexion->base;
+    $salida[5]=$datosConexion->usuario;
+    $salida[6]=$datosConexion->password;
+    return $salida;
+}
 
 function insertarElementos($res){
     $arreglo = array();
@@ -114,5 +128,4 @@ function insertarElementos($res){
     }
     return $arreglo;
 }
-
 ?>

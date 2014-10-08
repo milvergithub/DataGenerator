@@ -9,8 +9,7 @@ require_once "config/modulos.php";
 class cargarModel{
     private $conexion;
     public function __construct($directorio) {
-        $datos=$this->getDatosConexion("projects/".$directorio."/conexion/conexion.xml");
-        //print_r($datos);
+        $datos=getDatosConexion("projects/".$directorio."/conexion/conexion.xml");
         $this->conexion=new ConexionPG(
                                         $datos[1],
                                         $datos[2],
@@ -19,20 +18,7 @@ class cargarModel{
                                         $datos[6]
                                       );
     }
-    private function getDatosConexion($url){
-        $xml = simplexml_load_file($url);
-        //print_r($xml);
-        $salida = array();
-        $datosConexion=$xml;
-            $salida[0]=$datosConexion->nombre;
-            $salida[1]=$datosConexion->host;
-            $salida[2]=$datosConexion->puerto;
-            $salida[3]=$datosConexion->motor;
-            $salida[4]=$datosConexion->base;
-            $salida[5]=$datosConexion->usuario;
-            $salida[6]=$datosConexion->password;
-        return $salida;
-    }
+
     public function printtableSimple() {
         $resultadoPTS=  $this->printTables();
         return $resultadoPTS;
@@ -214,7 +200,32 @@ class cargarModel{
     public function getTablesAndReferences(){
         $tablasCatalogators=$this->getCatalogatorsAndSimplex();
         $tablasReferenciadas=formatearTablasAndReferenciados($this->getTablesAndReferences());
-
+        $tablasReferenciadas=array();
+        for($i=0;$i<sizeof($tablasCatalogators);$i++){
+            $tablasReferenciadas[$i]=$tablasCatalogators[$i]["tablaname"];
+        }
     }
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

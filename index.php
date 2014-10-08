@@ -127,9 +127,7 @@ session_start();
 
       <div id="page-wrapper" class="full-with">
       <!--	CONTENIDO	-->
-        <div class="panel panel-heading alert alert-info">
-            <h2>Generacion de Datos</h2>
-        </div>
+          <div class="panel-heading"></div>
         <?php
             if (isset($_GET)){
                 if (!empty($_GET['accion'])) {

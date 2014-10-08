@@ -13,3 +13,10 @@ body{
     background-size: 100% 100%;
     background-image: url("../../public/img/base-datos.png");
 }
+.arriba{
+    background-color: #245269;
+    position: fixed;
+    right: -2px;
+    top: 52px;
+    z-index: 5;
+}

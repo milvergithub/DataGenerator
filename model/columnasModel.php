@@ -9,13 +9,14 @@ require_once "../config/ConexionPG.php";
 
 class columnasModel {
     private $conexion;
-    public function __construct() {
+    public function __construct($name) {
+        $datos=getDatosConexion("projects/".$name."/conexion/conexion.xml");
         $this->conexion=new ConexionPG(
-            $_SESSION['host'],
-            $_SESSION['puerto'],
-            $_SESSION['base'],
-            $_SESSION['usuario'],
-            $_SESSION['password']
+            $datos[1],
+            $datos[2],
+            $datos[4],
+            $datos[5],
+            $datos[6]
         );
     }
     function printTables() {

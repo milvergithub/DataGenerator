@@ -27,7 +27,7 @@ function cargarConfiguracionTipo(){
          $("#opcionconfiguracion").load("view/formfile.phtml");
          break;
       case "tabla":
-         $("#opcionconfiguracion").load("view/formTabla.phtml");
+         $("#opcionconfiguracion").load("view/formTabla.php",{proyecto:'diagrama'});
          break;
       case "lista":
          $("#opcionconfiguracion").load("view/lista.phtml");
