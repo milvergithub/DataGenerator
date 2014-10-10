@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/cargar.phtml" afterPath="$PROJECT_DIR$/view/cargar.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/cargarModel.php" afterPath="$PROJECT_DIR$/model/cargarModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/modulos.php" afterPath="$PROJECT_DIR$/config/modulos.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DateGenIdioms.iws" />
@@ -42,69 +39,7 @@
     <favorites_list name="DateGenIdioms" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="cargarModel.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44925123" vertical-offset="3366" max-vertical-offset="4230">
-              <caret line="202" column="16" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
-              <folding>
-                <marker date="1412962679982" expanded="true" signature="842:901" placeholder="SELECT table..pg_tables..." />
-                <marker date="1412962679982" expanded="true" signature="2050:3237" placeholder="SELECT tab_c..columns..." />
-                <marker date="1412962679982" expanded="true" signature="6023:7025" placeholder="SELECT (SELE..pg_constraint..." />
-                <marker date="1412962679982" expanded="true" signature="6031:6267" placeholder="SELECT relna..pg_class..." />
-                <marker date="1412962679982" expanded="true" signature="6490:6738" placeholder="SELECT c.oid..pg_class..." />
-                <marker date="1412962679982" expanded="true" signature="6825:7011" placeholder="SELECT relna..pg_class..." />
-                <marker date="1412962679982" expanded="true" signature="7303:8069" placeholder="SELECT (SELE..pg_constraint..." />
-                <marker date="1412962679982" expanded="true" signature="7311:7547" placeholder="SELECT relna..pg_class..." />
-                <marker date="1412962679982" expanded="true" signature="7770:8018" placeholder="SELECT c.oid..pg_class..." />
-                <marker date="1412962679982" expanded="true" signature="8351:9104" placeholder="SELECT table..pg_tables..." />
-                <marker date="1412962679982" expanded="true" signature="8489:9103" placeholder="SELECT (SELE..pg_constraint..." />
-                <marker date="1412962679982" expanded="true" signature="8497:8669" placeholder="SELECT relna..pg_class..." />
-                <marker date="1412962679982" expanded="true" signature="8798:9050" placeholder="SELECT c.oid..pg_class..." />
-                <marker date="1412962679982" expanded="false" signature="9435:9448" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modulos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/modulos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="23.074074" vertical-offset="1775" max-vertical-offset="2376">
-              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cargar.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/cargar.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.592592" vertical-offset="245" max-vertical-offset="918">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-              <folding>
-                <marker date="1412963852066" expanded="true" signature="346:976" placeholder="..." />
-                <marker date="1412963852066" expanded="false" signature="630:643" placeholder="..." />
-                <marker date="1412963852066" expanded="true" signature="644:952" placeholder="..." />
-                <marker date="1412963852066" expanded="true" signature="701:925" placeholder="..." />
-                <marker date="1412963852066" expanded="true" signature="1358:1585" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cargarController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/cargarController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
-              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -331,20 +266,27 @@
       <option name="project" value="LOCAL" />
       <updated>1412285951199</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Respaldo 2014-10-10">
+      <created>1412965138561</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1412965138561</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1313" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.4996192" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18811882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21706016" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21706016" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.104321904" sideWeight="0.5003808" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -360,7 +302,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.4996192" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -409,7 +350,8 @@
     <MESSAGE value="Respaldo 2014-09-22" />
     <MESSAGE value="Respaldo 2014-09-23" />
     <MESSAGE value="Respaldo 2014-10-02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Respaldo 2014-10-02" />
+    <MESSAGE value="Respaldo 2014-10-10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Respaldo 2014-10-10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -926,17 +868,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/cargarController.php">
+    <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding />
+        <state vertical-scroll-proportion="0.44925123" vertical-offset="3366" max-vertical-offset="4230">
+          <caret line="202" column="16" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
+          <folding>
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT table..pg_tables..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT tab_c..columns..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT table..pg_tables..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1412962679982" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
+            <marker date="1412962679982" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/modulos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="23.074074" vertical-offset="1775" max-vertical-offset="2376">
+        <state vertical-scroll-proportion="-1.0366057" vertical-offset="1775" max-vertical-offset="2376">
           <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
           <folding />
         </state>
@@ -944,38 +901,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/cargar.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.592592" vertical-offset="245" max-vertical-offset="918">
+        <state vertical-scroll-proportion="0.8801997" vertical-offset="245" max-vertical-offset="918">
           <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
           <folding>
-            <marker date="1412963852066" expanded="true" signature="346:976" placeholder="..." />
-            <marker date="1412963852066" expanded="false" signature="630:643" placeholder="..." />
-            <marker date="1412963852066" expanded="true" signature="644:952" placeholder="..." />
-            <marker date="1412963852066" expanded="true" signature="701:925" placeholder="..." />
-            <marker date="1412963852066" expanded="true" signature="1358:1585" placeholder="..." />
+            <marker date="1412963852066" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1412963852066" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1412963852066" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1412963852066" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1412963852066" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
+    <entry file="file://$PROJECT_DIR$/controller/cargarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44925123" vertical-offset="3366" max-vertical-offset="4230">
-          <caret line="202" column="16" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
-          <folding>
-            <marker date="1412962679982" expanded="true" signature="842:901" placeholder="SELECT table..pg_tables..." />
-            <marker date="1412962679982" expanded="true" signature="2050:3237" placeholder="SELECT tab_c..columns..." />
-            <marker date="1412962679982" expanded="true" signature="6023:7025" placeholder="SELECT (SELE..pg_constraint..." />
-            <marker date="1412962679982" expanded="true" signature="6031:6267" placeholder="SELECT relna..pg_class..." />
-            <marker date="1412962679982" expanded="true" signature="6490:6738" placeholder="SELECT c.oid..pg_class..." />
-            <marker date="1412962679982" expanded="true" signature="6825:7011" placeholder="SELECT relna..pg_class..." />
-            <marker date="1412962679982" expanded="true" signature="7303:8069" placeholder="SELECT (SELE..pg_constraint..." />
-            <marker date="1412962679982" expanded="true" signature="7311:7547" placeholder="SELECT relna..pg_class..." />
-            <marker date="1412962679982" expanded="true" signature="7770:8018" placeholder="SELECT c.oid..pg_class..." />
-            <marker date="1412962679982" expanded="true" signature="8351:9104" placeholder="SELECT table..pg_tables..." />
-            <marker date="1412962679982" expanded="true" signature="8489:9103" placeholder="SELECT (SELE..pg_constraint..." />
-            <marker date="1412962679982" expanded="true" signature="8497:8669" placeholder="SELECT relna..pg_class..." />
-            <marker date="1412962679982" expanded="true" signature="8798:9050" placeholder="SELECT c.oid..pg_class..." />
-            <marker date="1412962679982" expanded="false" signature="9435:9448" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.08794788" vertical-offset="0" max-vertical-offset="614">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
