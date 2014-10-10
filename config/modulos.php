@@ -56,7 +56,7 @@ function multiexplode($delimiters, $string){
 function formatearTablasAndReferenciados($arreglo){
     $retorno=array();
     for($i=0;$i<sizeof($arreglo);$i++){
-        $fila=["tabla"=>$arreglo[$i]["tabla"],
+        $fila=["tabla"=>$arreglo[$i]["tablas"],
                "referencias"=>getTableOnlyReferenced($arreglo[$i]["referencias"]),
                "revisado"=>"false"];
         $retorno[$i]=$fila;
@@ -67,6 +67,7 @@ function getTableOnlyReferenced($cadena){
     //"FOREIGN KEY (cod_rol_para, cod_usu_para) REFERENCES usuario(cod_rol, cod_usu) ON UPDATE RESTRICT ON DELETE RESTRICT"
     $arreglo=multiexplode(array("(",")"),$cadena);
     $analizar=getNameOnlyTable(trim($arreglo[2]));
+    return $analizar;
 }
 function getNameOnlyTable($cadena){
     $name=explode(" ",$cadena);

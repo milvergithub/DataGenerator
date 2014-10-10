@@ -2,8 +2,9 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 well full-with">
     <?php
     $tablas->printTables();
+    print_r($tablas->getCatalogatorsAndSimplex());
     $resultadoPT=  $tablas->printTables();
-        for($contador=1;$contador<sizeof($resultadoPT);$contador++){
+        for($contador=1;$contador<=sizeof($resultadoPT);$contador++){
             echo '<div class="panel panel-primary col-lg-12">
                     <button class="btn btn-link" id="boton'.$contador.'" onclick="mostrarOcultar('.$contador.',\''.$resultadoPT[$contador-1]['tablename'].'\');">'.$resultadoPT[$contador-1]['tablename'].'</button>
                     <div class="well" id="tabla'.$contador.'" style="display: none">
@@ -15,6 +16,25 @@
                  </div>';
         }
     ?>
+        <div>
+            <table class="table">
+                <tr>
+                <th>tabla</th>
+                <th>tabla referenciada</th>
+                <th>revisado</th>
+                </tr>
+                <?php
+                $prueba=$tablas->getTablesAndReferences();
+                for($j=0;$j<sizeof($prueba);$j++){
+                    echo "<tr>
+                            <td>".$prueba[$j]["tabla"]."</td>
+                            <td>".$prueba[$j]["referencias"]."</td>
+                            <td>".$prueba[$j]["revisado"]."</td>
+                          </tr>";
+                }
+                ?>
+            </table>
+        </div>
     </div>
     <div class="panel panel-success arriba col-lg-5 col-md-5 col-sm-5 col-xs-5 navbar navbar-right" id="formularioConfiguracion">
        <div id="NombreTabla" class="h3 alert alert-success"></div>

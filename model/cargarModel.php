@@ -31,6 +31,7 @@ class cargarModel{
         while($reg=pg_fetch_assoc($resPT)){
             $resultado[]=$reg;
         }
+        //print_r($resultado);
         return $resultado;
     }
     public function printDetalleTable($tabla) {
@@ -199,11 +200,8 @@ class cargarModel{
     }
     public function getTablesAndReferences(){
         $tablasCatalogators=$this->getCatalogatorsAndSimplex();
-        $tablasReferenciadas=formatearTablasAndReferenciados($this->getTablesAndReferences());
-        $tablasReferenciadas=array();
-        for($i=0;$i<sizeof($tablasCatalogators);$i++){
-            $tablasReferenciadas[$i]=$tablasCatalogators[$i]["tablaname"];
-        }
+        $tablasReferenciadas=formatearTablasAndReferenciados($this->getTablesToRefences());
+        return $tablasReferenciadas;
     }
 }
 ?>
