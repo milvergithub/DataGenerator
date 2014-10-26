@@ -1,5 +1,6 @@
 <?php
 require_once "../config/ConexionPG.php";
+require_once "../config/modulos.php";
 /**
  * Created by PhpStorm.
  * User: milver
@@ -10,7 +11,7 @@ require_once "../config/ConexionPG.php";
 class columnasModel {
     private $conexion;
     public function __construct($name) {
-        $datos=getDatosConexion("projects/".$name."/conexion/conexion.xml");
+        $datos=getDatosConexion("../projects/".$name."/conexion/conexion.xml");
         $this->conexion=new ConexionPG(
             $datos[1],
             $datos[2],

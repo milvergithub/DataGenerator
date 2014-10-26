@@ -9,14 +9,42 @@ body{
     background-color: rgba(54, 121, 136, 0.63);
 }
 .proyecto{
-    background-color: #245269;
+    background-color: rgba(32, 173, 115, 0.83);
     background-size: 100% 100%;
     background-image: url("../../public/img/base-datos.png");
 }
 .arriba{
     background-color: #245269;
     position: fixed;
-    right: -2px;
-    top: 52px;
-    z-index: 5;
+}
+.indicador{
+    width: 3em;
+    background-color: rgba(201, 196, 119, 0.13);
+}
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+.nivel0{
+    border: solid 1px #03ad4f;
+}
+.nivel1{
+    border: solid 1px #006aad;
+}
+.nivel2{
+    border: solid 1px #ad0100;
+}
+.nivel3{
+    border: solid 1px #ad5e00;
+}
+.nivelPanel0{
+    background-color:  #03ad4f;
+}
+.nivelPanel1{
+    background-color:  #006aad;
+}
+.nivelPanel2{
+    background-color:  #ad0100;
+}
+.nivelPanel3{
+    background-color:  #ad5e00;
 }

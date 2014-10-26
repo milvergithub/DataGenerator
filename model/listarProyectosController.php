@@ -20,7 +20,7 @@ class listarProyectosController {
                 ?>
                 <div class="col-xs-3 well proyecto">
                     <?php
-                    echo "<a href='index.php?accion=cargar&project=".$archivo."'><h2>".$archivo."</h2></a>";
+                    echo "<a href='index.php?accion=cargar&project=".$archivo."' class='panel'>".$archivo."</a>";
                     ?>
 
                 </div>

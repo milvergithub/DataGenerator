@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <conexion>
-  <nombre>test</nombre>
+  <nombre>bdtis</nombre>
   <host>localhost</host>
   <puerto>5432</puerto>
   <motor>PostgreSQL</motor>
-  <base>test</base>
+  <base>bdtis</base>
   <usuario>milver</usuario>
   <password>milver</password>
 </conexion>

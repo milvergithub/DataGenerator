@@ -27,7 +27,7 @@ function cargarConfiguracionTipo(){
          $("#opcionconfiguracion").load("view/formfile.phtml");
          break;
       case "tabla":
-         $("#opcionconfiguracion").load("view/formTabla.php",{proyecto:'diagrama'});
+         $("#opcionconfiguracion").load("view/formTabla.php",{proyecto:$("#project").val()});
          break;
       case "lista":
          $("#opcionconfiguracion").load("view/lista.phtml");
@@ -60,9 +60,11 @@ function cargarContenidoTexto(){
       });
 }
 function cargarColumnasTabla(){
+   var proyecto=$("#project").val();
    var columna=$("#tabla").val();
    var dato=new FormData();
    dato.append("tabla",columna);
+   dato.append("proyecto",proyecto);
    $.ajax({
           type: "POST",
           url:"controller/columnasController.php",
