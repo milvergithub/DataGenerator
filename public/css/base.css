@@ -25,26 +25,32 @@ body{
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
 .nivel0{
-    border: solid 1px #03ad4f;
+    border: solid 1px rgba(234, 40, 18, 0.83);;
 }
 .nivel1{
-    border: solid 1px #006aad;
+    border: solid 1px rgba(225, 107, 23, 0.91);
 }
 .nivel2{
-    border: solid 1px #ad0100;
+    border: solid 1px rgba(255, 202, 38, 0.91);
 }
 .nivel3{
-    border: solid 1px #ad5e00;
+    border: solid 1px rgba(7, 173, 95, 0.91);
+}
+.nivel4{
+    border: solid 1px rgba(41, 173, 170, 0.91);
 }
 .nivelPanel0{
-    background-color:  #03ad4f;
+    background-color:  rgba(234, 40, 18, 0.83);
 }
 .nivelPanel1{
-    background-color:  #006aad;
+    background-color:  rgba(225, 107, 23, 0.91);
 }
 .nivelPanel2{
-    background-color:  #ad0100;
+    background-color: rgba(255, 202, 38, 0.91);
 }
 .nivelPanel3{
-    background-color:  #ad5e00;
+    background-color:  rgba(7, 173, 95, 0.91);
+}
+.nivelPanel4{
+    background-color:  rgba(41, 173, 170, 0.91);
 }

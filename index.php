@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "config/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -130,8 +131,8 @@ session_start();
                 <div class="panel-heading"></div>
                 <?php
                 if (isset($_GET)) {
-                    if (!empty($_GET['accion'])) {
-                        $accion = $_GET["accion"];
+                    if (!empty($_GET[ACTION])) {
+                        $accion = $_GET[ACTION];
                     } else {
                         $accion = "home";
                     }

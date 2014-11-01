@@ -1,0 +1,56 @@
+<div class="">
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 well full-with">
+        <?php
+        echo "<h2>Proyecto : " . $_GET[PROYECTO] . "</h2>";
+        echo '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">';
+        $resultadoPT = $loadTablas->getTablesAndReferences();
+        for ($contador = 1; $contador <= sizeof($resultadoPT); $contador++) {
+            echo '<div class="panel panel-primary nivel' . $resultadoPT[$contador - 1]['nivel'] . ' col-lg-12">
+                    <button class="btn nivelPanel' . $resultadoPT[$contador - 1]['nivel'] . '">' . $resultadoPT[$contador - 1]['nivel'] . '</button>
+                    <button class="btn btn-link" id="boton' . $contador . '" onclick="mostrarOcultar(' . $contador . ',\'' . $resultadoPT[$contador - 1]['tablename'] . '\');">' . $resultadoPT[$contador - 1]['tablename'] . '</button>
+                    <div class="well" id="tabla' . $contador . '" style="display: none">
+                       <table class="table table-hover">
+                       <tr><th>name</th><th>key</th><th>null</th><th>type</th><th>estado</th></tr>
+                      ' . printDetalleTable($resultadoPT[$contador - 1]['tablename']) . '
+                       </table>
+                    </div>
+                 </div>';
+        }
+        ?>
+    </div>
+    <div
+        class="panel panel-success arriba col-lg-offset-6 col-md-offset-6 col-sm-offset-6 col-xs-offset-6 col-lg-5 col-md-5 col-sm-5 col-xs-5"
+        id="formularioConfiguracion">
+        <div id="NombreTabla" class="h3 alert alert-success"></div>
+        <div id="divtabla" class="well">
+
+        </div>
+        <?php
+
+        function printDetalleTable($tabla){
+            $var=null;
+            $loadDetalle = new loadModel($_GET[PROYECTO]);
+            $resultadoPDT = $loadDetalle->printDetalleTable($tabla);
+            for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
+                $var .="<tr>"
+                    . "<td><button class='btn btn-link' onclick=\"cargarPanelConfiguracion('" . $tabla . "." . $resultadoPDT[$contador]['column_name'] . "');\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
+                    . "<td>" . isPrimaryKey($resultadoPDT[$contador]['constraint_type']) . "</td>"
+                    . "<td>" . $resultadoPDT[$contador]['is_nullable'] . "</td>"
+                    . "<td>" . $resultadoPDT[$contador]['data_type'] . "</td>"
+                    . "<td class='indicador'><span style='color: red' class='glyphicon glyphicon-remove-circle'></span></td>"
+                    . "</tr>";
+            }
+            return $var;
+        }
+
+        function isPrimaryKey($cadena){
+            if (trim($cadena) != null) {
+                return "<span class='glyphicon glyphicon-flash h6' style='color: orange'></span>";
+            } else {
+                return "";
+            }
+        }
+
+        ?>
+    </div>
+</div>

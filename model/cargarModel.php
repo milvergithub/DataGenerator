@@ -36,7 +36,6 @@ class cargarModel {
 
     public function printDetalleTable($tabla) {
         $resultadoPDT = $this->detalleTabla($tabla);
-        //print_r($resultadoPDT);
         global $var;
         $var = null;
         for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
