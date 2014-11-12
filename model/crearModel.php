@@ -218,7 +218,7 @@ class crearModel{
         $retorno = array();
         for ($i = 0; $i < sizeof($referencias); $i++) {
             $arreglo = ["column_name" => $referencias[$i]["referencias"], "data_type" => "FOREIGN", "character_maximum_length" => "",
-                "es_foranea" => "true", "referenciado" => $referencias[$i]["referencias"], "tabla" => $referencias[$i]["tabla"],
+                "es_foranea" => "true", "referencian" => $referencias[$i]["referencias"], "tabla" => $referencias[$i]["tabla"],
                 "referenciados" => $referencias[$i]["referenciados"], "numeric_precision" => "", "is_nullable" => "NO",
                 "constraint_type" => "foraneas"];
             $retorno[$i] = $arreglo;

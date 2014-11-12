@@ -2,6 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/conexion/conexion.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/amistad.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/archivo_multimedia.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/configuracion_nota.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/curso.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/documento_personal.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/email.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/email_solicitud.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/evaluacion_documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/foro.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/gestion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/grado.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/mensaje.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/nivel.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/rama.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/rol.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/secion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/solicitud.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/telefono.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/tipo_documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/tipo_multimedia.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/dates/usuario.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/mapeo/mapeo.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/amistad.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/archivo_multimedia.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/configuracion_nota.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/curso.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/documento_personal.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/email.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/email_solicitud.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/evaluacion_documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/foro.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/gestion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/grado.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/mensaje.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/nivel.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/rama.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/rol.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/secion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/solicitud.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/telefono.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/tipo_documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/tipo_multimedia.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/appMult/tables/usuario.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/conexion/conexion.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/archivos_empresa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/chat.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/configuracion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/configuracion_semestral.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/contrato_empresa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/convocatoria.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/email_integrante.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/email_user.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/evaluacion_archivos.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/foro.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/gestion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/grupo.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/grupo_empresa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/hora_presentacion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/horario.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/integrantes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/reunion_evaluativo.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/rol.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/telefono_integrante.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/telefono_user.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/tipo_documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/tipo_evaluacion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/dates/usuario.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/mapeo/mapeo.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/archivos_empresa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/chat.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/configuracion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/configuracion_semestral.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/contrato_empresa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/convocatoria.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/email_integrante.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/email_user.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/evaluacion_archivos.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/foro.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/gestion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/grupo.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/grupo_empresa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/hora_presentacion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/horario.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/integrantes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/reunion_evaluativo.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/rol.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/telefono_integrante.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/telefono_user.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/tipo_documento.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/tipo_evaluacion.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/bdtis/tables/usuario.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/categoria.json" afterPath="$PROJECT_DIR$/projects/venta/tables/categoria.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/cliente.json" afterPath="$PROJECT_DIR$/projects/venta/tables/cliente.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/compra_producto.json" afterPath="$PROJECT_DIR$/projects/venta/tables/compra_producto.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/crearModel.php" afterPath="$PROJECT_DIR$/model/crearModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/detalleventa.json" afterPath="$PROJECT_DIR$/projects/venta/tables/detalleventa.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/email.json" afterPath="$PROJECT_DIR$/projects/venta/tables/email.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/modulos.php" afterPath="$PROJECT_DIR$/config/modulos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/persona.json" afterPath="$PROJECT_DIR$/projects/venta/tables/persona.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/producto.json" afterPath="$PROJECT_DIR$/projects/venta/tables/producto.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/proveedor.json" afterPath="$PROJECT_DIR$/projects/venta/tables/proveedor.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/telefono.json" afterPath="$PROJECT_DIR$/projects/venta/tables/telefono.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/vendedor.json" afterPath="$PROJECT_DIR$/projects/venta/tables/vendedor.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DateGenIdioms.iws" />
@@ -75,31 +183,33 @@
         <option value="$PROJECT_DIR$/controller/conexionController.php" />
         <option value="$PROJECT_DIR$/view/login.phtml" />
         <option value="$PROJECT_DIR$/view/cargar.phtml" />
-        <option value="$PROJECT_DIR$/model/crearModel.php" />
         <option value="$PROJECT_DIR$/view/nuevo.phtml" />
         <option value="$PROJECT_DIR$/controller/cargarController.php" />
         <option value="$PROJECT_DIR$/model/cargarModel.php" />
         <option value="$PROJECT_DIR$/controller/crearController.php" />
-        <option value="$PROJECT_DIR$/projects/bdtis/tables/contrato_empresa.json" />
         <option value="$PROJECT_DIR$/projects/demo/tables/amistad.json" />
         <option value="$PROJECT_DIR$/projects/demo/mapeo/mapeo.json" />
         <option value="$PROJECT_DIR$/public/js/Test.php" />
-        <option value="$PROJECT_DIR$/config/modulos.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/model/listarProyectosController.php" />
         <option value="$PROJECT_DIR$/view/listarProyectos.phtml" />
         <option value="$PROJECT_DIR$/model/listarProyectosModel.php" />
         <option value="$PROJECT_DIR$/controller/homeController.php" />
         <option value="$PROJECT_DIR$/controller/loadController.php" />
         <option value="$PROJECT_DIR$/model/loadModel.php" />
-        <option value="$PROJECT_DIR$/projects/venta/dates/categoria.json" />
         <option value="$PROJECT_DIR$/view/load.phtml" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/view/home.phtml" />
         <option value="$PROJECT_DIR$/model/removeProjectModel.php" />
         <option value="$PROJECT_DIR$/controller/removeProjectController.php" />
         <option value="$PROJECT_DIR$/public/css/base.css" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/navbar.phtml" />
+        <option value="$PROJECT_DIR$/projects/venta/dates/categoria.json" />
+        <option value="$PROJECT_DIR$/projects/venta/tables/categoria.json" />
+        <option value="$PROJECT_DIR$/projects/bdtis/tables/contrato_empresa.json" />
+        <option value="$PROJECT_DIR$/config/modulos.php" />
+        <option value="$PROJECT_DIR$/model/crearModel.php" />
+        <option value="$PROJECT_DIR$/projects/venta/tables/detalleventa.json" />
       </list>
     </option>
   </component>
@@ -474,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/crearModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05823627" vertical-offset="215" max-vertical-offset="4194">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/nuevo.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38935107" vertical-offset="0" max-vertical-offset="936">
@@ -509,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/crearController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62229615" vertical-offset="1534" max-vertical-offset="2142">
-          <caret line="106" column="62" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/errorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
@@ -537,69 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4723127" vertical-offset="268" max-vertical-offset="1170">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/modulos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7903494" vertical-offset="1019" max-vertical-offset="1620">
-          <caret line="88" column="1" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/loadModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7068404" vertical-offset="124" max-vertical-offset="864">
-          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/loadController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.117263846" vertical-offset="0" max-vertical-offset="614">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/load.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.640599" vertical-offset="443" max-vertical-offset="1242">
-          <caret line="46" column="87" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
-          <folding>
-            <marker date="1415817110564" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1415817110564" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1415817110564" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38935107" vertical-offset="0" max-vertical-offset="5328">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT table..pg_tables..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT tab_c..columns..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT table..pg_tables..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
-            <marker date="1415722584036" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
-            <marker date="1415722584036" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -615,14 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-34.555557" vertical-offset="111" max-vertical-offset="1188">
           <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/navbar.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44925123" vertical-offset="0" max-vertical-offset="1890">
-          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
           <folding />
         </state>
       </provider>
@@ -648,6 +677,111 @@
         <state vertical-scroll-proportion="0.359401" vertical-offset="0" max-vertical-offset="601">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35179153" vertical-offset="0" max-vertical-offset="1170">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/navbar.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29950082" vertical-offset="0" max-vertical-offset="1890">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/cargarModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11980033" vertical-offset="558" max-vertical-offset="5328">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/crearController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029950082" vertical-offset="180" max-vertical-offset="2142">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/venta/dates/categoria.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/venta/tables/categoria.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/modulos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/venta/tables/detalleventa.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9413681" vertical-offset="448" max-vertical-offset="1422">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/load.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.85690516" vertical-offset="641" max-vertical-offset="1242">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <marker date="1415817110564" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415817110564" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415817110564" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/loadModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7068404" vertical-offset="124" max-vertical-offset="864">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/crearModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61064893" vertical-offset="3611" max-vertical-offset="4284">
+          <caret line="221" column="66" selection-start-line="221" selection-start-column="66" selection-end-line="221" selection-end-column="66" />
+          <folding>
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT table..pg_tables..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT tab_c..columns..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
+            <marker date="1415827205840" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
+          </folding>
         </state>
       </provider>
     </entry>
