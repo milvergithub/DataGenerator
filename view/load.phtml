@@ -3,7 +3,7 @@
         <?php
         echo "<h2>Proyecto : " . $_GET[PROYECTO] . "</h2>";
         echo '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">';
-        $resultadoPT = $loadTablas->getTablesAndReferences();
+        $resultadoPT = $loadTablas->getTablesAndReferencesLoad();
         for ($contador = 1; $contador <= sizeof($resultadoPT); $contador++) {
             echo '<div class="panel panel-primary nivel' . $resultadoPT[$contador - 1]['nivel'] . ' col-lg-12">
                     <button class="btn nivelPanel' . $resultadoPT[$contador - 1]['nivel'] . '">' . $resultadoPT[$contador - 1]['nivel'] . '</button>
@@ -30,19 +30,26 @@
         function printDetalleTable($tabla){
             $var=null;
             $loadDetalle = new loadModel($_GET[PROYECTO]);
-            $resultadoPDT = $loadDetalle->printDetalleTable($tabla);
+            $resultadoPDT = $loadDetalle->printDetalleTableLoad($tabla);
             for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
                 $var .="<tr>"
                     . "<td><button class='btn btn-link' onclick=\"cargarPanelConfiguracion('" . $tabla . "." . $resultadoPDT[$contador]['column_name'] . "');\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
                     . "<td>" . isPrimaryKey($resultadoPDT[$contador]['constraint_type']) . "</td>"
                     . "<td>" . $resultadoPDT[$contador]['is_nullable'] . "</td>"
                     . "<td>" . $resultadoPDT[$contador]['data_type'] . "</td>"
-                    . "<td class='indicador'><span style='color: red' class='glyphicon glyphicon-remove-circle'></span></td>"
+                    . "<td class='indicador'>".statusColumn($loadDetalle->getStatusColumnLoad($tabla,$resultadoPDT[$contador]['column_name']))."</td>"
                     . "</tr>";
             }
             return $var;
         }
-
+        function statusColumn($estado){
+            if($estado=="existe"){
+                return "<span style='color: green' class='glyphicon glyphicon-ok-circle'></span>";
+            }
+            else{
+                return "<span style='color: red' class='glyphicon glyphicon-remove-circle'></span>";
+            }
+        }
         function isPrimaryKey($cadena){
             if (trim($cadena) != null) {
                 return "<span class='glyphicon glyphicon-flash h6' style='color: orange'></span>";

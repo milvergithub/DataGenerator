@@ -17,7 +17,6 @@ class cargarModel {
                 $datos[1], $datos[2], $datos[4], $datos[5], $datos[6]
         );
     }
-
     public function printtableSimple() {
         $resultadoPTS = $this->printTables();
         return $resultadoPTS;
@@ -289,25 +288,3 @@ class cargarModel {
 
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

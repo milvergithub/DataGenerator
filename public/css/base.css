@@ -9,9 +9,30 @@ body{
     background-color: rgba(54, 121, 136, 0.63);
 }
 .proyecto{
+    margin: 0.2em;
+    width: 7em;
+    height: 5em;
     background-color: rgba(32, 173, 115, 0.83);
+    background-size: 70% 70%;
+    background-image: url("../../public/img/base-datos.png");
+    background-repeat: no-repeat;
+    box-shadow: #245269 5px 5px 20px 5px;
+    border-radius: 0.2em;
+}
+.proyecto:hover{
+    margin: 0.2em;
+    width: 7em;
+    height: 5em;
+    background-color: rgba(39, 140, 85, 0.89);
     background-size: 100% 100%;
     background-image: url("../../public/img/base-datos.png");
+    box-shadow: #222222 5px 5px 20px 7px;
+    border-radius: 0.2em;
+    border: dashed 1px cornsilk;
+    -webkit-transition:all .5s ease-out;
+    -moz-transition:all .5s ease-out;
+    -ms-transition:all .5s ease-out;
+    -o-transition:all .5s ease-out
 }
 .arriba{
     background-color: #245269;

@@ -4,5 +4,19 @@
     </a>
 </div>
 <?php
-    $proyectos->actionMostrarProyectos();
+$directorio=$proyectos->actionMostrarProyectos();
+while ($archivo = readdir($directorio)){
+    if (is_dir($archivo)){
+    }
+    else {
+        ?>
+        <div class="col-xs-3 well proyecto">
+            <?php
+            echo "<a href='index.php?".ACTION."=load&".PROYECTO."=".$archivo."' class='panel'>".$archivo."</a>";
+            ?>
+            <a href="controller/removeProjectController.php?<?php echo REMOVE_PROYECTO ?>=<?php echo $archivo?>" class="btn btn-sm btn-danger navbar-right"><span class="glyphicon glyphicon-remove"></span></a>
+        </div>
+    <?php
+    }
+}
 ?>
