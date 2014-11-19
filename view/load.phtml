@@ -31,9 +31,18 @@
             $var=null;
             $loadDetalle = new loadModel($_GET[PROYECTO]);
             $resultadoPDT = $loadDetalle->printDetalleTableLoad($tabla);
+            //print_r($resultadoPDT);
             for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
                 $var .="<tr>"
-                    . "<td><button class='btn btn-link' onclick=\"cargarPanelConfiguracion('" . $tabla . "." . $resultadoPDT[$contador]['column_name'] . "');\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
+                    . "<td><button class='btn btn-link'onclick=\"
+                                              cargarPanelConfiguracion('" .$tabla . "','"
+                                                                          .$resultadoPDT[$contador]['column_name'] . "','"
+                                                                          .$resultadoPDT[$contador]['data_type']."','"
+                                                                          .$resultadoPDT[$contador]['es_foranea']."','"
+                                                                          .$resultadoPDT[$contador]['referencian']."','"
+                                                                          .$resultadoPDT[$contador]['referenciados']."','"
+                                                                          .$resultadoPDT[$contador]['is_nullable']."','"
+                                                                          .$resultadoPDT[$contador]['constraint_type']."')\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
                     . "<td>" . isPrimaryKey($resultadoPDT[$contador]['constraint_type']) . "</td>"
                     . "<td>" . $resultadoPDT[$contador]['is_nullable'] . "</td>"
                     . "<td>" . $resultadoPDT[$contador]['data_type'] . "</td>"

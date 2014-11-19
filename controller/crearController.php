@@ -1,6 +1,7 @@
 <?php
 require_once "../config/config.php";
 require_once "../model/crearModel.php";
+require_once "../model/createDirModel.php";
 $basededatos = $_POST['basededatos'];
 if ($basededatos == "PostgreSQL") {
     $_SESSION['host'] = $_POST['host'];
@@ -37,19 +38,16 @@ if ($basededatos == "PostgreSQL") {
 
     $xml->formatOutput = true;
     $el_xml = $xml->saveXML();
+
+    $crearDirectorio=new createDirModel();
     if (file_exists("../projects/" . $_POST[NOMBRE_PROYECTO])) {
-        header("Location: ../index.php?accion=login&msm=1");
+        header("Location: ../index.php?".ACTION."=login&msm=1");
     } else {
-        mkdir("../projects/" . $_POST[NOMBRE_PROYECTO] . "", 0777);
-        chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "", 0777);
-        mkdir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/conexion", 0777);
-        chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "/conexion", 0777);
-        mkdir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/tables", 0777);
-        chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "/tables", 0777);
-        mkdir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/dates", 0777);
-        chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "/dates", 0777);
-        mkdir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo", 0777);
-        chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo", 0777);
+        $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "", 0777);
+        $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/conexion", 0777);
+        $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/tables", 0777);
+        $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/dates", 0777);
+        $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo", 0777);
         $xml->save('../projects/' . $_POST[NOMBRE_PROYECTO] . '/conexion/conexion.xml');
         chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "/conexion/conexion.xml", 0777);
 
@@ -65,8 +63,7 @@ if ($basededatos == "PostgreSQL") {
 
                 $resultadoPT = $tablas->getTablesAndReferences();
                 /*.........MAPEANDO..........*/
-                $fileMaping = fopen("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo/mapeo.json", "w+");
-                chmod("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo/mapeo.json", 0777);
+                $crearDirectorio->crearFileJSON("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo/mapeo.json", "w+");
                 $mapeoRPT = json_encode($resultadoPT, JSON_UNESCAPED_UNICODE);
                 $fhMRPT = fopen("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo/mapeo.json", 'w');
                 fwrite($fhMRPT, $mapeoRPT);

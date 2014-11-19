@@ -1,11 +1,44 @@
 $(document).ready(function(){
    
 });
-function cargarPanelConfiguracion(identificador){
-   $("#tablaCampo").html("<div class='alert alert-warning'>"+identificador+"</div>" +
+function cargarPanelConfiguracion(tabla,columna,data_type,esforanea,referencian,referenciados,isnull,constraint_type){
+   var identificador=tabla.toUpperCase()+'.'+columna;
+   $("#tablaCampo").html("<div class='identificador'>"+identificador+"</div>" +
                          "<input type='hidden' name='nombre_columna' id='nombre_columna' value='"+identificador+"'/>");
-   $("#formularioPersonalizado").load("view/formularioNumerico.phtml");
-   
+    console.log(data_type+" - "+esforanea+" - "+referencian+" - "+isnull+" - "+constraint_type);
+    var datoConfig=new FormData();
+    datoConfig.append("tabla",tabla);
+    datoConfig.append("columna",columna);
+    datoConfig.append("data_type",data_type);
+    datoConfig.append("es_foranea",esforanea);
+    datoConfig.append("referencian",referencian);
+    datoConfig.append("referenciados",referenciados);
+    datoConfig.append("is_null",isnull);
+    datoConfig.append("constraint_type",constraint_type);
+    cargarPanelAdecuado(datoConfig);
+}
+function cargarPanelAdecuado(datos){
+    $.ajax({
+        type: "POST",
+        url:"controller/loadPanelAdecuadoController.php",
+        enctype:'multipart/form-data',
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        beforeSend: function(dato) {
+            $("#formularioPersonalizado").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
+            $("#formularioPersonalizado").show();
+        },
+        success: function(data){
+            $("#formularioPersonalizado").html(data);
+            $("#formularioPersonalizado").show();
+        },
+        error: function(){
+            $("#mensajeUploadDoc").text("error")
+        }
+    });
 }
 function mostrarOcultar(num,tabla){
    if($("#tabla"+num).css('display')=='none'){
@@ -20,19 +53,32 @@ function mostrarOcultar(num,tabla){
         });
 	}
 }
-function cargarConfiguracionTipo(){
-   var elegido=$("#formularioTipoOrigen").val();
-   switch (elegido){
-      case "archivo":
-         $("#opcionconfiguracion").load("view/formfile.phtml");
-         break;
-      case "tabla":
-         $("#opcionconfiguracion").load("view/formTabla.php",{proyecto:$("#project").val()});
-         break;
-      case "lista":
-         $("#opcionconfiguracion").load("view/lista.phtml");
-         break;
-   }
+function cargarConfiguracionTipo(tabla){
+    var elegido=$("#formularioTipoOrigen").val();
+    var datoConfigTipo=new FormData();
+    datoConfigTipo.append("elegido",elegido);
+    datoConfigTipo.append("proyecto",$("#project").val())
+    $.ajax({
+        type: "POST",
+        url:"controller/loadConfigTypeController.php",
+        enctype:'multipart/form-data',
+        data: datoConfigTipo,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        beforeSend: function(dato) {
+            $("#opcionconfiguracion").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
+            $("#opcionconfiguracion").show();
+        },
+        success: function(data){
+            $("#opcionconfiguracion").html(data);
+            $("#opcionconfiguracion").show();
+        },
+        error: function(){
+            $("#opcionconfiguracion").text("error")
+        }
+    });
 }
 
 function cargarContenidoTexto(){
@@ -48,6 +94,10 @@ function cargarContenidoTexto(){
           contentType: false,
           processData: false,
           mimeType: 'multipart/form-data',
+          beforeSend: function(dato) {
+              $("#contenidogenerar").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
+              $("#contenidogenerar").show();
+          },
           success: function(data){
             $("#contenidogenerar").text(data);
             bootbox.alert(data, function() {
@@ -55,7 +105,7 @@ function cargarContenidoTexto(){
             });
           },
           error: function(){
-            $("#mensajeUploadDoc").text("error")
+            $("#contenidogenerar").text("error")
           }
       });
 }
@@ -74,6 +124,10 @@ function cargarColumnasTabla(){
           contentType: false,
           processData: false,
           mimeType: 'multipart/form-data',
+          beforeSend: function(data) {
+              $("#columna").html("<option value=''>CARGANDO...</option>");
+              $("#columna").show();
+          },
           success: function(data){
             $("#columna").html(data);
           },

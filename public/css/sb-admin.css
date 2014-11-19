@@ -83,11 +83,6 @@ table.tablesorter thead tr th:hover {
   #page-wrapper {
 	padding: 0px;
   }
-
-  /* Side Nav */
-    .proyecto{
-        font-size: 2em;
-    }
   .side-nav {
 	margin-left: -150px;
 	left: 150px;

@@ -9,6 +9,7 @@ body{
     background-color: rgba(54, 121, 136, 0.63);
 }
 .proyecto{
+    font-size: 2em;
     margin: 0.2em;
     width: 7em;
     height: 5em;
@@ -18,6 +19,10 @@ body{
     background-repeat: no-repeat;
     box-shadow: #245269 5px 5px 20px 5px;
     border-radius: 0.2em;
+    -webkit-transition:all .7s ease-in;
+    -moz-transition:all .7s ease-in;
+    -ms-transition:all .7s ease-in;
+    -o-transition:all .7s ease-in;
 }
 .proyecto:hover{
     margin: 0.2em;
@@ -74,4 +79,9 @@ body{
 }
 .nivelPanel4{
     background-color:  rgba(41, 173, 170, 0.91);
+}
+.identificador{
+    background-color: rgba(0, 201, 113, 0.89);
+    border-radius: 2px 5px 0px 2px;
+    margin: 0.3em;
 }
