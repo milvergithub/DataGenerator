@@ -1,8 +1,4 @@
 <?php
-
-require_once "config/ConexionPG.php";
-require_once "config/modulos.php";
-
 /**
  * Description of Tablas
  * @author milver

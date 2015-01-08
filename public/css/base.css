@@ -51,34 +51,52 @@ body{
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
 .nivel0{
-    border: solid 1px rgba(234, 40, 18, 0.83);;
+    border: solid 1px rgb(233, 75, 59);
 }
 .nivel1{
-    border: solid 1px rgba(225, 107, 23, 0.91);
+    border: solid 1px rgb(249, 142, 51);
 }
 .nivel2{
-    border: solid 1px rgba(255, 202, 38, 0.91);
+    border: solid 1px rgb(255, 182, 28);
 }
 .nivel3{
-    border: solid 1px rgba(7, 173, 95, 0.91);
+    border: solid 1px rgb(35, 174, 137);
 }
 .nivel4{
-    border: solid 1px rgba(41, 173, 170, 0.91);
+    border: solid 1px rgb(46, 193, 204);
+}
+.nivel5{
+    border: solid 1px rgb(68, 157, 213);
+}
+.nivel6{
+    border: solid 1px rgb(28, 126, 187);
+}
+.nivel7{
+    border: solid 1px rgb(106, 85, 194);
 }
 .nivelPanel0{
-    background-color:  rgba(234, 40, 18, 0.83);
+    background-color:  rgb(233, 75, 59);
 }
 .nivelPanel1{
-    background-color:  rgba(225, 107, 23, 0.91);
+    background-color:  rgb(249, 142, 51);
 }
 .nivelPanel2{
-    background-color: rgba(255, 202, 38, 0.91);
+    background-color: rgb(255, 182, 28);
 }
 .nivelPanel3{
-    background-color:  rgba(7, 173, 95, 0.91);
+    background-color:  rgb(35, 174, 137);
 }
 .nivelPanel4{
-    background-color:  rgba(41, 173, 170, 0.91);
+    background-color:  rgb(46, 193, 204);
+}
+.nivelPanel5{
+    background-color:  rgb(68, 157, 213);
+}
+.nivelPanel6{
+    background-color:  rgb(28, 126, 187);
+}
+.nivelPanel7{
+    background-color:  rgb(106, 85, 194);
 }
 .identificador{
     background-color: rgba(0, 201, 113, 0.89);

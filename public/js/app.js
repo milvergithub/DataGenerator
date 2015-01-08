@@ -1,5 +1,5 @@
 $(document).ready(function(){
-   
+
 });
 function cargarPanelConfiguracion(tabla,columna,data_type,esforanea,referencian,referenciados,isnull,constraint_type){
    var identificador=tabla.toUpperCase()+'.'+columna;
@@ -135,4 +135,8 @@ function cargarColumnasTabla(){
             $("#columna").text("error")
           }
       });
+}
+
+function guardarConfiguracion(){
+    alert("Hola mundo");
 }

@@ -1,14 +1,14 @@
 <?php
 session_start();
-include "../model/columnasModel.php";
-$tablas=new columnasModel($_POST["proyecto"]);
+include "../model/tablasJSONModel.php";
+$tablas=new tablasJSONModel($_POST["proyecto"]);
 ?>
 <select name="tabla" id="tabla" class="form-control" onchange="cargarColumnasTabla()">
     <?php
         echo "<option>selecciones tabla</option>";
-        $resultadoPTS=$tablas->printTables();
-        while ($regPTS = pg_fetch_assoc($resultadoPTS)) {
-            echo '<option value="'.$regPTS['tablename'].'">'.$regPTS['tablename'].'</option>';
+        $resultadoTablas=$tablas->getTablas();
+        for($i=0;$i<sizeof($resultadoTablas);$i++) {
+            echo '<option value="' . $resultadoTablas[$i]['tablename'] . '">' . $resultadoTablas[$i]['tablename'] . '</option>';
         }
     ?>
 </select>

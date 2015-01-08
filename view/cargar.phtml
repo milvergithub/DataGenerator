@@ -3,12 +3,7 @@
         <?php
         echo "<h2>Proyecto : " . $_GET[PROYECTO] . "</h2>";
         echo '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">';
-        //print_r($tablas->getCatalogatorsAndSimplex());
-        //print_r(json_encode($tablas->getCatalogatorsAndSimplex()));
         echo "<br>";
-        $data = file_get_contents("demo.json");
-        $products = json_decode($data, true);
-        //print_r($products);
         $resultadoPT = $tablas->getTablesAndReferences();
         for ($contador = 1; $contador <= sizeof($resultadoPT); $contador++) {
             $fp = fopen("projects/".$_GET[PROYECTO]."/dates/".$resultadoPT[$contador - 1]['tablename'].".json", "w+");

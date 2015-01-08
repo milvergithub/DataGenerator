@@ -1,6 +1,0 @@
-[
-    {"table":"contador",
-     "referenciada":"persona",
-     "estado":"false"},
-    {"tablename":"categoria"}
-]

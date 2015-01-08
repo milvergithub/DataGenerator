@@ -10,10 +10,13 @@ switch ($_POST['elegido']){
         require_once "../view/formfile.phtml";
         break;
     case "tabla":
-        require_once "../view/formTabla.php";//,{proyecto:$("#project").val()});
-break;
-case "lista":
+        require_once "../view/formTabla.php";
+        break;
+    case "lista":
          require_once "../view/lista.phtml";
          break;
-   }
+    case "rango":
+        require_once "../view/rango.phtml";
+        break;
+}
 ?>

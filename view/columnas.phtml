@@ -1,5 +1,6 @@
 <?php
-while ($regPCT = pg_fetch_assoc($resultadoPCT)) {
-    echo '<option value="'.$regPCT['column_name'].'">'.$regPCT['column_name'].'</option>';
+echo "<option>selecione una fila</option>";
+for($cont=0;$cont<sizeof($resultado);$cont++){
+    echo '<option value="'.$resultado[$cont]['column_name'].'">'.$resultado[$cont]['column_name'].'</option>';
 }
 ?>
