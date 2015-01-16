@@ -113,8 +113,6 @@ class crearModel{
             $resultadoDT[] = $regFT;
         }
         return $this->getTablaReducida($this->aumentarCampos($resultadoDT), $tabla);
-        //return $this->aumentarCampos($resultadoDT);
-        //return $resultadoDT;
     }
     public function getReferenciasLineal($vertical) {
         $lineal = array();

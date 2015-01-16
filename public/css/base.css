@@ -42,6 +42,7 @@ body{
 .arriba{
     background-color: #245269;
     position: fixed;
+    float: right;
 }
 .indicador{
     width: 3em;

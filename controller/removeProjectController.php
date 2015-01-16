@@ -9,7 +9,6 @@ require_once "../model/removeProjectModel.php";
 require_once "../config/config.php";
 $removeDir=new removeProjectModel();
 try {
-    //echo "../projects/".$_GET[REMOVE_PROYECTO];
     $removeDir->eliminarDir("../projects/".$_GET[REMOVE_PROYECTO]);
 } catch (Exception $exc) {
     echo $exc->getTraceAsString();

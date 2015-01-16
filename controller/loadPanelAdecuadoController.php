@@ -5,7 +5,7 @@
  * Date: 19/11/14
  * Time: 14:46
  */
-if($_POST['es_foranea']=='true'){
+if($_POST['constraint_type'] == "foraneas"){
     require_once "../view/formularioForeignKey.phtml";
 }
 else {

@@ -1,4 +1,5 @@
 $(function(){
+    $("#formulariotestconn").validationEngine({promptPosition : "topRight", scroll: true});
     $("#formulariotestconn").validate({
         rules:{
             nombreProyecto:{
@@ -35,5 +36,6 @@ $(function(){
                 .closest('.control-group').removeClass('control-group has-error').addClass('has-success');
         }
     });
+
 });
 

@@ -15,3 +15,8 @@ $tablas=new tablasJSONModel($_POST["proyecto"]);
 <select name="columna" id="columna" class="form-control" onchange="">
     <option value="">selecione culumna</option>
 </select>
+
+<div>
+    <input type="checkbox" title="Aleatorio">
+</div>
+<button class="btn btn-success btn-sm">guardar</button>

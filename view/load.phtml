@@ -6,7 +6,7 @@
         $resultadoPT = $loadTablas->getTablesAndReferencesLoad();
         for ($contador = 1; $contador <= sizeof($resultadoPT); $contador++) {
             echo '<div class="panel panel-primary nivel' . $resultadoPT[$contador - 1]['nivel'] . ' col-lg-12">
-                    <button class="btn nivelPanel' . $resultadoPT[$contador - 1]['nivel'] . '">' . $resultadoPT[$contador - 1]['nivel'] . '</button>
+                    <button class="btn fa fa-th nivelPanel' . $resultadoPT[$contador - 1]['nivel'] . '"> ' . $resultadoPT[$contador - 1]['nivel'] . '</button>
                     <button class="btn btn-link" id="boton' . $contador . '" onclick="mostrarOcultar(' . $contador . ',\'' . $resultadoPT[$contador - 1]['tablename'] . '\');">' . $resultadoPT[$contador - 1]['tablename'] . '</button>
                     <div class="well" id="tabla' . $contador . '" style="display: none">
                        <table class="table table-hover">
@@ -29,7 +29,18 @@
             $var=null;
             $loadDetalle = new loadModel($_GET[PROYECTO]);
             $resultadoPDT = $loadDetalle->printDetalleTableLoad($tabla);
-            //print_r($resultadoPDT);
+            /*
+             *  "column_name": "cod_rol_para, cod_usu_para",
+                "data_type": "FOREIGN",
+                "character_maximum_length": "",
+                "es_foranea": "true",
+                "referencian": "cod_rol_para, cod_usu_para",
+                "tabla": "usuario",
+                "referenciados": "cod_rol, cod_usu",
+                "numeric_precision": "",
+                "is_nullable": "NO",
+                "constraint_type": "foraneas"
+             * */
             for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
                 $var .="<tr>"
                     . "<td><button class='btn btn-link'onclick=\"
@@ -38,6 +49,7 @@
                                                                           .$resultadoPDT[$contador]['data_type']."','"
                                                                           .$resultadoPDT[$contador]['es_foranea']."','"
                                                                           .$resultadoPDT[$contador]['referencian']."','"
+                                                                          .$resultadoPDT[$contador]['tabla']."','"
                                                                           .$resultadoPDT[$contador]['referenciados']."','"
                                                                           .$resultadoPDT[$contador]['is_nullable']."','"
                                                                           .$resultadoPDT[$contador]['constraint_type']."')\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
