@@ -1,10 +1,17 @@
 <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
     <?php
-    if(isset($_GET['msm'])==1){
-        ?>
-        <div class="alert alert-danger">
-            ya existe el nomnre del proyecto
-        </div>
+    switch($_GET['msm']){
+        case 1:
+            ?>
+            <div class="alert alert-danger">
+                ya existe el nomnre del proyecto
+            </div>
+        <?php
+        case 2:
+            ?>
+            <div class="alert alert-danger">
+                Error en los datos procure que los datos ingresados sean correctos...
+            </div>
         <?php
     }
     ?>

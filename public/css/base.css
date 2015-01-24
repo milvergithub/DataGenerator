@@ -1,12 +1,29 @@
 body{
     
 }
+.listaTablas{
+    max-height: 500px;
+    max-width: 50%;
+    overflow: scroll;
+}
 .full-with{
     padding: 0px;
     margin: 0px;
 }
 .nuevo{
     background-color: rgba(54, 121, 136, 0.63);
+}
+.line{
+    background-color: rgba(32, 173, 115, 0.5);
+    border-radius: 0.5em;
+    border: solid 1px #1a1a1a;
+
+}
+.line:hover{
+    background-color: rgba(39, 140, 85, 0.89);
+    border-radius: 0.5em;
+    border: solid 1px #1a1a1a;
+    box-shadow: #245269 2px 2px 20px 5px;
 }
 .proyecto{
     font-size: 2em;
@@ -19,10 +36,7 @@ body{
     background-repeat: no-repeat;
     box-shadow: #245269 5px 5px 20px 5px;
     border-radius: 0.2em;
-    -webkit-transition:all .7s ease-in;
-    -moz-transition:all .7s ease-in;
-    -ms-transition:all .7s ease-in;
-    -o-transition:all .7s ease-in;
+    border: solid 1px #101010;
 }
 .proyecto:hover{
     margin: 0.2em;
@@ -33,7 +47,7 @@ body{
     background-image: url("../../public/img/base-datos.png");
     box-shadow: #222222 5px 5px 20px 7px;
     border-radius: 0.2em;
-    border: dashed 1px cornsilk;
+    border: dashed 1px #101010;
     -webkit-transition:all .5s ease-out;
     -moz-transition:all .5s ease-out;
     -ms-transition:all .5s ease-out;
@@ -77,27 +91,77 @@ body{
 }
 .nivelPanel0{
     background-color:  rgb(233, 75, 59);
+    color: #ffffff;
 }
 .nivelPanel1{
     background-color:  rgb(249, 142, 51);
+    color: #ffffff;
 }
 .nivelPanel2{
     background-color: rgb(255, 182, 28);
+    color: #ffffff;
 }
 .nivelPanel3{
     background-color:  rgb(35, 174, 137);
+    color: #ffffff;
 }
 .nivelPanel4{
     background-color:  rgb(46, 193, 204);
+    color: #ffffff;
 }
 .nivelPanel5{
     background-color:  rgb(68, 157, 213);
+    color: #ffffff;
 }
 .nivelPanel6{
     background-color:  rgb(28, 126, 187);
+    color: #ffffff;
 }
 .nivelPanel7{
     background-color:  rgb(106, 85, 194);
+    color: #ffffff;
+}
+/*APARIENCIA PARA INDICADORES DE NIVELES*/
+.nivelPanelNiv0{
+    background-color:  rgb(233, 75, 59);
+    color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv1{
+    background-color:  rgb(249, 142, 51);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv2{
+    background-color: rgb(255, 182, 28);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv3{
+    background-color:  rgb(35, 174, 137);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv4{
+    background-color:  rgb(46, 193, 204);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv5{
+    background-color:  rgb(68, 157, 213);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv6{
+    background-color:  rgb(28, 126, 187);
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+.nivelPanelNiv7{
+    background-color:  rgb(106, 85, 194);
+    color: #ffffff;
+    border: solid 1px #ffffff;
 }
 .identificador{
     background-color: rgba(0, 201, 113, 0.89);

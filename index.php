@@ -21,12 +21,12 @@ require_once "config/config.php";
     <link href="public/css/style-responsive.css" rel="stylesheet">
     <!--HOJAS DE ESTILO PERSONALIZADo-->
     <link href="public/css/validationEngine.jquery.css" type="text/css" rel="stylesheet" />
-    <link href="public/css/base.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="public/js/html5shiv.js"></script>
+      <script src="public/js/respond.min.js"></script>
     <![endif]-->
+      <link href="public/css/base.css" rel="stylesheet">
   </head>
   <body>
   <section id="container" >

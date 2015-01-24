@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $( "#btnQuared").hide();
 });
 function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla,referenciados, isnull, constraint_type) {
     var identificador = tablaActual.toUpperCase() + '.' + columna;
@@ -28,7 +28,7 @@ function cargarPanelAdecuado(datos) {
         processData: false,
         mimeType: 'multipart/form-data',
         beforeSend: function (dato) {
-            $("#formularioPersonalizado").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
+            $("#formularioPersonalizado").html("<img src='public/img/ajax-loader.gif' class='img-responsive'/>");
             $("#formularioPersonalizado").show();
         },
         success: function (data) {
@@ -136,11 +136,17 @@ function cargarColumnasTabla() {
         }
     });
 }
-function changeVisualitation(){
-    var elementos=$(".proyecto");
-    for(i=0;i<elementos.size();i++){
-        elementos[i].removeClass("proyecto");
-    }
+function changeVisualitationLine(){
+    $('.proyectos').removeClass('well col-xs-3 proyecto');
+    $('.proyectos').addClass('panel panel-body line');
+    $( "#btnLine").hide();
+    $( "#btnQuared").show();
+}
+function changeVisualitationQuared(){
+    $('.proyectos').removeClass('panel panel-body line');
+    $('.proyectos').addClass('well col-xs-3 proyecto');
+    $( "#btnQuared").hide();
+    $( "#btnLine").show();
 }
 function guardarConfiguracion() {
     if($("#numerodatos").val() == ""){

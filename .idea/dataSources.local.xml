@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - bdtis@localhost" uuid="b2cd4a26-19c9-49ea-acad-fd2d31c60318">
-      <secret-storage>master_key</secret-storage>
-      <user-name>milver</user-name>
-      <schema-pattern>bdtis.pg_catalog bdtis.public</schema-pattern>
-      <default-schemas>bdtis.pg_catalog bdtis.public</default-schemas>
-    </data-source>
+    <data-source name="PostgreSQL - bdtis@localhost" uuid="b2cd4a26-19c9-49ea-acad-fd2d31c60318" />
   </component>
 </project>
 

@@ -9,7 +9,9 @@
         "referenciados": null,
         "numeric_precision": "32",
         "is_nullable": "NO",
-        "constraint_type": "PRIMARY KEY"
+        "constraint_type": "PRIMARY KEY",
+        "column_default": "nextval('categoria_cod_categoria_seq'::regclass)",
+        "check_clause": null
     },
     {
         "column_name": "nombre_categoria",
@@ -21,6 +23,8 @@
         "referenciados": null,
         "numeric_precision": null,
         "is_nullable": "NO",
-        "constraint_type": null
+        "constraint_type": null,
+        "column_default": null,
+        "check_clause": null
     }
 ]

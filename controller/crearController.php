@@ -8,11 +8,11 @@ $basededatos = $_POST['basededatos'];
 if ($basededatos == "PostgreSQL") {
     $crearDirectorio = new createDirModel();
     if (file_exists("../projects/" . $_POST[NOMBRE_PROYECTO])) {
-        header("Location: ../index.php?" . ACTION . "=login&msm=1");
+        header("Location: ../index.php?" . ACTION . "=nuevo&msm=1");
     } else {
         $config = "host=" . $_POST['host'] . " port=" . $_POST['puerto'] . " dbname=" . $_POST['nombrebasedatos'] . " user=" . $_POST['usuario'] . " password=" . $_POST['pass'] . "";
         try {
-            $cnx = pg_connect($config) or die ("Error de conexion. " . pg_last_error());
+            $cnx = pg_connect($config) or die (header("Location: ../index.php?" . ACTION . "=nuevo&msm=2"));
         } catch (Exception $exc) {
 
         }

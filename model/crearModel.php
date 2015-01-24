@@ -91,23 +91,28 @@ class crearModel{
     }
     function detalleTabla($tabla) {
         $resultadoDT = array();
-        $sqlDT = "SELECT  tab_columns.column_name, data_type, character_maximum_length,
-	                    numeric_precision, is_nullable, tab_constraints.constraint_type
-                FROM 	information_schema.columns AS tab_columns
-	            LEFT OUTER JOIN
-	                    information_schema.constraint_column_usage AS col_constraints
-	                 ON tab_columns.table_name = col_constraints.table_name AND
-                        tab_columns.column_name = col_constraints.column_name
-                LEFT OUTER JOIN
-                        information_schema.table_constraints AS tab_constraints
-                     ON tab_constraints.constraint_name = col_constraints.constraint_name
-                LEFT OUTER JOIN
-                        information_schema.check_constraints AS col_check_constraints
-                     ON col_check_constraints.constraint_name = tab_constraints.constraint_name
-                WHERE   tab_columns.table_name = '" . $tabla . "' AND
-                        tab_columns.table_schema = 'public' AND
-                        (tab_constraints.constraint_type='PRIMARY KEY' OR tab_constraints.constraint_type ISNULL)
-                ORDER BY ordinal_position;";
+        $sqlDT = "SELECT  tab_columns.column_name,
+                          data_type,
+                          character_maximum_length,
+                          numeric_precision, is_nullable,
+                          tab_constraints.constraint_type,
+                          column_default,
+                          check_clause
+                    FROM 	information_schema.columns AS tab_columns
+                    LEFT OUTER JOIN
+                            information_schema.constraint_column_usage AS col_constraints
+                         ON tab_columns.table_name = col_constraints.table_name AND
+                            tab_columns.column_name = col_constraints.column_name
+                    LEFT OUTER JOIN
+                            information_schema.table_constraints AS tab_constraints
+                         ON tab_constraints.constraint_name = col_constraints.constraint_name
+                    LEFT OUTER JOIN
+                            information_schema.check_constraints AS col_check_constraints
+                         ON col_check_constraints.constraint_name = tab_constraints.constraint_name
+                    WHERE   tab_columns.table_name = '" . $tabla . "' AND
+                            tab_columns.table_schema = 'public' AND
+                            (tab_constraints.constraint_type='PRIMARY KEY' OR tab_constraints.constraint_type='CHECK' OR tab_constraints.constraint_type ISNULL)
+                    ORDER BY ordinal_position;";
         $resFT = $this->conexion->Consultas($sqlDT);
         while ($regFT = pg_fetch_assoc($resFT)) {
             $resultadoDT[] = $regFT;
@@ -215,10 +220,16 @@ class crearModel{
     function getTableEstructurado($tabla, $referencias) {
         $retorno = array();
         for ($i = 0; $i < sizeof($referencias); $i++) {
-            $arreglo = ["column_name" => $referencias[$i]["referencias"], "data_type" => "FOREIGN", "character_maximum_length" => "",
-                "es_foranea" => "true", "referencian" => $referencias[$i]["referencias"], "tabla" => $referencias[$i]["tabla"],
-                "referenciados" => $referencias[$i]["referenciados"], "numeric_precision" => "", "is_nullable" => "NO",
-                "constraint_type" => "foraneas"];
+            $arreglo = [ "column_name" => $referencias[$i]["referencias"],
+                         "data_type" => "FOREIGN",
+                         "character_maximum_length" => "",
+                         "es_foranea" => "true",
+                         "referencian" => $referencias[$i]["referencias"],
+                         "tabla" => $referencias[$i]["tabla"],
+                         "referenciados" => $referencias[$i]["referenciados"],
+                         "numeric_precision" => "",
+                         "is_nullable" => "NO",
+                         "constraint_type" => "foraneas"];
             $retorno[$i] = $arreglo;
         }
         for ($k = 0; $k < sizeof($tabla); $k++) {

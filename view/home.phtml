@@ -2,7 +2,8 @@
     <a class="glyphicon glyphicon-plus-sign btn btn-success btn-lg" href="index.php?<?php echo ACTION ?>=nuevo">
         New
     </a>
-    <button onclick="changeVisualitation()" class="btn navbar-right fa fa-th"></button>
+    <button id="btnLine" onclick="changeVisualitationLine()" class="btn navbar-right fa fa-tasks"></button>
+    <button id="btnQuared" onclick="changeVisualitationQuared()" class="btn navbar-right fa fa-th"></button>
 </div>
 <?php
 $directorio=$proyectos->actionMostrarProyectos();
@@ -11,7 +12,7 @@ while ($archivo = readdir($directorio)){
     }
     else {
         ?>
-        <div class="col-xs-3 well proyecto">
+        <div class="proyectos well col-xs-3 proyecto">
             <?php
             echo "<a href='index.php?".ACTION."=load&".PROYECTO."=".$archivo."' class='badge bg-inverse'>".$archivo."</a>";
             ?>
