@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $( "#btnQuared").hide();
 });
-function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla,referenciados, isnull, constraint_type) {
+function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla,referenciados, isnull, constraint_type,column_default,check_clause) {
     var identificador = tablaActual.toUpperCase() + '.' + columna;
     $("#tablaCampo").html("<span class='badge bg-primary'>"+identificador+"</span>" +
     "<input type='hidden' name='nombre_columna' id='nombre_columna' value='" + identificador + "'/>");
@@ -15,6 +15,8 @@ function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, re
     datoConfig.append("referenciados", referenciados);
     datoConfig.append("is_null", isnull);
     datoConfig.append("constraint_type", constraint_type);
+    datoConfig.append("column_default",column_default);
+    datoConfig.append("check_clause",check_clause);
     cargarPanelAdecuado(datoConfig);
 }
 function cargarPanelAdecuado(datos) {
@@ -36,7 +38,7 @@ function cargarPanelAdecuado(datos) {
             $("#formularioPersonalizado").show();
         },
         error: function () {
-            $("#mensajeUploadDoc").text("error")
+            $("#formularioPersonalizado").text("error")
         }
     });
 }
@@ -46,7 +48,7 @@ function mostrarOcultar(num, tabla) {
             display: "show"
         });
         $("#NombreTabla").html(tabla);
-        $("#divtabla").load("view/formAttr.phtml", {tablaactual: tabla});
+        $("#divtabla").load("view/formSettings.php", {tablaactual: tabla});
     } else {
         $("#tabla" + num).css({
             display: "none"
@@ -148,10 +150,40 @@ function changeVisualitationQuared(){
     $( "#btnQuared").hide();
     $( "#btnLine").show();
 }
+function soloNumeros(event){
+    if(event.shiftKey){
+        event.preventDefault();
+    }
+    if(event.keyCode == 46 || event.keyCode == 8){
+    }
+    else{
+        if(event.keyCode < 95){
+            if(event.keyCode < 48 || event.keyCode > 57){
+                event.preventDefault();
+            }
+        }
+        else{
+            if(event.keyCode < 96 || event.keyCode > 105){
+                event.preventDefault();
+            }
+        }
+    }
+}
+function validacion(){
+    var valor = document.getElementById("numerodatos").value;
+    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
+        $("#numerodatos").parent().addClass('has-error');
+        return false;
+    }else{
+        $("#numerodatos").parent().removeClass('has-error');
+        $("#numerodatos").parent().addClass('has-success');
+    }
+}
 function guardarConfiguracion() {
-    if($("#numerodatos").val() == ""){
-        bootbox.alert("Ingrese una cantidad de datos a generar...",function(){
-
-        });
+    if($("#numerodatos").val().trim() == ""){
+        $("#mensajes").html("<div class='alert alert-danger'> Ingrese la cantidad de datos a generar...</div>");
+    }
+    else{
+        alert("numero");
     }
 }

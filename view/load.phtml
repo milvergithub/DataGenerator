@@ -30,8 +30,20 @@ function printDetalleTable($tabla){
     $var=null;
     $loadDetalle = new loadModel($_GET[PROYECTO]);
     $resultadoPDT = $loadDetalle->printDetalleTableLoad($tabla);
+    //print_r($resultadoPDT);
     /*
-     *
+     *  "column_name": "cod_categoria",
+        "data_type": "integer",
+        "character_maximum_length": null,
+        "es_foranea": "false",
+        "referencian": null,
+        "tabla": null,
+        "referenciados": null,
+        "numeric_precision": "32",
+        "is_nullable": "NO",
+        "constraint_type": "PRIMARY KEY",
+        "column_default": "nextval('categoria_cod_categoria_seq'::regclass)",
+        "check_clause": null
      * */
     for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
         $var .="<tr>"
@@ -44,7 +56,9 @@ function printDetalleTable($tabla){
             .$resultadoPDT[$contador]['tabla']."','"
             .$resultadoPDT[$contador]['referenciados']."','"
             .$resultadoPDT[$contador]['is_nullable']."','"
-            .$resultadoPDT[$contador]['constraint_type']."')\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
+            .$resultadoPDT[$contador]['constraint_type']."','"
+            .secuencial($resultadoPDT[$contador]['column_default'])."','"
+            .$resultadoPDT[$contador]['check_clause']."')\">" . $resultadoPDT[$contador]['column_name'] . "</button></td>"
             . "<td>" . isPrimaryKey($resultadoPDT[$contador]['constraint_type']) . "</td>"
             . "<td>" . $resultadoPDT[$contador]['is_nullable'] . "</td>"
             . "<td>" . $resultadoPDT[$contador]['data_type'] . "</td>"
@@ -52,6 +66,13 @@ function printDetalleTable($tabla){
             . "</tr>";
     }
     return $var;
+}
+function secuencial($cadena){
+    if(trim($cadena) !=null){
+        return "serial";
+    }else{
+        return '';
+    }
 }
 function statusColumn($estado){
     if($estado=="existe"){

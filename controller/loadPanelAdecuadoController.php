@@ -58,17 +58,20 @@ if($_POST['constraint_type'] == "foraneas"){
                 }else{
                     if(($_POST['data_type']=="money")){
                     /*SI EL TIPO DE DATOS ES monetario*/
+                        require_once "../view/type_data/moneyTypeView.phtml";
                     }else{
                         if(($_POST['data_type']=="bytea")){
                         /*SI EL TIPO DE DATOS ES archivo codificado*/
+                            require_once "../view/type_data/byteaTypeView.phtml";
                         }else{
                             if( ($_POST['data_type']=="cidr") OR
                                 ($_POST['data_type']=="inet") OR
                                 ($_POST['data_type']=="macaddr")){
                                 /*SI EL TIPO DE DATOS ES direcciones de red*/
+                                    require_once "../view/type_data/redTypeView.phtml";
                             }else{
                                 if( ($_POST['data_type']=="boolean") ){
-
+                                    require_once "../view/type_data/booleanTypeView.phtml";
                                 }else{
                                     require_once "../view/type_data/type404View.phtml";
                                 }

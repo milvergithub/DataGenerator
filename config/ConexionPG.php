@@ -21,6 +21,9 @@ class ConexionPG {
                 or die ('Error de conexión. Póngase en contacto con el administrador');
         return $BaseDato;
    }
+   function TetsConnection(){
+
+   }
    function Consultas($sql){
         $conx=$this->Conectar();
         if(!$conx) return 0; //Si no se pudo conectar
