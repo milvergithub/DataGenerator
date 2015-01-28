@@ -229,7 +229,9 @@ class crearModel{
                          "referenciados" => $referencias[$i]["referenciados"],
                          "numeric_precision" => "",
                          "is_nullable" => "NO",
-                         "constraint_type" => "foraneas"];
+                         "constraint_type" => "foraneas",
+                         "column_default" => "",
+                         "check_clause" => ""];
             $retorno[$i] = $arreglo;
         }
         for ($k = 0; $k < sizeof($tabla); $k++) {

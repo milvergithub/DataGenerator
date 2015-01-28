@@ -1,1 +1,44 @@
-[{"column_name":"cod_persona","data_type":"FOREIGN","character_maximum_length":"","es_foranea":"true","referencian":"cod_persona","tabla":"persona","referenciados":"cod_persona","numeric_precision":"","is_nullable":"NO","constraint_type":"foraneas"},{"column_name":"cod_cliente","data_type":"integer","character_maximum_length":null,"es_foranea":"false","referencian":null,"tabla":null,"referenciados":null,"numeric_precision":"32","is_nullable":"NO","constraint_type":"PRIMARY KEY","column_default":"nextval('cliente_cod_cliente_seq'::regclass)","check_clause":null},{"column_name":"nombre_cliente","data_type":"character varying","character_maximum_length":null,"es_foranea":"false","referencian":null,"tabla":null,"referenciados":null,"numeric_precision":null,"is_nullable":"NO","constraint_type":null,"column_default":null,"check_clause":null}]
+[
+  {
+    "column_name": "cod_persona",
+    "data_type": "FOREIGN",
+    "character_maximum_length": "",
+    "es_foranea": "true",
+    "referencian": "cod_persona",
+    "tabla": "persona",
+    "referenciados": "cod_persona",
+    "numeric_precision": "",
+    "is_nullable": "NO",
+    "constraint_type": "foraneas",
+    "column_default": "",
+    "check_clause": ""
+  },
+  {
+    "column_name": "cod_cliente",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "es_foranea": "false",
+    "referencian": null,
+    "tabla": null,
+    "referenciados": null,
+    "numeric_precision": "32",
+    "is_nullable": "NO",
+    "constraint_type": "PRIMARY KEY",
+    "column_default": "nextval('cliente_cod_cliente_seq'::regclass)",
+    "check_clause": null
+  },
+  {
+    "column_name": "nombre_cliente",
+    "data_type": "character varying",
+    "character_maximum_length": null,
+    "es_foranea": "false",
+    "referencian": null,
+    "tabla": null,
+    "referenciados": null,
+    "numeric_precision": null,
+    "is_nullable": "NO",
+    "constraint_type": null,
+    "column_default": null,
+    "check_clause": null
+  }
+]

@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 require_once "config/config.php";
 ?>
 <!DOCTYPE html>
@@ -59,7 +58,7 @@ require_once "config/config.php";
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2014 - Alvarez.is
+              2014 - Milver Flores Acevedo
               <a href="general.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>

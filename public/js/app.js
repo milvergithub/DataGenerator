@@ -89,7 +89,7 @@ function cargarContenidoTexto() {
     datoDoc.append("archivo", archivo);
     $.ajax({
         type: "POST",
-        url: "controller/procesaFile.php",
+        url: "controller/processFileController.php",
         enctype: 'multipart/form-data',
         data: datoDoc,
         cache: false,
@@ -101,10 +101,15 @@ function cargarContenidoTexto() {
             $("#contenidogenerar").show();
         },
         success: function (data) {
-            $("#contenidogenerar").text(data);
-            bootbox.alert(data, function () {
-
-            });
+            if(data==='visible'){
+                $("#divsubmit").css("display", "block");
+            }else{
+                $("#contenidogenerar").text(data);
+                bootbox.alert(data, function () {
+                });
+                $("#archivo").val(null);
+                $("#divsubmit").css("display", "none");
+            }
         },
         error: function () {
             $("#contenidogenerar").text("error")
@@ -169,14 +174,78 @@ function soloNumeros(event){
         }
     }
 }
+function addError(elemento){
+    $(elemento).parent().addClass('has-error');
+}
+function addSuccess(elemento){
+    $(elemento).parent().removeClass('has-error');
+    $(elemento).parent().addClass('has-success');
+}
 function validacion(){
-    var valor = document.getElementById("numerodatos").value;
-    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
-        $("#numerodatos").parent().addClass('has-error');
-        return false;
+    var estado=document.getElementById('directo').value;
+    if((estado)=="indirecto"){
+        var valor = document.getElementById("numerodatos").value;
+        if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
+            addError($("#numerodatos"));
+            return false;
+        }else{
+            addSuccess($("#numerodatos"));
+        }
+        var seleccionado=document.getElementById('formularioTipoOrigen').value;
+        switch (seleccionado){
+            case 'archivo':
+                break;
+            case 'tabla':
+                var tablaSelecionada = document.getElementById("tabla").selectedIndex;
+                if( tablaSelecionada == null || tablaSelecionada == 0 ) {
+                    addError($("#tabla"));
+                    return false;
+                }else{
+                    addSuccess($("#tabla"));
+                }
+                var columnaSelecionada = document.getElementById("columna").selectedIndex;
+                if( columnaSelecionada == null || columnaSelecionada == 0 ) {
+                    addError($("#columna"));
+                    return false;
+                }else{
+                    addSuccess($("#columna"));
+                }
+                alert(seleccionado);
+                break;
+            case 'lista':
+                var contenidoLista=document.getElementById('contenidogenerar').value;
+                alert(contenidoLista);
+                break;
+            case 'algoritmos':
+                alert(seleccionado);
+                break;
+            case 'rango':
+                var valor = document.getElementById("minimo").value;
+                if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
+                    addError($("#minimo"));
+                    return false;
+                }else{
+                    addSuccess($("#minimo"));
+                }
+                var valor = document.getElementById("maximo").value;
+                if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
+                    addError($("#maximo"));
+                    return false;
+                }else{
+                    addSuccess($("#maximo"));
+                }
+                alert(seleccionado);
+                break;
+        }
+
     }else{
-        $("#numerodatos").parent().removeClass('has-error');
-        $("#numerodatos").parent().addClass('has-success');
+        var valor = document.getElementById("numerodatos").value;
+        if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
+            addError($("#numerodatos"));
+            return false;
+        }else{
+            addSuccess($("#numerodatos"));
+        }
     }
 }
 function guardarConfiguracion() {
@@ -184,6 +253,6 @@ function guardarConfiguracion() {
         $("#mensajes").html("<div class='alert alert-danger'> Ingrese la cantidad de datos a generar...</div>");
     }
     else{
-        alert("numero");
+        alert("paso las pruebas...")
     }
 }
