@@ -213,8 +213,14 @@ function validacion(){
                 alert(seleccionado);
                 break;
             case 'lista':
-                var contenidoLista=document.getElementById('contenidogenerar').value;
+                var contenidoLista=document.formConfiguracion.contenidogenerar.value;
                 alert(contenidoLista);
+                if( contenidoLista == null || contenidoLista.length == 0 || /^\s+$/.test(valor)) {
+                    addError($("#contenidogenerar"));
+                    return false;
+                }else{
+                    addSuccess($("#contenidogenerar"));
+                }
                 break;
             case 'algoritmos':
                 alert(seleccionado);
@@ -249,10 +255,5 @@ function validacion(){
     }
 }
 function guardarConfiguracion() {
-    if($("#numerodatos").val().trim() == ""){
-        $("#mensajes").html("<div class='alert alert-danger'> Ingrese la cantidad de datos a generar...</div>");
-    }
-    else{
-        alert("paso las pruebas...")
-    }
+    alert("paso las prubas");
 }

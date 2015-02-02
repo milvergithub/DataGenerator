@@ -18,5 +18,8 @@ switch ($_POST['elegido']){
     case "rango":
         require_once "../view/rango.phtml";
         break;
+    case "algoritmo":
+        require_once "../view/formAlgoritmos.phtml";
+        break;
 }
 ?>

@@ -5,16 +5,34 @@
  * Date: 19/11/14
  * Time: 14:46
  */
+?>
+<input type="hidden" id="tablaActual" value="<?php echo $_POST['tablaActual'] ?>"/>
+<input type="hidden" id="columna" value="<?php echo $_POST['columna'] ?>"/>
+<input type="hidden" id="data_type" value="<?php echo $_POST['data_type'] ?>"/>
+<input type="hidden" id="es_foranea" value="<?php echo $_POST['es_foranea'] ?>"/>
+<input type="hidden" id="referencian" value="<?php echo $_POST['referencian'] ?>"/>
+<input type="hidden" id="tabla" value="<?php echo $_POST['tabla'] ?>"/>
+<input type="hidden" id="is_null" value="<?php echo $_POST['is_null'] ?>"/>
+<input type="hidden" id="constraint_type" value="<?php echo $_POST['constraint_type'] ?>"/>
+<input type="hidden" id="column_default" value="<?php echo $_POST['column_default'] ?>"/>
+<input type="hidden" id="check_clause" value="<?php echo $_POST['check_clause'] ?>"/>
+<?php
 if($_POST['constraint_type'] == "foraneas"){
     require_once "../view/formularioForeignKey.phtml";
 }else{
     if(($_POST['constraint_type']=="PRIMARY KEY")){
         switch($_POST['data_type']){
             case 'integer':
-                require_once "../view/formularioPrimaryKey.phtml";/*formulacio si es integer*/
+                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulacio si es integer*/
             break;
+            case 'smallint':
+                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulacio si es integer*/
+            break;
+            case 'bigint':
+                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulacio si es integer*/
+                break;
             case 'character varying':
-                require_once "../view/formularioPrimaryKey.phtml";/*formulario si es text*/
+                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulario si es text*/
                 break;
         }
     }else{

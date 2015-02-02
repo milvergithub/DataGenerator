@@ -18,6 +18,10 @@ class GeneratorTextModel {
         $posDomain=rand(0,count($dominios)-1);
         return ($this->getGenerarPalabras()."@".$dominios[$posDomain].$extenciones[$posExt]);
     }
+    function getGenerarEmailWhithDomain($dominios) {
+        $posDom=rand(0,count($dominios)-1);
+        return ($this->getGenerarPalabras()."@".$dominios[$posDom]);
+    }
     function getGenerarPalabras($min = 4, $max = 8,$iniMay=true) {
         $vocales = array('a', 'e', 'i', 'o', 'u');
         $consonantes = array('b', 'c', 'd', 'f', 'g', 'j', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y');
