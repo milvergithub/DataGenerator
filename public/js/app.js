@@ -210,9 +210,8 @@ function validacion(){
                 }else{
                     addSuccess($("#columna"));
                 }
-                alert(seleccionado);
                 break;
-            case 'lista':
+            case 'lista'://MEJORAR
                 var contenidoLista=document.formConfiguracion.contenidogenerar.value;
                 alert(contenidoLista);
                 if( contenidoLista == null || contenidoLista.length == 0 || /^\s+$/.test(valor)) {
@@ -223,7 +222,6 @@ function validacion(){
                 }
                 break;
             case 'algoritmos':
-                alert(seleccionado);
                 break;
             case 'rango':
                 var valor = document.getElementById("minimo").value;
@@ -240,7 +238,6 @@ function validacion(){
                 }else{
                     addSuccess($("#maximo"));
                 }
-                alert(seleccionado);
                 break;
         }
 
@@ -255,5 +252,41 @@ function validacion(){
     }
 }
 function guardarConfiguracion() {
-    alert("paso las prubas");
+    var datosDetalle = new FormData();
+    /*DATOS DEL DETALLE DE LA COLUMNA*/
+    datosDetalle.append('tablaActual',document.getElementById('tablaActual').value);
+    datosDetalle.append('columna',document.getElementById('columna').value);
+    datosDetalle.append('data_type',document.getElementById('data_type').value);
+    datosDetalle.append('es_foranea',document.getElementById('es_foranea').value);
+    datosDetalle.append('referencian',document.getElementById('referencian').value);
+    datosDetalle.append('tabla',document.getElementById('tabla').value);
+    datosDetalle.append('is_null',document.getElementById('is_null').value);
+    datosDetalle.append('constraint_type',document.getElementById('constraint_type').value);
+    datosDetalle.append('column_default',document.getElementById('column_default').value);
+    datosDetalle.append('check_clause',document.getElementById('check_clause').value);
+    /*DATOS DE CONFIGURACION CANTIDAD, PROYECTO*/
+    datosDetalle.append('cantidad',document.getElementById('numerodatos').value);
+    datosDetalle.append('proyecto',document.getElementById('project').value);
+
+    var seleccionado=document.getElementById('formularioTipoOrigen').value;
+    switch (seleccionado){
+        case 'archivo':
+            alert("archivo");
+            break;
+        case 'tabla':
+            alert("tabla");
+            break;
+        case 'lista':
+            alert("lista");
+            break;
+        case 'algoritmo':
+            alert("algoritmo");
+            break;
+        case 'rango':
+            datosDetalle.append('minimo',document.getElementById('minimo').value);
+            datosDetalle.append('maximo',document.getElementById('maximo').value);
+            sendTypeRango(datosDetalle);
+            break;
+    }
+
 }

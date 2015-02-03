@@ -9,6 +9,6 @@
    <div id="tablaCampo" class="panel">
         <span class="badge bg-inverse glyphicon glyphicon-hand-left"> Selecione un atributo</span>
    </div>
-   <div id="formularioPersonalizado" class="panel well">
+   <div id="formularioPersonalizado" class="panel">
    </div>
 </form>

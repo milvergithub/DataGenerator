@@ -84,6 +84,7 @@ require_once "config/config.php";
     <script src="public/js/jquery.validate.js"></script>
     <script src="public/js/bootbox.js" ></script>
     <script src="public/js/app.js"></script>
+    <script src="public/js/functionsDateGenrate.js"></script>
     <script src="public/js/validaciones.js"></script>
   </body>
 </html>
