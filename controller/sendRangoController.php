@@ -9,6 +9,12 @@ require_once "../model/writerReadDatesModel.php";
 require_once "../model/GeneratorNumericsModel.php";
 $generatorNumbers=new GeneratorNumericsModel();
 $model=new writerReadDatesModel($_POST['proyecto']);
-$datos=$generatorNumbers->getNumerosEnteros($_POST['minimo'],$_POST['maximo'],$_POST['cantidad'],false);
+if($_POST['aleatorio']=='false'){
+    $aleatorio=false;
+}else{
+    $aleatorio=true;
+}
+
+$datos=$generatorNumbers->getNumerosEnteros($_POST['minimo'],$_POST['maximo'],$_POST['cantidad'],$aleatorio);
 $model->setProccessTabla($_POST['columna'],$datos,$_POST['tablaActual']);
 echo "SUCCESSFULL...";

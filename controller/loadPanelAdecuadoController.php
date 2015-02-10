@@ -18,7 +18,7 @@
 <input type="hidden" id="check_clause" value="<?php echo $_POST['check_clause'] ?>"/>
 <?php
 if($_POST['constraint_type'] == "foraneas"){
-    require_once "../view/formularioForeignKey.phtml";
+    require_once "../view/type_data/formularioForeignKey.phtml";
 }else{
     if(($_POST['constraint_type']=="PRIMARY KEY")){
         switch($_POST['data_type']){

@@ -20,6 +20,22 @@ class loadModel {
         $mapaTablas = json_decode($mapa, true);
         return $mapaTablas;
     }
+    public function getStatusTableColumnLoad($tabla,$columa){
+        $res="no existe";
+        $dateMapeo =file_get_contents($this->path."mapeo/mapeo.json");
+        $tablas=json_decode($dateMapeo,true);
+        for($i=0;$i<count($tablas);$i++){
+            if($tablas[$i]['tablename']==$tabla){
+                $fila=$tablas[$i];
+                $cantidad=$fila['cantidad'];
+                if($cantidad>0){
+                    $res="existe";
+                }
+            }
+            break;
+        }
+        return $res;
+    }
     public function getStatusColumnLoad($tabla,$columna){
         $res="no existe";
         $dateTabla =file_get_contents($this->path."dates/".$tabla.".json");

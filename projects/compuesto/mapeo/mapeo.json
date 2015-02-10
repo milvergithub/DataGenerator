@@ -1,0 +1,26 @@
+[
+  {
+    "tablename": "cliente",
+    "nivel": 0
+  },
+  {
+    "tablename": "turno",
+    "nivel": 0
+  },
+  {
+    "tablename": "producto",
+    "nivel": 0
+  },
+  {
+    "tablename": "vendedor",
+    "nivel": 1
+  },
+  {
+    "tablename": "venta",
+    "nivel": 2
+  },
+  {
+    "tablename": "detalle",
+    "nivel": 3
+  }
+]

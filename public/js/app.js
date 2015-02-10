@@ -285,6 +285,7 @@ function guardarConfiguracion() {
         case 'rango':
             datosDetalle.append('minimo',document.getElementById('minimo').value);
             datosDetalle.append('maximo',document.getElementById('maximo').value);
+            datosDetalle.append('aleatorio',document.getElementById('repeat').checked);
             sendTypeRango(datosDetalle);
             break;
     }

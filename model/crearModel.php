@@ -18,16 +18,28 @@ class crearModel{
             $datos[1], $datos[2], $datos[4], $datos[5], $datos[6]
         );
     }
+    /*FUNCION QUE ORDENA POR PRIORIDAD DE LLENADO*/
     public function getTablesAndReferences() {
         $enaccion = true;
-        $tablasCatalogators = $this->getCatalogatorsAndSimplex();
-        $tablasReferenciadas = formatearTablasAndReferenciados($this->getTablesToRefences());
-        $general = array();
-        $lineal = $this->getReferenciasLineal($tablasCatalogators);
-        $general[0] = $lineal;
+        $tablasCatalogators = $this->getCatalogatorsAndSimplex();/*devuelve las entidades catalogadores*/
+        $tablasReferenciadas = formatearTablasAndReferenciados($this->getTablesToRefences());/*devuelve las que refrencian formateada*/
+        /*
+         * echo "<table>";
+        for($i=0;$i<count($tablasReferenciadas);$i++){
+            echo "<tr>
+                    <td>".$tablasReferenciadas[$i]['tabla']."</td>
+                    <td>".$tablasReferenciadas[$i]['referencias']."</td>
+                    <td>".$tablasReferenciadas[$i]['revisado']."</td>
+                  </tr>";
+        }
+        echo "</table><br><br><br>";*/
+        $general = array();/*donde voy a almacenar por orden pero hay que invertirlo todavia*/
+        $lineal = $this->getReferenciasLineal($tablasCatalogators);/*la lista de catalogadores lo llevo a una array lineal*/
+        //print_r($lineal);echo "<br><br><br>";
+        $general[0] = $lineal;/*a la solucion lo guardo los catalogadores*/
         $cantidad = 0;
         if ($enaccion) {
-            while ($this->getCantidadRevisar($tablasReferenciadas) > 0) {
+            while (true) {
                 $filaArray = $general[sizeof($general) - 1];
                 $nuevoFila = array();
                 $ind = 0;
@@ -40,11 +52,15 @@ class crearModel{
                         }
                     }
                 }
-                $posiscion = sizeof($general);
-                $general[$posiscion] = $nuevoFila;
-                $cantidad++;
+                if(count($nuevoFila)>0){
+                    $posiscion = sizeof($general);
+                    $general[$posiscion] = $nuevoFila;
+                    $cantidad++;
+                }else{
+                    break;
+                }
             }
-            //print_r($general);
+            //print_r($general);echo "<br><br><br>";
             //echo "--------------------------------------------------------";
             //print_r(array_reverse($this->getRemoveRepeticion($general)));
         }

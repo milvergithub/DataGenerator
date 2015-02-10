@@ -356,7 +356,7 @@ ul.sidebar-menu li a span {
 }
 
 ul.sidebar-menu li a {
-    color: #aeb2b7;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 15px 0 15px 10px;
@@ -370,7 +370,6 @@ ul.sidebar-menu li a {
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #68dff0;
     color: #fff;
     display: block;
 
