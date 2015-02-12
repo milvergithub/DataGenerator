@@ -2,83 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92f514cc-81ce-4157-b8ab-53689b29ebb2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/conexion/conexion.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/archivos_empresa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/chat.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/configuracion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/configuracion_semestral.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/contrato_empresa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/convocatoria.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/documento.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/email_integrante.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/email_user.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/evaluacion_archivos.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/foro.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/gestion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/grupo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/grupo_empresa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/hora_presentacion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/horario.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/integrantes.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/reunion_evaluativo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/rol.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/telefono_integrante.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/telefono_user.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/tipo_documento.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/tipo_evaluacion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/dates/usuario.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/mapeo/mapeo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/archivos_empresa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/chat.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/configuracion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/configuracion_semestral.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/contrato_empresa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/convocatoria.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/documento.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/email_integrante.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/email_user.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/evaluacion_archivos.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/foro.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/gestion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/grupo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/grupo_empresa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/hora_presentacion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/horario.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/integrantes.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/reunion_evaluativo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/rol.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/telefono_integrante.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/telefono_user.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/tipo_documento.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/tipo_evaluacion.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/sitbd/tables/usuario.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/loadingblue.gif" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/fullcalendar/bootstrap-fullcalendar.css" afterPath="$PROJECT_DIR$/public/js/fullcalendar/bootstrap-fullcalendar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/calendar-conf-events.js" afterPath="$PROJECT_DIR$/public/js/calendar-conf-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/dates/categoria.json" afterPath="$PROJECT_DIR$/projects/venta/dates/categoria.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/chartjs-conf.js" afterPath="$PROJECT_DIR$/public/js/chartjs-conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/cliente.json" afterPath="$PROJECT_DIR$/projects/venta/tables/cliente.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/crearModel.php" afterPath="$PROJECT_DIR$/model/crearModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/easy-pie-chart.js" afterPath="$PROJECT_DIR$/public/js/easy-pie-chart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/form-component.js" afterPath="$PROJECT_DIR$/public/js/form-component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/gritter-conf.js" afterPath="$PROJECT_DIR$/public/js/gritter-conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-1.8.3.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.dcjqaccordion.2.7.js" afterPath="$PROJECT_DIR$/public/js/jquery.dcjqaccordion.2.7.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.validationEngine.js" afterPath="$PROJECT_DIR$/public/js/jquery.validationEngine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/loadModel.php" afterPath="$PROJECT_DIR$/model/loadModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/loadPanelAdecuadoController.php" afterPath="$PROJECT_DIR$/controller/loadPanelAdecuadoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/load.phtml" afterPath="$PROJECT_DIR$/view/load.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/morris-conf.js" afterPath="$PROJECT_DIR$/public/js/morris-conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/navbar.phtml" afterPath="$PROJECT_DIR$/view/navbar.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/venta/tables/persona.json" afterPath="$PROJECT_DIR$/projects/venta/tables/persona.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/rango.phtml" afterPath="$PROJECT_DIR$/view/rango.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/sendRangoController.php" afterPath="$PROJECT_DIR$/controller/sendRangoController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sparkline-chart.js" afterPath="$PROJECT_DIR$/public/js/sparkline-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/tasks.js" afterPath="$PROJECT_DIR$/public/js/tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/validationEngine.jquery.css" afterPath="$PROJECT_DIR$/public/css/validationEngine.jquery.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/writerReadDatesModel.php" afterPath="$PROJECT_DIR$/model/writerReadDatesModel.php" />
     </list>
     <ignored path="DateGenIdioms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projects/venta/tables/persona.json" />
         <option value="$PROJECT_DIR$/projects/venta/tables/cliente.json" />
         <option value="$PROJECT_DIR$/view/nuevo.phtml" />
         <option value="$PROJECT_DIR$/view/type_data/booleanTypeView.phtml" />
@@ -154,7 +92,6 @@
         <option value="$PROJECT_DIR$/view/lista.phtml" />
         <option value="$PROJECT_DIR$/view/formSettings.php" />
         <option value="$PROJECT_DIR$/public/js/functionsDateGenrate.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/model/writerTableModel.php" />
         <option value="$PROJECT_DIR$/model/writerDatesModel.php" />
         <option value="$PROJECT_DIR$/view/rango.phtml" />
@@ -179,6 +116,8 @@
         <option value="$PROJECT_DIR$/controller/crearController.php" />
         <option value="$PROJECT_DIR$/public/css/base.css" />
         <option value="$PROJECT_DIR$/model/crearModel.php" />
+        <option value="$PROJECT_DIR$/view/load.phtml" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -262,7 +201,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="projects" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DateGenIdioms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DateGenIdioms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,7 +365,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20335111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20335111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.104321904" sideWeight="0.5003808" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -809,31 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7638437" vertical-offset="465" max-vertical-offset="1710">
-          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/loadModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29641694" vertical-offset="466" max-vertical-offset="1080">
           <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/load.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19134775" vertical-offset="1037" max-vertical-offset="1782">
-          <caret line="64" column="77" selection-start-line="64" selection-start-column="77" selection-end-line="64" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/loadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="342">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -848,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,7 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94009984" vertical-offset="173" max-vertical-offset="846">
           <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,30 +794,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16848674" vertical-offset="0" max-vertical-offset="3150">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/crearController.php">
+    <entry file="file://$PROJECT_DIR$/projects/ventadb/conexion/conexion.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6705491" vertical-offset="821" max-vertical-offset="1422">
-          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9120521" vertical-offset="1078" max-vertical-offset="1764">
+          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/load.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.059900165" vertical-offset="0" max-vertical-offset="1836">
+          <caret line="2" column="69" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/loadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="342">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/modulos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.718802" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.16139767" vertical-offset="1019" max-vertical-offset="1620">
+          <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/crearModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33943427" vertical-offset="228" max-vertical-offset="4770">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.36272877" vertical-offset="3958" max-vertical-offset="4770">
+          <caret line="232" column="32" selection-start-line="232" selection-start-column="32" selection-end-line="232" selection-end-column="32" />
           <folding>
             <marker date="1423595623438" expanded="true" signature="-1:-1" placeholder="SELECT table..pg_tables..." />
             <marker date="1423595623438" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..pg_constraint..." />
@@ -902,6 +851,14 @@
             <marker date="1423595623438" expanded="true" signature="-1:-1" placeholder="SELECT c.oid..pg_class..." />
             <marker date="1423595623438" expanded="true" signature="-1:-1" placeholder="SELECT relna..pg_class..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/crearController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49084857" vertical-offset="749" max-vertical-offset="1422">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
