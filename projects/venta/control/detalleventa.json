@@ -1,0 +1,26 @@
+[
+  {
+    "column_name": "cod_producto",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_cliente",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_vendedor",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_detalleventa",
+    "rellenado": true
+  },
+  {
+    "column_name": "cantidad_detalleventa",
+    "rellenado": true
+  },
+  {
+    "column_name": "fecha_detalleventa",
+    "rellenado": true
+  }
+]

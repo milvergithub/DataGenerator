@@ -1,0 +1,14 @@
+[
+  {
+    "column_name": "cod_persona",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_proveedor",
+    "rellenado": true
+  },
+  {
+    "column_name": "nombre_proveedor",
+    "rellenado": true
+  }
+]

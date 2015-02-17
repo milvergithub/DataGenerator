@@ -1,0 +1,10 @@
+[
+  {
+    "column_name": "cod_persona",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_email",
+    "rellenado": true
+  }
+]

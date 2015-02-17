@@ -1,0 +1,14 @@
+[
+  {
+    "column_name": "cod_persona",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_telefono",
+    "rellenado": true
+  },
+  {
+    "column_name": "numero_telefono",
+    "rellenado": true
+  }
+]

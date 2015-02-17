@@ -33,21 +33,6 @@ function printDetalleTable($tabla){
     $var=null;
     $loadDetalle = new loadModel($_GET[PROYECTO]);
     $resultadoPDT = $loadDetalle->printDetalleTableLoad($tabla);
-    //print_r($resultadoPDT);
-    /*
-     *  "column_name": "cod_categoria",
-        "data_type": "integer",
-        "character_maximum_length": null,
-        "es_foranea": "false",
-        "referencian": null,
-        "tabla": null,
-        "referenciados": null,
-        "numeric_precision": "32",
-        "is_nullable": "NO",
-        "constraint_type": "PRIMARY KEY",
-        "column_default": "nextval('categoria_cod_categoria_seq'::regclass)",
-        "check_clause": null
-     * */
     for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
         $var .="<tr>"
             . "<td><button class='btn btn-link'onclick=\"

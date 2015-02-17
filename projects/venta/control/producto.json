@@ -1,0 +1,18 @@
+[
+  {
+    "column_name": "cod_categoria",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_producto",
+    "rellenado": true
+  },
+  {
+    "column_name": "nombre_producto",
+    "rellenado": true
+  },
+  {
+    "column_name": "descripcion_producto",
+    "rellenado": true
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "column_name": "cod_producto",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_proveedor",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_compra_producto",
+    "rellenado": true
+  },
+  {
+    "column_name": "fecha_compra_producto",
+    "rellenado": true
+  }
+]

@@ -38,15 +38,16 @@ class loadModel {
     }
     public function getStatusColumnLoad($tabla,$columna){
         $res="no existe";
-        $dateTabla =file_get_contents($this->path."dates/".$tabla.".json");
+        $dateTabla =file_get_contents($this->path."control/".$tabla.".json");
         $tablaDatos=json_decode($dateTabla,true);
-        if(sizeof($tablaDatos)>0){
-            if (array_key_exists($columna, $tablaDatos[0])) {
-                if(($tablaDatos[0][$columna])){
+        for($i=0;$i<count($tablaDatos);$i++){
+            if(trim($tablaDatos[$i]["column_name"])==trim($columna)){
+                if($tablaDatos[$i]["rellenado"]==true){
                     $res="existe";
+                }else{
+                    $res="no existe";
                 }
             }
-
         }
         return $res;
     }

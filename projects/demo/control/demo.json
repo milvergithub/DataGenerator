@@ -1,0 +1,34 @@
+[
+  {
+    "column_name": "cod_demo",
+    "rellenado": true
+  },
+  {
+    "column_name": "edad_demo",
+    "rellenado": true
+  },
+  {
+    "column_name": "carnet_demo",
+    "rellenado": true
+  },
+  {
+    "column_name": "telefono_demo",
+    "rellenado": true
+  },
+  {
+    "column_name": "celular_demo",
+    "rellenado": true
+  },
+  {
+    "column_name": "codigo_postal_demo",
+    "rellenado": true
+  },
+  {
+    "column_name": "numero_casa",
+    "rellenado": true
+  },
+  {
+    "column_name": "telefono_referencia_demo",
+    "rellenado": true
+  }
+]

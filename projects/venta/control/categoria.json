@@ -1,0 +1,10 @@
+[
+  {
+    "column_name": "cod_categoria",
+    "rellenado": true
+  },
+  {
+    "column_name": "nombre_categoria",
+    "rellenado": true
+  }
+]

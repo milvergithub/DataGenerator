@@ -1,0 +1,18 @@
+[
+  {
+    "column_name": "cond_vendedor",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_cliente",
+    "rellenado": true
+  },
+  {
+    "column_name": "cod_venta",
+    "rellenado": true
+  },
+  {
+    "column_name": "fecha_venta",
+    "rellenado": true
+  }
+]

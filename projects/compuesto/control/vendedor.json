@@ -1,0 +1,10 @@
+[
+  {
+    "column_name": "cod_turno",
+    "rellenado": true
+  },
+  {
+    "column_name": "cond_vendedor",
+    "rellenado": true
+  }
+]

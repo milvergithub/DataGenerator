@@ -135,6 +135,15 @@ class crearModel{
         }
         return $this->getTablaReducida($this->aumentarCampos($resultadoDT), $tabla);
     }
+    public function getDetalleTablaStatus($tabla){
+        $detalleTabla=$this->detalleTabla($tabla);
+        $detalleStatus=array();
+        for($i=0;$i<count($detalleTabla);$i++){
+            $linea=["column_name" => $detalleTabla[$i]['column_name'], "rellenado"=> false];
+            $detalleStatus[$i]=$linea;
+        }
+        return $detalleStatus;
+    }
     public function getReferenciasLineal($vertical) {
         $lineal = array();
         $contador = 0;

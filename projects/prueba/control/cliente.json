@@ -1,0 +1,14 @@
+[
+  {
+    "column_name": "cod_persona",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_cliente",
+    "rellenado": false
+  },
+  {
+    "column_name": "nombre_cliente",
+    "rellenado": false
+  }
+]
