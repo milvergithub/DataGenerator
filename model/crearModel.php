@@ -168,7 +168,7 @@ class crearModel{
         for ($i = count($ordenadoCRT); $i > 0; $i--) {
             for ($j = 0; $j < count($ordenadoCRT[$i - 1]); $j++) {
                 if (!($this->busacarExistencia($ordenadoSRT, $ordenadoCRT[$i - 1][$j]))) {
-                    $tablaArray = ["tablename" => $ordenadoCRT[$i - 1][$j], "nivel" => ($i - 1)];
+                    $tablaArray = ["tablename" => $ordenadoCRT[$i - 1][$j], "nivel" => ($i - 1),"cantidad"=>0];
                     $ordenadoSRT[$ind] = $tablaArray;
                     $ind++;
                 }

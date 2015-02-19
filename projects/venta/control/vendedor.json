@@ -1,14 +1,1 @@
-[
-  {
-    "column_name": "cod_persona",
-    "rellenado": true
-  },
-  {
-    "column_name": "cod_vendedor",
-    "rellenado": true
-  },
-  {
-    "column_name": "estado_vendedor",
-    "rellenado": true
-  }
-]
+[{"column_name":"cod_persona","rellenado":false},{"column_name":"cod_vendedor","rellenado":false},{"column_name":"estado_vendedor","rellenado":false}]

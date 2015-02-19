@@ -1,7 +1,9 @@
 <div class="">
     <div>
-        <button onclick="alert('Rellenar...')" class="btn btn-theme03">Rellenar Base de datos</button>
+        <?php echo '<button onclick="verificarEstadoConfiguracion(\''.$_GET[PROYECTO].'\')" class="btn btn-theme03">Rellenar Base de datos</button>'; ?>
+        <div id="mensajeVerificarEstado"></div>
     </div>
+
     <div class="col-lg-14 col-lg-7 col-md-7 col-sm-7 col-xs-7 well full-with">
         <?php
         echo '<h3>PROJECT  <i class="fa fa-angle-right"></i> '. $_GET[PROYECTO] .'</h3>';

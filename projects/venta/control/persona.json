@@ -1,14 +1,1 @@
-[
-  {
-    "column_name": "cod_persona",
-    "rellenado": true
-  },
-  {
-    "column_name": "nombre_persona",
-    "rellenado": true
-  },
-  {
-    "column_name": "edad_persona",
-    "rellenado": true
-  }
-]
+[{"column_name":"cod_persona","rellenado":false},{"column_name":"nombre_persona","rellenado":false},{"column_name":"edad_persona","rellenado":false}]

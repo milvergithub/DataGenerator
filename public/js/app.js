@@ -48,7 +48,7 @@ function mostrarOcultar(num, tabla) {
             display: "show"
         });
         $("#NombreTabla").html(tabla);
-        $("#divtabla").load("view/formSettings.php", {tablaactual: tabla});
+        $("#divtabla").load("view/formSettings.php", {tablaactual: tabla,proyecto:document.getElementById("project").value});
     } else {
         $("#tabla" + num).css({
             display: "none"

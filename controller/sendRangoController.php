@@ -14,7 +14,8 @@ if($_POST['aleatorio']=='false'){
 }else{
     $aleatorio=true;
 }
-
 $datos=$generatorNumbers->getNumerosEnteros($_POST['minimo'],$_POST['maximo'],$_POST['cantidad'],$aleatorio);
 $model->setProccessTabla($_POST['columna'],$datos,$_POST['tablaActual']);
+$model->cambiarEstadoColumna($_POST['tablaActual'],$_POST['columna']);
+$model->setCantidadDatosTabla($_POST['tablaActual'],$_POST['cantidad']);
 echo "SUCCESSFULL...";

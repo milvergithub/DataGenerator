@@ -1,14 +1,1 @@
-[
-  {
-    "column_name": "cod_producto",
-    "rellenado": true
-  },
-  {
-    "column_name": "cod_cliente, cod_venta, cond_vendedor",
-    "rellenado": true
-  },
-  {
-    "column_name": "cod_detalle",
-    "rellenado": true
-  }
-]
+[{"column_name":"cod_producto","rellenado":false},{"column_name":"cod_cliente, cod_venta, cond_vendedor","rellenado":false},{"column_name":"cod_detalle","rellenado":false}]

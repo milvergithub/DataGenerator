@@ -1,1 +1,1 @@
-[{"tablename":"cliente","nivel":0},{"tablename":"turno","nivel":0},{"tablename":"producto","nivel":0},{"tablename":"vendedor","nivel":1},{"tablename":"venta","nivel":2},{"tablename":"detalle","nivel":3}]
+[{"tablename":"cliente","nivel":0,"cantidad":"10"},{"tablename":"turno","nivel":0,"cantidad":"15"},{"tablename":"producto","nivel":0,"cantidad":0},{"tablename":"vendedor","nivel":1,"cantidad":0},{"tablename":"venta","nivel":2,"cantidad":0},{"tablename":"detalle","nivel":3,"cantidad":0}]

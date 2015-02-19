@@ -1,0 +1,30 @@
+[
+  {
+    "column_name": "cod_rolrep, cod_gruporep, cod_usuariorep",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_gest, cod_conv, cod_emp",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_roldoc, cod_grupodoc, cod_usuariodoc",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_contrato_emp",
+    "rellenado": false
+  },
+  {
+    "column_name": "fecha_findoc_emp",
+    "rellenado": false
+  },
+  {
+    "column_name": "fecha_finprop_emp",
+    "rellenado": false
+  },
+  {
+    "column_name": "estado_contrato_emp",
+    "rellenado": false
+  }
+]
