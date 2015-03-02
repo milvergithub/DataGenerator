@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conexion>
+  <nombre>ventas</nombre>
+  <host>localhost</host>
+  <puerto>5432</puerto>
+  <motor>PostgreSQL</motor>
+  <base>ventas</base>
+  <usuario>milver</usuario>
+  <password>milver</password>
+</conexion>

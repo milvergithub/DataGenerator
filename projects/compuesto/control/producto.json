@@ -1,1 +1,10 @@
-[{"column_name":"cod_producto","rellenado":false},{"column_name":"nombre_producto","rellenado":false}]
+[
+  {
+    "column_name": "cod_producto",
+    "rellenado": true
+  },
+  {
+    "column_name": "nombre_producto",
+    "rellenado": false
+  }
+]

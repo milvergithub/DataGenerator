@@ -1,6 +1,7 @@
 <?php
 error_reporting(0);
 require_once "../config/config.php";
+require_once "../config/ConexionPG.php";
 require_once "../model/crearModel.php";
 require_once "../model/createDirModel.php";
 require_once "../model/crearStructureModel.php";
@@ -10,9 +11,9 @@ if ($basededatos == "PostgreSQL") {
     if (file_exists("../projects/" . $_POST[NOMBRE_PROYECTO])) {
         header("Location: ../index.php?" . ACTION . "=nuevo&msm=1");
     } else {
-        $config = "host=" . $_POST['host'] . " port=" . $_POST['puerto'] . " dbname=" . $_POST['nombrebasedatos'] . " user=" . $_POST['usuario'] . " password=" . $_POST['pass'] . "";
         try {
-            $cnx = pg_connect($config) or die (header("Location: ../index.php?" . ACTION . "=nuevo&msm=2"));
+            $conexion=new ConexionPG($_POST['host'],$_POST['puerto'],$_POST['nombrebasedatos'],$_POST['usuario'],$_POST['pass']);
+            $cnx = $conexion->Conectar();
         } catch (Exception $exc) {
 
         }

@@ -1,1 +1,12 @@
-[]
+[
+  {"cod_producto": "1"},
+  {"cod_producto": 2},
+  {"cod_producto": 3},
+  {"cod_producto": 4},
+  {"cod_producto": 5},
+  {"cod_producto": 6},
+  {"cod_producto": 7},
+  {"cod_producto": 8},
+  {"cod_producto": 9},
+  {"cod_producto": 10}
+]

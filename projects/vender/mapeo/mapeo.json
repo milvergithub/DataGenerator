@@ -1,0 +1,52 @@
+  [
+  {
+    "tablename": "categoria",
+    "nivel": 0,
+    "cantidad": 0
+  },
+  {
+    "tablename": "persona",
+    "nivel": 0,
+    "cantidad": 0
+  },
+  {
+    "tablename": "producto",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "email",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "telefono",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "proveedor",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "cliente",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "vendedor",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "compra_producto",
+    "nivel": 2,
+    "cantidad": 0
+  },
+  {
+    "tablename": "detalleventa",
+    "nivel": 2,
+    "cantidad": 0
+  }
+]

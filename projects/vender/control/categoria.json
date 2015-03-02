@@ -1,0 +1,12 @@
+[
+  {
+    "column_name": "cod_categoria",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "nombre_categoria",
+    "is_nullable": "NO",
+    "rellenado": false
+  }
+]

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="PostgreSQL - bdtis@localhost" uuid="b2cd4a26-19c9-49ea-acad-fd2d31c60318" />
+    <data-source name="SQLite -" uuid="91755682-f577-49bc-9321-a835c4ccb0c4">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
   </component>
 </project>
-

@@ -3,4 +3,58 @@
   <data-source name="PostgreSQL - bdtis@localhost" uuid="b2cd4a26-19c9-49ea-acad-fd2d31c60318">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source name="SQLite -" uuid="91755682-f577-49bc-9321-a835c4ccb0c4">
+    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="ENFERMEDAD" schema="" catalog="" type="TABLE">
+      <column name="cod_enfermedad" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="nombre_enfermedad" sqlType="VARCHAR(30)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="cod_enfermedad"/>
+      <exported-key name="#FAKE_REGISTRO_ENFERMEDAD_1" table="REGISTRO_ENFERMEDAD" schema="" catalog="" columns="fk_cod_enfermedad"/>
+    </table>
+    <table name="PACIENTES" schema="" catalog="" type="TABLE">
+      <column name="cod_paciente" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="nombre_paciente" sqlType="VARCHAR(50)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="fecha_nac_paciente" sqlType="DATE" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="cod_paciente"/>
+      <exported-key name="#FAKE_REGISTRO_ENFERMEDAD_2" table="REGISTRO_ENFERMEDAD" schema="" catalog="" columns="fk_cod_paciente"/>
+    </table>
+    <table name="REGISTRO_ENFERMEDAD" schema="" catalog="" type="TABLE">
+      <column name="cod_registro_enfermedad" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="fecha_registro_enfermedad" sqlType="DATE" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="rango_registro_enfermedad" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="fk_cod_paciente" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="fk_cod_enfermedad" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="cod_registro_enfermedad"/>
+      <foreign-key name="#FAKE_REGISTRO_ENFERMEDAD_1" columns="fk_cod_enfermedad" ref-table="ENFERMEDAD" ref-schema="" ref-catalog="" ref-columns="cod_enfermedad" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_REGISTRO_ENFERMEDAD_2" columns="fk_cod_paciente" ref-table="PACIENTES" ref-schema="" ref-catalog="" ref-columns="cod_paciente" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_VACUNAS_2" table="VACUNAS" schema="" catalog="" columns="fk_cod_registro_enfermedad"/>
+    </table>
+    <table name="USUARIO" schema="" catalog="" type="TABLE">
+      <column name="cod_usuario" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="nombre_usuario" sqlType="VARCHAR(50)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="login_usuario" sqlType="VARCHAR(20)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="pass_usuario" sqlType="VARCHAR(20)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="cod_usuario"/>
+      <exported-key name="#FAKE_VACUNAS_1" table="VACUNAS" schema="" catalog="" columns="fk_cod_usuario"/>
+    </table>
+    <table name="VACUNAS" schema="" catalog="" type="TABLE">
+      <column name="cod_vacunas" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="fecha_vacunas" sqlType="DATE" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="estado_vacunas" sqlType="BOOL" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="fk_cod_registro_enfermedad" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="fk_cod_usuario" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="cod_vacunas"/>
+      <foreign-key name="#FAKE_VACUNAS_1" columns="fk_cod_usuario" ref-table="USUARIO" ref-schema="" ref-catalog="" ref-columns="cod_usuario" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_VACUNAS_2" columns="fk_cod_registro_enfermedad" ref-table="REGISTRO_ENFERMEDAD" ref-schema="" ref-catalog="" ref-columns="cod_registro_enfermedad" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="android_metadata" schema="" catalog="" type="TABLE">
+      <column name="locale" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
 </component>

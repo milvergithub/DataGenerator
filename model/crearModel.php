@@ -139,7 +139,7 @@ class crearModel{
         $detalleTabla=$this->detalleTabla($tabla);
         $detalleStatus=array();
         for($i=0;$i<count($detalleTabla);$i++){
-            $linea=["column_name" => $detalleTabla[$i]['column_name'], "rellenado"=> false];
+            $linea=["column_name" => $detalleTabla[$i]['column_name'], "is_nullable"=>$detalleTabla[$i]['is_nullable'], "rellenado"=> false];
             $detalleStatus[$i]=$linea;
         }
         return $detalleStatus;

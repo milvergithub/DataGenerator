@@ -11,23 +11,31 @@ class writerReadDatesModel {
     function __construct($p){
         $this->proyecto=$p;
     }
-    private function getDatosTabla($tabla){
+    protected function getDatosTabla($tabla){
         $datos = file_get_contents("../projects/".$this->proyecto."/dates/".$tabla.".json");
         $datosTabla = json_decode($datos, true);
         return $datosTabla;
     }
-    private function getStatusTabla($tabla){
+    protected function getStatusTabla($tabla){
         $datos = file_get_contents("../projects/".$this->proyecto."/control/".$tabla.".json");
         $datosTabla = json_decode($datos, true);
         return $datosTabla;
     }
-    private function getNombreTablas(){
+    protected function getDetalleTabla($tabla){
+        $datos = file_get_contents("../projects/".$this->proyecto."/control/".$tabla.".json");
+        $datosTabla = json_decode($datos, true);
+        return $datosTabla;
+    }
+    protected function getNombreTablas(){
         $datos = file_get_contents("../projects/".$this->proyecto."/mapeo/mapeo.json");
         $datosTabla = json_decode($datos, true);
         return $datosTabla;
     }
     public function getListaTablas(){
         return $this->getNombreTablas();
+    }
+    public function getListaAtributos($tabla){
+        return $this->getStatusTabla($tabla);
     }
     function setProccessTabla($columna,$datos,$tabla){
         $datosActuales=$this->getDatosTabla($tabla);

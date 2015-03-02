@@ -20,6 +20,7 @@ function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, re
     cargarPanelAdecuado(datoConfig);
 }
 function cargarPanelAdecuado(datos) {
+
     $.ajax({
         type: "POST",
         url: "controller/loadPanelAdecuadoController.php",
@@ -185,7 +186,7 @@ function validacion(){
     var estado=document.getElementById('directo').value;
     if((estado)=="indirecto"){
         var valor = document.getElementById("numerodatos").value;
-        if( valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
+        if(valor==0 || valor == null || valor.length == 0 || /^\s+$/.test(valor) || isNaN(valor)) {
             addError($("#numerodatos"));
             return false;
         }else{
