@@ -10,7 +10,7 @@ class GeneratorDateTimeModel {
     public function __construct(){
 
     }
-    function fechas($start, $end,$formato="Y-m-d") {
+    function getDates($start, $end,$formato="Y-m-d") {
         $range = array();
         if (is_string($start) === true)
             $start = strtotime($start);
@@ -29,57 +29,37 @@ class GeneratorDateTimeModel {
        $endTime = strtotime("+60 seconds", strtotime($selectedTime));
        echo date('h:i:s', $endTime);
      * */
-    function getGenerateDateTime($start/* Y-m-d-H-i-s */, $end/* Y-m-d-H-i-s */, $cant, $formato = "Y-m-d H:m:s"){
-        $retornoDateTime = array();
-        $inicios = explode('-', $start);
-        $finales = explode('-', $end);
-        $inicio = new DateTime();
-        $inicio->setDate($inicios[0], $inicios[1], $inicios[2]);
-        $inicio->setTime($inicios[3], $inicios[4], $inicios[5]);
-        $final = new DateTime();
-        $final->setDate($finales[0], $finales[1], $finales[2]);
-        $final->setTime($finales[3], $finales[4], $finales[5]);
-        $cantidad = $cant;
-        $indice = 0;
-        $cont = 0;
-        $inc = 0;
-        while ($cont < $cantidad) {
-            if ($inicio >= $final) {
-                $inicio->setDate($inicios[0], $inicios[1], $inicios[2]);
-                $inicio->setTime($inicios[3], $inicios[4], $inicios[5]);
+    public function getTimes($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03',$cant=200) {
+        $t1 = strtotime($inicio);
+        $t2 = strtotime($final);
+        $retorno=array();
+        $ind=0;
+        $cont=0;
+        while ($cont<$cant) {
+            if ($t1 >= $t2) {
+                $t1=  strtotime($inicio);
             }
-            $inicio->setTime($inicios[3], $inicios[4], $inicios[5] + $inc);
-            $retornoDateTime[$indice] = $inicio->format($formato);
-            $cont = $cont + 1;
-            $indice = $indice + 1;
-            $inc=$inc+1;
+            $retorno[$ind]=date('H:i:s', $t1);
+            $t1 = strtotime('+1 second', $t1);
+            $ind=$ind+1;
+            $cont=$cont+1;
         }
-        return $retornoDateTime;
+        return $retorno;
     }
-    function getGenerateTime($start/* Y-m-d-H-i-s */, $end/* Y-m-d-H-i-s */, $cant, $formato = "H:m:s") {
-        $retorno = array();
-        $inicios = explode('-', $start);
-        $finales = explode('-', $end);
-        $inicio = new DateTime();
-        $inicio->setDate($inicios[0], $inicios[1], $inicios[2]);
-        $inicio->setTime($inicios[3], $inicios[4], $inicios[5]);
-        $final = new DateTime();
-        $final->setDate($finales[0], $finales[1], $finales[2]);
-        $final->setTime($finales[3], $finales[4], $finales[5]);
-        $cantidad = $cant;
-        $indice = 0;
-        $cont = 0;
-        $inc = 0;
-        while ($cont < $cantidad) {
-            if ($inicio >= $final) {
-                $inicio->setDate($inicios[0], $inicios[1], $inicios[2]);
-                $inicio->setTime($inicios[3], $inicios[4], $inicios[5]);
+    public function getDateTimes($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03',$cant=200) {
+        $t1 = strtotime($inicio);
+        $t2 = strtotime($final);
+        $retorno=array();
+        $ind=0;
+        $cont=0;
+        while ($cont<$cant) {
+            if ($t1 >= $t2) {
+                $t1=  strtotime($inicio);
             }
-            $inicio->setTime($inicios[3], $inicios[4], $inicios[5] + $inc);
-            $retorno[$indice] = $inicio->format($formato);
-            $cont = $cont + 1;
-            $indice = $indice + 1;
-            $inc=$inc+1;
+            $retorno[$ind]=date('Y-m-d H:i:s', $t1);
+            $t1 = strtotime('+1 second', $t1);
+            $ind=$ind+1;
+            $cont=$cont+1;
         }
         return $retorno;
     }
