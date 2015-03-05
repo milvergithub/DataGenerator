@@ -10,7 +10,7 @@ class GeneratorDateTimeModel {
     public function __construct(){
 
     }
-    function getDates($start, $end,$formato="Y-m-d") {
+    public function getDates($start, $end,$formato="Y-m-d") {
         $range = array();
         if (is_string($start) === true)
             $start = strtotime($start);
@@ -29,7 +29,7 @@ class GeneratorDateTimeModel {
        $endTime = strtotime("+60 seconds", strtotime($selectedTime));
        echo date('h:i:s', $endTime);
      * */
-    public function getTimes($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03',$cant=200) {
+    public function getTimes($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03',$cant=100) {
         $t1 = strtotime($inicio);
         $t2 = strtotime($final);
         $retorno=array();
@@ -46,7 +46,7 @@ class GeneratorDateTimeModel {
         }
         return $retorno;
     }
-    public function getDateTimes($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03',$cant=200) {
+    public function getDateTimes($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03',$cant=100) {
         $t1 = strtotime($inicio);
         $t2 = strtotime($final);
         $retorno=array();

@@ -72,7 +72,7 @@ if($_POST['constraint_type'] == "foraneas"){
                     ($_POST['data_type']=="interval") OR
                     ($_POST['data_type']=="date")){
                     /*SI EL TIPO DE DATOS ES una fecha u hora*/
-                    require_once "../view/type_data/dateTimeView.phtml";
+                    require_once "../view/dateTime/dateTimeView.phtml";
                 }else{
                     if(($_POST['data_type']=="money")){
                     /*SI EL TIPO DE DATOS ES monetario*/

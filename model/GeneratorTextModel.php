@@ -8,10 +8,19 @@
 
 class GeneratorTextModel {
 
-    private function __construct() {
+    public function __construct() {
 
     }
-    function getGenerarEmail(){
+    public function getEmails($cantidad) {
+        $retorno=array();
+        $cont=0;
+        while ($cont<$cantidad) {
+            $retorno[$cont]=  $this->getGenerarEmail();
+            $cont++;
+        }
+        return $retorno;
+    }
+    private function getGenerarEmail(){
         $extenciones=array('.com','.org','.co','.cl','eu','.biz','es','.net','.edu','.tv','.info');
         $dominios=array('gmail','outlook','hotmail','otro');
         $posExt=rand(0,count($extenciones)-1);

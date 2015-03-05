@@ -1,6 +1,16 @@
 $(document).ready(function () {
+    initilialize();
     $( "#btnQuared").hide();
 });
+function initilialize(){
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        startDate: "2013-02-14 10:00",
+        minuteStep: 10
+    });
+}
 function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla,referenciados, isnull, constraint_type,column_default,check_clause) {
     var identificador = tablaActual.toUpperCase() + '.' + columna;
     $("#tablaCampo").html("<span class='badge bg-primary'>"+identificador+"</span>" +
@@ -56,6 +66,9 @@ function mostrarOcultar(num, tabla) {
         });
     }
 }
+function cargarConfiguracionTipoDateTime(tabla){
+    
+}
 function cargarConfiguracionTipo(tabla) {
     var elegido = $("#formularioTipoOrigen").val();
     var datoConfigTipo = new FormData();
@@ -77,6 +90,7 @@ function cargarConfiguracionTipo(tabla) {
         success: function (data) {
             $("#opcionconfiguracion").html(data);
             $("#opcionconfiguracion").show();
+            
         },
         error: function () {
             $("#opcionconfiguracion").text("error")

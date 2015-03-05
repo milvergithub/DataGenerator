@@ -21,5 +21,15 @@ switch ($_POST['elegido']){
     case "algoritmo":
         require_once "../view/formAlgoritmos.phtml";
         break;
+    //si son tipo fecha
+    case "Date":
+        require_once "../view/dateTime/form.phtml";
+        break;
+    case "Time":
+        require_once "../view/dateTime/form.phtml";
+        break;
+    case "DateTime":
+        require_once "../view/dateTime/form.phtml";
+        break;
 }
 ?>

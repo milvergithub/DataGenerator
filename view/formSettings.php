@@ -6,7 +6,7 @@ $cantidad=$model->getCantidadDatosTabla($_POST['tablaactual']);
 <div id="mensajes">
 
 </div>
-<form  onsubmit="return validacion()" action="javascript:guardarConfiguracion()" method="post" class="form" id="formConfiguracion" name="formConfiguracion">
+<form  onsubmit="return validacion()" action="javascript:guardarConfiguracion()" method="post" class="form" id="formConfiguracion" name="formConfiguracion" enctype="multipart/form-data">
    <div class="form-group">
        <span class="control-label badge bg-info">cantidad de datos a generar  para la tabla<span class="badge bg-inverse"><?php echo $_POST['tablaactual']; ?></span></span>
         <?php

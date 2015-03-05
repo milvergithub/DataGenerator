@@ -30,6 +30,7 @@ function guardarConfiguracion() {
     switch (seleccionado){
         case 'archivo':
             alert("archivo");
+            datosDetalle.append()
             break;
         case 'tabla':
             alert("tabla");
