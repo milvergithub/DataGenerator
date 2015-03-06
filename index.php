@@ -12,7 +12,9 @@ require_once "config/config.php";
         <title>DateGenIdioms</title>
         <!-- Bootstrap core CSS -->
         <link href="public/css/bootstrap.min.css" rel="stylesheet">
+
         <link href="public/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+
         <!--external css-->
         <link href="public/font-awesome/css/font-awesome.css" rel="stylesheet"/>
         <link href="public/js/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
@@ -31,10 +33,16 @@ require_once "config/config.php";
     <body>
         <section id="container">
             <?php
-            include "view/navbar.phtml";
+            include "view/navbar.php";
             ?>
             <section id="main-content">
                 <section class="wrapper">
+                    <div class="col-xs-3 input-group date form_datetime" data-date="1979-09-16T05:25:07Z"
+                         data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                        <input class="form-control" size="16" type="text" value="" >
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
                     <div class="row mt">
                         <?php
                         if (isset($_GET)) {
@@ -94,5 +102,6 @@ require_once "config/config.php";
         <script src="public/js/functionsDateGenrate.js"></script>
         <script src="public/js/validaciones.js"></script>
         <script src="public/js/validacionProyecto.js"></script>
+        
     </body>
 </html>

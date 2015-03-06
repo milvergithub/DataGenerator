@@ -1,3 +1,3 @@
 <?php
-require_once "view/nuevo.phtml";
+require_once "view/nuevo.php";
 ?>

@@ -18,21 +18,21 @@
 <input type="hidden" id="check_clause" value="<?php echo $_POST['check_clause'] ?>"/>
 <?php
 if($_POST['constraint_type'] == "foraneas"){
-    require_once "../view/type_data/formularioForeignKey.phtml";
+    require_once "../view/type_data/formularioForeignKey.php";
 }else{
     if(($_POST['constraint_type']=="PRIMARY KEY")){
         switch($_POST['data_type']){
             case 'integer':
-                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulacio si es integer*/
+                require_once "../view/type_data/formularioPrimaryKey.php";/*formulacio si es integer*/
             break;
             case 'smallint':
-                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulacio si es integer*/
+                require_once "../view/type_data/formularioPrimaryKey.php";/*formulacio si es integer*/
             break;
             case 'bigint':
-                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulacio si es integer*/
+                require_once "../view/type_data/formularioPrimaryKey.php";/*formulacio si es integer*/
                 break;
             case 'character varying':
-                require_once "../view/type_data/formularioPrimaryKey.phtml";/*formulario si es text*/
+                require_once "../view/type_data/formularioPrimaryKey.php";/*formulario si es text*/
                 break;
         }
     }else{
@@ -51,10 +51,10 @@ if($_POST['constraint_type'] == "foraneas"){
                 ($_POST['data_type']=="serial") OR
                 ($_POST['data_type']=="bigserial")){
                 /*SI EL TIPO DE DATO ES numero y entero*/
-                require_once "../view/type_data/numeroIntegerView.phtml";
+                require_once "../view/type_data/numeroIntegerView.php";
             }else{
                 /*SI EL TIPO DE DATO ES numero y con decimal*/
-                require_once "../view/type_data/numeroDecimalView.phtml";
+                require_once "../view/type_data/numeroDecimalView.php";
             }
         }else{
             if( ($_POST['data_type']=="character varying") OR
@@ -63,7 +63,7 @@ if($_POST['constraint_type'] == "foraneas"){
                 ($_POST['data_type']=="char") OR
                 ($_POST['data_type']=="text")){
                 /*SI EL TIPO DE DATO ES una cadena de caracteres*/
-                require_once "../view/type_data/textTypeView.phtml";
+                require_once "../view/type_data/textTypeView.php";
             }else{
                 if( ($_POST['data_type']=="time without time zone") OR
                     ($_POST['data_type']=="time with time zone") OR
@@ -72,26 +72,26 @@ if($_POST['constraint_type'] == "foraneas"){
                     ($_POST['data_type']=="interval") OR
                     ($_POST['data_type']=="date")){
                     /*SI EL TIPO DE DATOS ES una fecha u hora*/
-                    require_once "../view/dateTime/dateTimeView.phtml";
+                    require_once "../view/dateTime/dateTimeView.php";
                 }else{
                     if(($_POST['data_type']=="money")){
                     /*SI EL TIPO DE DATOS ES monetario*/
-                        require_once "../view/type_data/moneyTypeView.phtml";
+                        require_once "../view/type_data/moneyTypeView.php";
                     }else{
                         if(($_POST['data_type']=="bytea")){
                         /*SI EL TIPO DE DATOS ES archivo codificado*/
-                            require_once "../view/type_data/byteaTypeView.phtml";
+                            require_once "../view/type_data/byteaTypeView.php";
                         }else{
                             if( ($_POST['data_type']=="cidr") OR
                                 ($_POST['data_type']=="inet") OR
                                 ($_POST['data_type']=="macaddr")){
                                 /*SI EL TIPO DE DATOS ES direcciones de red*/
-                                    require_once "../view/type_data/redTypeView.phtml";
+                                    require_once "../view/type_data/redTypeView.php";
                             }else{
                                 if( ($_POST['data_type']=="boolean") ){
-                                    require_once "../view/type_data/booleanTypeView.phtml";
+                                    require_once "../view/type_data/booleanTypeView.php";
                                 }else{
-                                    require_once "../view/type_data/type404View.phtml";
+                                    require_once "../view/type_data/type404View.php";
                                 }
                             }
                         }
@@ -101,7 +101,7 @@ if($_POST['constraint_type'] == "foraneas"){
         }
     }
 }
-require_once "../view/formularioArea.phtml";
+require_once "../view/formularioArea.php";
 ?>
 
 

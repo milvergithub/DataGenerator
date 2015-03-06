@@ -7,29 +7,29 @@
  */
 switch ($_POST['elegido']){
     case "archivo":
-        require_once "../view/formfile.phtml";
+        require_once "../view/formfile.php";
         break;
     case "tabla":
         require_once "../view/formTabla.php";
         break;
     case "lista":
-         require_once "../view/lista.phtml";
+         require_once "../view/lista.php";
          break;
     case "rango":
-        require_once "../view/rango.phtml";
+        require_once "../view/rango.php";
         break;
     case "algoritmo":
-        require_once "../view/formAlgoritmos.phtml";
+        require_once "../view/formAlgoritmos.php";
         break;
     //si son tipo fecha
     case "Date":
-        require_once "../view/dateTime/form.phtml";
+        require_once "../view/dateTime/form.php";
         break;
     case "Time":
-        require_once "../view/dateTime/form.phtml";
+        require_once "../view/dateTime/form.php";
         break;
     case "DateTime":
-        require_once "../view/dateTime/form.phtml";
+        require_once "../view/dateTime/form.php";
         break;
 }
 ?>

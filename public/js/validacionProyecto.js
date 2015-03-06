@@ -2,9 +2,13 @@
  * Created by milver on 19-02-15.
  */
 function validarArchivos(){
-    var archivos = $("#archivos")[0].files[0];//$( '#anexo' )[0].files[0])
+    var archivos = document.getElementById('archivos').files;
+    //var archivos = $("#archivos").files;//$( '#anexo' )[0].files[0])
     var datoDoc = new FormData();
-    datoDoc.append("archivos", archivos);
+    for (i=0;i<archivos.length;i++){
+        datoDoc.append('archivo'+i,archivos[i]);
+    }
+    
     $.ajax({
         type: "POST",
         url: "controller/validarArchivosByteaController.php",

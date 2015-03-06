@@ -9,4 +9,4 @@
 require_once "../model/writerReadDatesModel.php";
 $model = new writerReadDatesModel($_REQUEST['proyecto']);
 $listaTablas = $model->getListaTablas();
-require_once '../view/test/testView.phtml';
+require_once '../view/test/testView.php';

@@ -4,10 +4,10 @@ $(document).ready(function () {
 });
 function initilialize(){
     $(".form_datetime").datetimepicker({
-        format: "dd MM yyyy - hh:ii",
+        format: "yyyy-mm-dd-hh-ii",
         autoclose: true,
         todayBtn: true,
-        startDate: "2013-02-14 10:00",
+        startDate: "2013-02-14-10-00",
         minuteStep: 10
     });
 }
@@ -59,7 +59,29 @@ function mostrarOcultar(num, tabla) {
             display: "show"
         });
         $("#NombreTabla").html(tabla);
-        $("#divtabla").load("view/formSettings.php", {tablaactual: tabla,proyecto:document.getElementById("project").value});
+        var datos = new FormData();
+        datos.append('tablaactual',tabla);
+        datos.append('proyecto',document.getElementById("project").value);
+        $.ajax({
+                type: "POST",
+                url: "controller/mostrarOcultarController.php",
+                data: datos,
+                cache: false,
+                contentType: false,
+                processData: false,
+                beforeSend: function (dato) {
+                    $("#divtabla").html("cargando");
+                    $("#divtabla").show();
+                },
+                success: function (data) {
+                    $("#divtabla").html(data);
+                    $("#divtabla").show();
+
+                },
+                error: function () {
+                    $("#divtabla").text("error")
+                }
+            });
     } else {
         $("#tabla" + num).css({
             display: "none"
