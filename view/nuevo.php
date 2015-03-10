@@ -20,34 +20,34 @@
     }
     ?>
     <form class="form col-lg-12  well" action="controller/crearController.php" id="formulariotestconn" method="POST">
-        <div>
+        <div class="control-group">
             <span>Nombre</span>
             <input class="form-control input-sm validate[required,custom[onlyLetterNumber]]" type="text" name="<?php echo NOMBRE_PROYECTO ?>" id="<?php echo NOMBRE_PROYECTO ?>"/>
         </div>
-        <div class="">
+        <div class="control-group">
             <span class="">SGBD</span>
             <select class="form-control input-sm validate[required]" name="basededatos" id="basededatos">
                 <option value="">Seleccione un gestor</option>
                 <option value="PostgreSQL">PostgreSQL</option>
             </select>
         </div>
-        <div class="">
+        <div class="control-group">
             <span class="">base de datos</span>
             <input type="text" class="form-control input-sm validate[required,custom[onlyLetterNumber]]" name="nombrebasedatos" id="nombrebasedatos"/>
         </div>
-        <div class="">
+        <div class="control-group">
             <span class="">host</span>
             <input type="text" class="form-control input-sm validate[required]" name="host" id="host"/>
         </div>
-        <div class="">
+        <div class="control-group">
             <span class="">puerto</span>
             <input type="text" class="form-control input-sm validate[required,custom[onlyLetterNumber]]" name="puerto" id="puerto" value="5432"/>
         </div>
-        <div class="">
+        <div class="control-group">
             <span class="glyphicon glyphicon-user">usuario</span>
             <input type="text" class="form-control input-sm validate[required,custom[onlyLetterNumber]]" name="usuario" id="usuario"/>
         </div>
-        <div class="">
+        <div class="control-group">
             <span class="glyphicon glyphicon-lock">password</span>
             <input type="text" class="form-control input-sm validate[required]" name="pass" id="pass"/>
         </div>

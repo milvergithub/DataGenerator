@@ -3,10 +3,10 @@ session_start();
 include "../model/tablasJSONModel.php";
 $tablas=new tablasJSONModel($_POST["proyecto"]);
 ?>
-<div class="form-group">
+<div class="control-group">
     <select name="tabla" id="tabla" class="form-control" onchange="cargarColumnasTabla()">
         <?php
-        echo "<option value=''>selecciones tabla</option>";
+        echo "<option value=''>------- selecciones tabla -------</option>";
         $resultadoTablas=$tablas->getTablas();
         for($i=0;$i<sizeof($resultadoTablas);$i++) {
             echo '<option value="' . $resultadoTablas[$i]['tablename'] . '">' . $resultadoTablas[$i]['tablename'] . '</option>';
@@ -14,9 +14,9 @@ $tablas=new tablasJSONModel($_POST["proyecto"]);
         ?>
     </select>
 </div>
-<div class="form-group">
+<div class="control-group">
     <select name="columna" id="columna" class="form-control" onchange="">
-        <option value="">selecione culumna</option>
+        <option value="">------- selecciones columna -------</option>
     </select>
 </div>
 <input type="hidden" value="indirecto" id="directo">

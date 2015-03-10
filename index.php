@@ -1,4 +1,6 @@
 <?php
+session_start();
+session_name("niveles");
 require_once "config/config.php";
 ?>
 <!DOCTYPE html>
@@ -33,7 +35,8 @@ require_once "config/config.php";
     <body>
         <section id="container">
             <?php
-            include "view/navbar.php";
+            include "view/menu/navbar.php";
+            include "view/menu/sidebar.php"
             ?>
             <section id="main-content">
                 <section class="wrapper">
@@ -64,7 +67,7 @@ require_once "config/config.php";
             <!--footer start-->
             <footer class="site-footer">
                 <div class="text-center">
-                    2014 - Milver Flores Acevedo
+                    <?php echo date('Y-m-d'); ?> - Milver Flores Acevedo
                     <a href="#container" class="go-top">
                         <i class="fa fa-angle-up"></i>
                     </a>

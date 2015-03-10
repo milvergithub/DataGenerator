@@ -1,5 +1,5 @@
 <select class="form-control" id="formularioTipoOrigen" onchange="cargarConfiguracionTipo('<?php echo $_POST['tablaActual'] ?>')">
-    <option value="">selecciones origen</option>
+    <option value="">------- selecciones origen -------</option>
     <option value="archivo">archivo</option>
     <option value="tabla">tabla</option>
     <option value="lista">lista</option>

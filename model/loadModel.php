@@ -20,6 +20,10 @@ class loadModel {
         $mapaTablas = json_decode($mapa, true);
         return $mapaTablas;
     }
+    public function getCantidadDeNiveles(){
+        $resultado=$this->getTablesAndReferencesLoad();
+        return $resultado[sizeof($resultado)-1]['nivel'];
+    }
     public function getStatusTableColumnLoad($tabla,$columa){
         $res="no existe";
         $dateMapeo =file_get_contents($this->path."mapeo/mapeo.json");

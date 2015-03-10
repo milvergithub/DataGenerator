@@ -102,7 +102,6 @@ function validacion(){
                 break;
             case 'lista'://MEJORAR
                 var contenidoLista=document.formConfiguracion.contenidogenerar.value;
-                alert(contenidoLista);
                 if( contenidoLista == null || contenidoLista.length == 0 || /^\s+$/.test(valor)) {
                     addError($("#contenidogenerar"));
                     return false;

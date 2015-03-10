@@ -49,6 +49,7 @@ class cargarModel {
         return $var;
     }
 
+    //<editor-fold desc="QUERY DETALLE TABLA">
     function detalleTabla($tabla) {
         $resultadoDT = array();
         $sqlDT = "SELECT  tab_columns.column_name, data_type, character_maximum_length,
@@ -76,6 +77,7 @@ class cargarModel {
         //return $this->aumentarCampos($resultadoDT);
         //return $resultadoDT;
     }
+    //</editor-fold>
 
     private function aumentarCampos($reducido) {
         $aumentado = insertarElementos($reducido);

@@ -1,6 +1,9 @@
 $(document).ready(function () {
     initilialize();
     $( "#btnQuared").hide();
+    jQuery.validator.addMethod("numberOnly",function(value,element){
+        return this.optional(element) || /^[0-9]+$/i.test(value);
+    },'<span style="color: #cd0a0a">ingrese numero mayor a 0</span>')
 });
 function initilialize(){
     $(".form_datetime").datetimepicker({
