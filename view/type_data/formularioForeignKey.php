@@ -4,7 +4,5 @@
     echo '<span class="badge bg-inverse">a las columnas : <span class="badge bg-theme03">'.$_POST['referenciados'].'</span></span>'."<br>";
 ?>
 <input type="hidden" value="directo" id="directo">
-<div>
-    <input type="checkbox">
-</div>
+<br/>
 <button class="btn btn-success btn-sm">guardar</button>

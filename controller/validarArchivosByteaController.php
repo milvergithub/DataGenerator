@@ -7,5 +7,6 @@
  */
 foreach ($_FILES as $key) //Iteramos el arreglo de archivos
 {
-    echo $key['name'];;
+    $key['name'];;
 }
+echo 'visible';

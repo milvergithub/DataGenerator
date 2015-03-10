@@ -25,6 +25,8 @@ function validarArchivos(){
         success: function (data) {
             if(data==='visible'){
                 $("#divsubmit").css("display", "block");
+                $("#mensajeValidacionArchivos").html('');
+                $("#mensajeValidacionArchivos").show();
             }else{
                 $("#mensajeValidacionArchivos").text(data);
                 bootbox.alert(data, function () {

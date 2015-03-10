@@ -1,10 +1,1 @@
-[
-  {
-    "column_name": "cod_categoria",
-    "rellenado": true
-  },
-  {
-    "column_name": "nombre_categoria",
-    "rellenado": false
-  }
-]
+[{"column_name":"cod_categoria","is_nullable":"NO","rellenado":false},{"column_name":"nombre_categoria","is_nullable":"NO","rellenado":false}]

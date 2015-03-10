@@ -1,0 +1,1 @@
+[{"column_name":"cod_arch","is_nullable":"NO","rellenado":false},{"column_name":"cod_gest, cod_conv, cod_emp, cod_integ","is_nullable":"NO","rellenado":false},{"column_name":"cod_eval","is_nullable":"NO","rellenado":false},{"column_name":"nota_eval","is_nullable":"NO","rellenado":false},{"column_name":"fecha_eval","is_nullable":"NO","rellenado":false}]

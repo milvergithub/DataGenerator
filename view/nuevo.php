@@ -52,7 +52,7 @@
             <input type="text" class="form-control input-sm validate[required]" name="pass" id="pass"/>
         </div>
         <br/>
-        <button class="btn btn-success btn-sm" onclick="alert('test conection')">test conection</button>
-        <input type="submit" class="btn btn-success btn-sm navbar-right" value="crear y cargar"/>
+        <button class="btn btn-success btn-sm" onclick="testConection()">test conection</button>
+        <button class="btn btn-success btn-sm navbar-right">crear</button>
     </form>
 </div>

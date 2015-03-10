@@ -1,5 +1,6 @@
 
 <input type="file" class="btn btn-default" name="archivo" id="archivo" multiple onchange="cargarContenidoTexto()"/>
+<input class="form-control input-sm" type="text" name="separador" id="separador"/>
 <input type="hidden" value="indirecto" id="directo">
 <div style="display: none" id="divsubmit">
     <div>

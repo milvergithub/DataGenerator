@@ -24,6 +24,7 @@ if ($basededatos == "PostgreSQL") {
             $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/dates", 0777);
             $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/mapeo", 0777);
             $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/control", 0777);
+            $crearDirectorio->createDir("../projects/" . $_POST[NOMBRE_PROYECTO] . "/files",0777);
             $crearSM = new crearStructureModel();//$nameProject,$host,$port,$dbms,$dbname,$user,$pass
             $crearSM->createConnectionOffline($_POST[NOMBRE_PROYECTO], $_POST['host'], $_POST['puerto'], $_POST['basededatos'], $_POST['nombrebasedatos'], $_POST['usuario'], $_POST['pass']);
 
@@ -85,5 +86,7 @@ if ($basededatos == "PostgreSQL") {
             header("Location: ../index.php?" . ACTION . "=error");
         }
     }
+}else{
+    header("Location: ../index.php?" . ACTION . "=nuevo&msm=1");
 }
 ?>

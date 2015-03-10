@@ -1,0 +1,1 @@
+[{"column_name":"cod_gest","is_nullable":"NO","rellenado":false},{"column_name":"cod_conv","is_nullable":"NO","rellenado":false},{"column_name":"nombre_conv","is_nullable":"NO","rellenado":false},{"column_name":"fecha_invitacion","is_nullable":"YES","rellenado":false},{"column_name":"fecha_prop_conv","is_nullable":"YES","rellenado":false}]

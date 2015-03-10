@@ -1,1 +1,0 @@
-[{"column_name":"cod_producto","is_nullable":"NO","rellenado":false},{"column_name":"cod_cliente, cod_venta, cond_vendedor","is_nullable":"NO","rellenado":false},{"column_name":"cod_detalle","is_nullable":"NO","rellenado":false}]

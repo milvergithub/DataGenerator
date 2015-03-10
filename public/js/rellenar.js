@@ -18,32 +18,47 @@ function guardarConfiguracion() {
     datosDetalle.append('cantidad',document.getElementById('numerodatos').value);
     datosDetalle.append('proyecto',document.getElementById('project').value);
 
-    var seleccionado=document.getElementById('formularioTipoOrigen').value;
-
     function metodoRango() {
         datosDetalle.append('minimo', document.getElementById('minimo').value);
         datosDetalle.append('maximo', document.getElementById('maximo').value);
         datosDetalle.append('aleatorio', document.getElementById('repeat').checked);
         sendTypeRango(datosDetalle);
     }
+    function metodoBooleano(){
+        datosDetalle.append('modo',document.getElementById('modo').value);
+        sendTypeBooleano(datosDetalle);
+    }
+    function metodoForanea(){
+        sendTypeForanea(datosDetalle);
+    }
+    var estado=document.getElementById('directo').value;
+    if((estado)=="indirecto"){
+        var seleccionado=document.getElementById('formularioTipoOrigen').value;
+        switch (seleccionado){
+            case 'archivo':
+                alert("archivo");
 
-    switch (seleccionado){
-        case 'archivo':
-            alert("archivo");
-            datosDetalle.append()
-            break;
-        case 'tabla':
-            alert("tabla");
-            break;
-        case 'lista':
-            alert("lista");
-            break;
-        case 'algoritmo':
-            alert("algoritmo");
-            break;
-        case 'rango':
-            metodoRango();
-            break;
+                break;
+            case 'tabla':
+                alert("tabla");
+                break;
+            case 'lista':
+                alert("lista");
+                break;
+            case 'algoritmo':
+                alert("algoritmo");
+                break;
+            case 'rango':
+                metodoRango();
+                break;
+            /*SI EL TIPO ES BOOLEANO*/
+            case 'booleano':
+                metodoBooleano();
+                break;
+
+        }
+    }else{
+        metodoForanea();
     }
 
 }

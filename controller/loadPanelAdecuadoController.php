@@ -89,7 +89,7 @@ if($_POST['constraint_type'] == "foraneas"){
                                     require_once "../view/type_data/redTypeView.php";
                             }else{
                                 if( ($_POST['data_type']=="boolean") ){
-                                    require_once "../view/type_data/booleanTypeView.php";
+                                    require_once "../view/boolean/booleanTypeView.php";
                                 }else{
                                     require_once "../view/type_data/type404View.php";
                                 }

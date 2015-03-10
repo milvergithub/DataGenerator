@@ -19,7 +19,7 @@ switch ($_POST['elegido']){
         require_once "../view/rango.php";
         break;
     case "algoritmo":
-        require_once "../view/formAlgoritmos.php";
+        require_once "../view/algoritmo/formAlgoritmos.php";
         break;
     //si son tipo fecha
     case "Date":
@@ -30,6 +30,9 @@ switch ($_POST['elegido']){
         break;
     case "DateTime":
         require_once "../view/dateTime/form.php";
+        break;
+    case "booleano":
+        require_once "../view/boolean/form.php";
         break;
 }
 ?>

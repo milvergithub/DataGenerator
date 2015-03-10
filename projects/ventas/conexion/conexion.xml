@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <conexion>
   <nombre>ventas</nombre>
-  <host>localhost</host>
+  <host>127.0.0.1</host>
   <puerto>5432</puerto>
   <motor>PostgreSQL</motor>
   <base>ventas</base>

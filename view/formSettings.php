@@ -3,6 +3,11 @@ require_once "../model/writerReadDatesModel.php";
 $model=new writerReadDatesModel($_POST['proyecto']);
 $cantidad=$model->getCantidadDatosTabla($_POST['tablaactual']);
 ?>
+<script type="text/javascript">
+    window.onload=function(){
+        initilialize();
+    }
+</script>
 <div id="mensajes">
 
 </div>
