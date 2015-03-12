@@ -21,15 +21,28 @@ function guardarConfiguracion() {
     function metodoRango() {
         datosDetalle.append('minimo', document.getElementById('minimo').value);
         datosDetalle.append('maximo', document.getElementById('maximo').value);
-        datosDetalle.append('aleatorio', document.getElementById('repeat').checked);
         sendTypeRango(datosDetalle);
     }
+
     function metodoBooleano(){
         datosDetalle.append('modo',document.getElementById('modo').value);
         sendTypeBooleano(datosDetalle);
     }
+
     function metodoForanea(){
         sendTypeForanea(datosDetalle);
+    }
+
+    function metodoBytea(){
+        var archivos = document.getElementById('archivos').files;
+        for (i=0;i<archivos.length;i++){
+            datosDetalle.append('archivo'+i,archivos[i]);
+        }
+        sendTypeBytea(datosDetalle);
+    }
+    function metodoLista(){
+        datosDetalle.append('contenido',document.getElementById('contenidogenerar').value);
+        sendTypeLista(datosDetalle);
     }
     var estado=document.getElementById('directo').value;
     if((estado)=="indirecto"){
@@ -37,13 +50,16 @@ function guardarConfiguracion() {
         switch (seleccionado){
             case 'archivo':
                 alert("archivo");
-
+                break;
+            case 'bytea':
+                metodoBytea();
+                alert("bytea");
                 break;
             case 'tabla':
                 alert("tabla");
                 break;
             case 'lista':
-                alert("lista");
+                metodoLista()
                 break;
             case 'algoritmo':
                 alert("algoritmo");

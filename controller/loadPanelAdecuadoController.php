@@ -80,7 +80,7 @@ if($_POST['constraint_type'] == "foraneas"){
                     }else{
                         if(($_POST['data_type']=="bytea")){
                         /*SI EL TIPO DE DATOS ES archivo codificado*/
-                            require_once "../view/type_data/byteaTypeView.php";
+                            require_once "../view/file/byteaTypeView.php";
                         }else{
                             if( ($_POST['data_type']=="cidr") OR
                                 ($_POST['data_type']=="inet") OR

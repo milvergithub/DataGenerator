@@ -54,4 +54,21 @@ class GeneratorTextModel {
             return $nombre;
         }
     }
-} 
+    function getContenidoLista($texto,$cantidad){
+        $lista=array();
+        $contenido=explode(',',$texto);
+        $cont=0;
+        $ind=0;
+        $pos=0;
+        while($cont<$cantidad){
+            if($pos>=sizeof($contenido)){
+                $pos=0;
+            }
+            $lista[$ind]=$contenido[$pos];
+            $ind++;$pos++;$cont++;
+        }
+        return $lista;
+    }
+}
+
+

@@ -1,6 +1,9 @@
 body{
     
 }
+#formConfiguracion{
+    margin: 5px;
+}
 .listaTablas{
     max-height: 500px;
     max-width: 50%;

@@ -7,7 +7,7 @@
  */
 switch ($_POST['elegido']){
     case "archivo":
-        require_once "../view/formfile.php";
+        require_once "../view/file/formfile.php";
         break;
     case "tabla":
         require_once "../view/formTabla.php";

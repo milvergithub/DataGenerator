@@ -1,1 +1,1 @@
-[{"column_name":"cod_grupo","is_nullable":"NO","rellenado":false},{"column_name":"nro_grupo","is_nullable":"NO","rellenado":false}]
+[{"column_name":"cod_grupo","is_nullable":"NO","rellenado":true},{"column_name":"nro_grupo","is_nullable":"NO","rellenado":true}]

@@ -1,4 +1,3 @@
-<input type="hidden" id="dtp_input1" value=""/>
 <div class="control-group">
     <label class="control-label" for="fechaInicial">fecha inicial</label>
     <input type="text" name="fechaInicial" id="fechaInicial" class="input-sm form-control"

@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "nombre_rol": "milver",
+    "cod_rol": "0"
+  },
+  {
+    "nombre_rol": "flores",
+    "cod_rol": 1
+  },
+  {
+    "nombre_rol": "acevedo",
+    "cod_rol": 2
+  },
+  {
+    "nombre_rol": "milver",
+    "cod_rol": 3
+  },
+  {
+    "nombre_rol": "flores",
+    "cod_rol": 4
+  }
+]

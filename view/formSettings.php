@@ -26,70 +26,20 @@ $cantidad=$model->getCantidadDatosTabla($_POST['tablaactual']);
    </div>
    <div id="formularioPersonalizado" class="panel">
    </div>
+    <div id="fechas" style="display: none">
+        <div class="control-group">
+            <div class="input-group date form_datetime">
+                <input class="form-control" type="text" value="" name="fechaInicial" id="fechaInicial">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="input-group date form_datetime">
+                <input class="form-control" type="text" value="" name="fechaFinal" id="fechaFinal">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+        </div>
+        <button class="btn btn-success btn-sm">guardar</button>
+    </div>
 </form>
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $('#formConfiguracion').validate({
-            rules: {
-                numerodatos: {
-                    required: true,
-                    number:true,
-                    numberOnly:true
-                },
-                minimo:{
-                    required:true,
-                    number:true
-                },
-                maximo:{
-                    required:true,
-                    number:true
-                },
-                contenidogenerar:{
-                    required:true
-                },
-                separador:{
-                    required:true
-                },
-                tabla:{
-                    required:true
-                },
-                columna:{
-                    required:true
-                },
-                fechaInicial:{
-                    required:true
-                },
-                fechaFinal:{
-                    required:true
-                }
-            },
-            highlight: function(element) {
-                $(element).closest('.control-group').removeClass('has-success').addClass('control-group has-error');
-            },
-            success: function(element) {
-                element
-                    .closest('.control-group').removeClass('control-group has-error').addClass('has-success');
-            }
-        });
-    });
-    function soloNumeros(event){
-        if(event.shiftKey){
-            event.preventDefault();
-        }
-        if(event.keyCode == 46 || event.keyCode == 8){
-        }
-        else{
-            if(event.keyCode < 95){
-                if(event.keyCode < 48 || event.keyCode > 57){
-                    event.preventDefault();
-                }
-            }
-            else{
-                if(event.keyCode < 96 || event.keyCode > 105){
-                    event.preventDefault();
-                }
-            }
-        }
-    }
-</script>
+<script type="text/javascript" src="public/js/validacionesFormSetting.js"></script>

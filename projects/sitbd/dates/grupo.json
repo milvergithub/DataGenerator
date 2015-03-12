@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "nro_grupo": "10",
+    "cod_grupo": "0"
+  },
+  {
+    "nro_grupo": 11,
+    "cod_grupo": 1
+  },
+  {
+    "nro_grupo": 12,
+    "cod_grupo": 2
+  },
+  {
+    "nro_grupo": 13,
+    "cod_grupo": 3
+  },
+  {
+    "nro_grupo": 14,
+    "cod_grupo": 4
+  },
+  {
+    "nro_grupo": 15,
+    "cod_grupo": 5
+  },
+  {
+    "nro_grupo": 16,
+    "cod_grupo": 6
+  },
+  {
+    "nro_grupo": 17,
+    "cod_grupo": 7
+  },
+  {
+    "nro_grupo": 18,
+    "cod_grupo": 8
+  },
+  {
+    "nro_grupo": 19,
+    "cod_grupo": 9
+  }
+]

@@ -1,19 +1,16 @@
 $(document).ready(function () {
-    initilialize();
     $( "#btnQuared").hide();
+    /*AGREGANDO VALIDADOR DE SOLO PERMITIR NUMEROS MAYORES A CERO y ENTEROS*/
     jQuery.validator.addMethod("numberOnly",function(value,element){
-        return this.optional(element) || /^[0-9]+$/i.test(value);
+        return this.optional(element) || /^-?[1-9][0-9]*$/i.test(value);
     },'<span style="color: #cd0a0a">ingrese numero mayor a 0</span>')
+
+    /*AGREGANDO VALIDADOR DE SOLO CARACTERES a execcion de " , " */
+    jQuery.validator.addMethod("lettersOnlyCom",function(value,element){
+        return this.optional(element) || /^[,a-z-0-9]+$/i.test(value);
+    },'<span style="color: #cd0a0a">ingrese caracteres validos</span>')
+
 });
-function initilialize(){
-    $(".form_datetime").datetimepicker({
-        format: "yyyy-mm-dd-hh-ii",
-        autoclose: true,
-        todayBtn: true,
-        startDate: "2013-02-14-10-00",
-        minuteStep: 10
-    });
-}
 function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla,referenciados, isnull, constraint_type,column_default,check_clause) {
     var identificador = tablaActual.toUpperCase() + '.' + columna;
     $("#tablaCampo").html("<span class='badge bg-primary'>"+identificador+"</span>" +
@@ -96,31 +93,37 @@ function cargarConfiguracionTipoDateTime(tabla){
 }
 function cargarConfiguracionTipo(tabla) {
     var elegido = $("#formularioTipoOrigen").val();
-    var datoConfigTipo = new FormData();
-    datoConfigTipo.append("elegido", elegido);
-    datoConfigTipo.append("proyecto", $("#project").val())
-    $.ajax({
-        type: "POST",
-        url: "controller/loadConfigTypeController.php",
-        enctype: 'multipart/form-data',
-        data: datoConfigTipo,
-        cache: false,
-        contentType: false,
-        processData: false,
-        mimeType: 'multipart/form-data',
-        beforeSend: function (dato) {
-            $("#opcionconfiguracion").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
-            $("#opcionconfiguracion").show();
-        },
-        success: function (data) {
-            $("#opcionconfiguracion").html(data);
-            $("#opcionconfiguracion").show();
-            
-        },
-        error: function () {
-            $("#opcionconfiguracion").text("error")
-        }
-    });
+    if(elegido=='Date' || elegido=="Time" || elegido=="DateTime"){
+        $("#fechas").css({
+            display: "show"
+        });
+    }else{
+        var datoConfigTipo = new FormData();
+        datoConfigTipo.append("elegido", elegido);
+        datoConfigTipo.append("proyecto", $("#project").val())
+        $.ajax({
+            type: "POST",
+            url: "controller/loadConfigTypeController.php",
+            enctype: 'multipart/form-data',
+            data: datoConfigTipo,
+            cache: false,
+            contentType: false,
+            processData: false,
+            mimeType: 'multipart/form-data',
+            beforeSend: function (dato) {
+                $("#opcionconfiguracion").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
+                $("#opcionconfiguracion").show();
+            },
+            success: function (data) {
+                $("#opcionconfiguracion").html(data);
+                $("#opcionconfiguracion").show();
+
+            },
+            error: function () {
+                $("#opcionconfiguracion").text("error")
+            }
+        });
+    }
 }
 
 function cargarContenidoTexto() {

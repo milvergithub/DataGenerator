@@ -96,7 +96,7 @@ require_once "config/config.php";
         <script src="public/lib/bootbox.js"></script>
         <script src="public/js/app.js"></script>
         <script src="public/js/rellenar.js"></script>
-        <script src="public/js/functionsDateGenrate.js"></script>
+        <script src="public/js/functionsSendTypes.js"></script>
 
         <script src="public/js/validacionProyecto.js"></script>
         <script src="public/js/validaciones.js" ></script>
