@@ -1,7 +1,7 @@
 <div id="mensajeValidacionArchivos"></div>
 <input type="hidden" value="indirecto" id="directo">
 <div class="control-group">
-    <select class="form-control" id="formularioTipoOrigen" name="formularioTipoOrigen" onchange="cargarConfiguracionTipo('<?php echo $_POST['tablaActual'] ?>')">
+    <select class="form-control input-sm" id="formularioTipoOrigen" name="formularioTipoOrigen" onchange="cargarConfiguracionTipo('<?php echo $_POST['tablaActual'] ?>')">
         <option value="bytea">bytea</option>
     </select>
 </div>

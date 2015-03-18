@@ -46,7 +46,7 @@ $(document).ready(function () {
             formularioTipoOrigen:{
                 required:true
             },
-            algorimos:{
+            algoritmos:{
                 required:true
             },
             idioma:{

@@ -18,6 +18,9 @@ switch ($_POST['elegido']){
     case "rango":
         require_once "../view/numeric/rango.php";
         break;
+    case "algoritmosEnteros":
+        require_once "../view/numeric/rango.php";
+        break;
     case "algoritmo":
         require_once "../view/algoritmo/formAlgoritmos.php";
         break;

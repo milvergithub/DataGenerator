@@ -18,7 +18,7 @@ MAIN SIDEBAR MENU
                     for($i=0;$i<=$loadTablas->getCantidadDeNiveles();$i++){
                     ?>
                         <li class="nivelPanelNiv<?php echo $i ?>">
-                            <a href="javascript:;">
+                            <a href="#<?php echo ($i) ?>">
                                 <i class="fa fa-th"></i>
                                 <span>Nivel <?php echo $i ?></span>
                             </a>

@@ -1,6 +1,16 @@
 /**
  * Created by milver on 02-02-15.
  */
+function before(){
+    $("#mensajes").html("PROCESANDO...");
+    $("#mensajes").show();
+}
+function success(data){
+        $("#mensajes").html(data);
+}
+function error() {
+    $("#mensajes").text("FALLO LA CONEXION...!!!")
+}
 function sendTypeRango(datos){
     $.ajax({
         type: "POST",
@@ -11,16 +21,9 @@ function sendTypeRango(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        beforeSend: function (data) {
-            $("#mensajes").html("PROCESANDO...");
-            $("#mensajes").show();
-        },
-        success: function (data) {
-            $("#mensajes").html(data);
-        },
-        error: function () {
-            $("#mensajes").text("FALLO LA CONEXION...!!!")
-        }
+        beforeSend:before,
+        success: success,
+        error: error
     });
 }
 function sendTypeBooleano(datos){
@@ -33,16 +36,9 @@ function sendTypeBooleano(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        beforeSend: function (data) {
-            $("#mensajes").html("PROCESANDO...");
-            $("#mensajes").show();
-        },
-        success: function (data) {
-            $("#mensajes").html(data);
-        },
-        error: function () {
-            $("#mensajes").text("FALLO LA CONEXION...!!!")
-        }
+        beforeSend: before(),
+        success: success,
+        error:error
     });
 }
 function sendTypeForanea(datos){
@@ -55,16 +51,9 @@ function sendTypeForanea(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        beforeSend: function (data) {
-            $("#mensajes").html("PROCESANDO...");
-            $("#mensajes").show();
-        },
-        success: function (data) {
-            $("#mensajes").html(data);
-        },
-        error: function () {
-            $("#mensajes").text("FALLO LA CONEXION...!!!")
-        }
+        beforeSend: before(),
+        success: success,
+        error:error
     });
 }
 function sendTypeBytea(datos){
@@ -77,16 +66,9 @@ function sendTypeBytea(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        beforeSend: function (data) {
-            $("#mensajes").html("subiendo...");
-            $("#mensajes").show();
-        },
-        success: function (data) {
-            $("#mensajes").html(data);
-        },
-        error: function () {
-            $("#mensajes").text("FALLO LA CONEXION...!!!")
-        }
+        beforeSend: before(),
+        success: success,
+        error:error
     });
 }
 function sendTypeLista(datos){
@@ -99,15 +81,53 @@ function sendTypeLista(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        beforeSend: function (data) {
-            $("#mensajes").html("subiendo...");
-            $("#mensajes").show();
-        },
-        success: function (data) {
-            $("#mensajes").html(data);
-        },
-        error: function () {
-            $("#mensajes").text("FALLO LA CONEXION...!!!")
-        }
+        beforeSend: before(),
+        success: success,
+        error:error
+    });
+}
+function sendTypeAlgoritmoText(datos){
+    $.ajax({
+        type: "POST",
+        url: "controller/sendAlgoritmoTextController.php",
+        enctype: 'multipart/form-data',
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        beforeSend: before(),
+        success: success,
+        error:error
+    });
+}
+function sendTypeDateTime(datos){
+    $.ajax({
+        type: "POST",
+        url: "controller/sendDateTimeController.php",
+        enctype: 'multipart/form-data',
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        beforeSend: before(),
+        success: success,
+        error:error
+    });
+}
+function sendTypeEnterosDecimales(datos){
+    $.ajax({
+        type: "POST",
+        url: "controller/sendEnterosDecimalesController.php",
+        enctype: 'multipart/form-data',
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        beforeSend: before(),
+        success: success,
+        error:error
     });
 }

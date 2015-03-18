@@ -1,19 +1,26 @@
 $(document).ready(function () {
-    $( "#btnQuared").hide();
+    $("#btnQuared").hide();
+
     /*AGREGANDO VALIDADOR DE SOLO PERMITIR NUMEROS MAYORES A CERO y ENTEROS*/
-    jQuery.validator.addMethod("numberOnly",function(value,element){
+    jQuery.validator.addMethod("numberOnly", function (value, element) {
         return this.optional(element) || /^-?[1-9][0-9]*$/i.test(value);
-    },'<span style="color: #cd0a0a">ingrese numero mayor a 0</span>')
+    }, '<span style="color: #cd0a0a">ingrese numero mayor a 0</span>')
 
     /*AGREGANDO VALIDADOR DE SOLO CARACTERES a execcion de " , " */
-    jQuery.validator.addMethod("lettersOnlyCom",function(value,element){
+    jQuery.validator.addMethod("lettersOnlyCom", function (value, element) {
         return this.optional(element) || /^[,a-z-0-9]+$/i.test(value);
-    },'<span style="color: #cd0a0a">ingrese caracteres validos</span>')
+    }, '<span style="color: #cd0a0a">ingrese caracteres validos sin espacios</span>')
 
 });
-function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla,referenciados, isnull, constraint_type,column_default,check_clause) {
+function estadoNormal() {
+    $("#fechas").css({
+        display: "none"
+    });
+}
+function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla, referenciados, isnull, constraint_type, column_default, check_clause) {
+    estadoNormal();
     var identificador = tablaActual.toUpperCase() + '.' + columna;
-    $("#tablaCampo").html("<span class='badge bg-primary'>"+identificador+"</span>" +
+    $("#tablaCampo").html("<span class='badge bg-primary'>" + identificador + "</span>" +
     "<input type='hidden' name='nombre_columna' id='nombre_columna' value='" + identificador + "'/>");
     var datoConfig = new FormData();
     datoConfig.append("tablaActual", tablaActual);
@@ -25,8 +32,8 @@ function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, re
     datoConfig.append("referenciados", referenciados);
     datoConfig.append("is_null", isnull);
     datoConfig.append("constraint_type", constraint_type);
-    datoConfig.append("column_default",column_default);
-    datoConfig.append("check_clause",check_clause);
+    datoConfig.append("column_default", column_default);
+    datoConfig.append("check_clause", check_clause);
     cargarPanelAdecuado(datoConfig);
 }
 function cargarPanelAdecuado(datos) {
@@ -60,44 +67,44 @@ function mostrarOcultar(num, tabla) {
         });
         $("#NombreTabla").html(tabla);
         var datos = new FormData();
-        datos.append('tablaactual',tabla);
-        datos.append('proyecto',document.getElementById("project").value);
+        datos.append('tablaactual', tabla);
+        datos.append('proyecto', document.getElementById("project").value);
         $.ajax({
-                type: "POST",
-                url: "controller/mostrarOcultarController.php",
-                data: datos,
-                cache: false,
-                contentType: false,
-                processData: false,
-                beforeSend: function (dato) {
-                    $("#divtabla").html("cargando");
-                    $("#divtabla").show();
-                },
-                success: function (data) {
-                    $("#divtabla").html(data);
-                    $("#divtabla").show();
+            type: "POST",
+            url: "controller/mostrarOcultarController.php",
+            data: datos,
+            cache: false,
+            contentType: false,
+            processData: false,
+            beforeSend: function (dato) {
+                $("#divtabla").html("cargando");
+                $("#divtabla").show();
+            },
+            success: function (data) {
+                $("#divtabla").html(data);
+                $("#divtabla").show();
 
-                },
-                error: function () {
-                    $("#divtabla").text("error")
-                }
-            });
+            },
+            error: function () {
+                $("#divtabla").text("error")
+            }
+        });
     } else {
         $("#tabla" + num).css({
             display: "none"
         });
     }
 }
-function cargarConfiguracionTipoDateTime(tabla){
-
-}
 function cargarConfiguracionTipo(tabla) {
     var elegido = $("#formularioTipoOrigen").val();
-    if(elegido=='Date' || elegido=="Time" || elegido=="DateTime"){
+    if (elegido == 'Date' || elegido == "Time" || elegido == "DateTime") {
         $("#fechas").css({
             display: "show"
         });
-    }else{
+    } else {
+        $("#fechas").css({
+            display: "none"
+        });
         var datoConfigTipo = new FormData();
         datoConfigTipo.append("elegido", elegido);
         datoConfigTipo.append("proyecto", $("#project").val())
@@ -144,9 +151,9 @@ function cargarContenidoTexto() {
             $("#contenidogenerar").show();
         },
         success: function (data) {
-            if(data==='visible'){
+            if (data === 'visible') {
                 $("#divsubmit").css("display", "block");
-            }else{
+            } else {
                 $("#contenidogenerar").text(data);
                 bootbox.alert(data, function () {
                 });
@@ -186,15 +193,15 @@ function cargarColumnasTabla() {
         }
     });
 }
-function changeVisualitationLine(){
+function changeVisualitationLine() {
     $('.proyectos').removeClass('well col-xs-3 proyecto');
     $('.proyectos').addClass('panel panel-body line');
-    $( "#btnLine").hide();
-    $( "#btnQuared").show();
+    $("#btnLine").hide();
+    $("#btnQuared").show();
 }
-function changeVisualitationQuared(){
+function changeVisualitationQuared() {
     $('.proyectos').removeClass('panel panel-body line');
     $('.proyectos').addClass('well col-xs-3 proyecto');
-    $( "#btnQuared").hide();
-    $( "#btnLine").show();
+    $("#btnQuared").hide();
+    $("#btnLine").show();
 }

@@ -31,6 +31,13 @@ class GeneratorTextModel {
         $posDom=rand(0,count($dominios)-1);
         return ($this->getGenerarPalabras()."@".$dominios[$posDom]);
     }
+    function getPalabras($cantidad){
+        $lista=array();
+        for($i=0;$i<$cantidad;$i++){
+            $lista[$i]=$this->getGenerarPalabras();
+        }
+        return $lista;
+    }
     function getGenerarPalabras($min = 4, $max = 8,$iniMay=true) {
         $vocales = array('a', 'e', 'i', 'o', 'u');
         $consonantes = array('b', 'c', 'd', 'f', 'g', 'j', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y');

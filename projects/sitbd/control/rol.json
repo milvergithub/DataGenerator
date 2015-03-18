@@ -1,1 +1,12 @@
-[{"column_name":"cod_rol","is_nullable":"NO","rellenado":true},{"column_name":"nombre_rol","is_nullable":"NO","rellenado":true}]
+[
+  {
+    "column_name": "cod_rol",
+    "is_nullable": "NO",
+    "rellenado": true
+  },
+  {
+    "column_name": "nombre_rol",
+    "is_nullable": "NO",
+    "rellenado": true
+  }
+]

@@ -1,5 +1,6 @@
-body{
-    
+.test{
+    max-height: 450px;
+    overflow-y: auto;
 }
 #formConfiguracion{
     margin: 5px;

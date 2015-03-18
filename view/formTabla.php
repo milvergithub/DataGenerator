@@ -4,7 +4,7 @@ include "../model/tablasJSONModel.php";
 $tablas=new tablasJSONModel($_POST["proyecto"]);
 ?>
 <div class="control-group">
-    <select name="tabla" id="tabla" class="form-control" onchange="cargarColumnasTabla()">
+    <select name="tabla" id="tabla" class="form-control input-sm" onchange="cargarColumnasTabla()">
         <?php
         echo "<option value=''>------- selecciones tabla -------</option>";
         $resultadoTablas=$tablas->getTablas();
@@ -15,7 +15,7 @@ $tablas=new tablasJSONModel($_POST["proyecto"]);
     </select>
 </div>
 <div class="control-group">
-    <select name="columna" id="columna" class="form-control" onchange="">
+    <select name="columna" id="columna" class="form-control input-sm" onchange="">
         <option value="">------- selecciones columna -------</option>
     </select>
 </div>

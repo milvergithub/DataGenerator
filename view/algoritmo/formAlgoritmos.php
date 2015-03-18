@@ -1,6 +1,6 @@
 <div class="control-group">
-    <select class="form-control" name="algorimos" id="algoritmos">
-        <option value="">------- selecione algoritmo -------</option>
+    <select class="form-control input-sm" name="algoritmos" id="algoritmos">
+        <option value="">------------ selecione algoritmo -----------</option>
         <option value="palabras">Generador de palabras</option>
         <option value="emails">Generador de emails</option>
         <option value="direciones">Generador de direciones</option>
@@ -10,11 +10,11 @@
     </select>
 </div>
 <div class="control-group">
-    <select class="form-control" name="idioma" id="idioma">
-        <option value="">--------- selecione idioma ---------</option>
+    <select class="form-control input-sm" name="idioma" id="idioma">
+        <option value="">------------ selecione un idioma ------------</option>
         <option value="es_ES">Espanol</option>
         <option value="en_EN">Ingles</option>
-        <option value="">Portugues</option>
+        <option value="ar">	árabe</option>
         <option value="">Russo</option>
     </select>
 </div>

@@ -11,6 +11,58 @@ class writerReadDatesModel {
     function __construct($p){
         $this->proyecto=$p;
     }
+    public function getEstadoForaneaV1($tablaRefenciada,$columnaRefenciada){
+        $datos= file_get_contents("../projects/".$this->proyecto."/control/".$tablaRefenciada.".json");
+        $datosTabla = json_decode($datos,true);
+        $estadoColumnas=array();
+        $claves=explode(',',$columnaRefenciada);
+        if(sizeof($claves)>1){
+            $cont=0;
+            for($c=0;$c<count($claves);$c++){
+                $columnaTest=$claves[$c];
+                for($d=0;$d<count($datosTabla);$d++){
+                    if($columnaTest==$datosTabla[$d]['column_name']){
+                        if($datosTabla[$d]['rellenado']==true){
+                            $estadoColumnas[$cont]=true;$cont++;
+                        }else{
+                            $estadoColumnas[$cont]=true;$cont++;
+                        }
+                    }
+                }
+            }
+        }else{
+            for($i=0;$i<count($datosTabla);$i++){
+                if($datosTabla[$i]['column_name']==$columnaRefenciada){
+                    if($datosTabla[$i]['rellenado']==true){
+                        $estadoColumnas[0]=true;
+                    }else{
+                        $estadoColumnas[0]=false;
+                    }
+                }
+            }
+        }
+        return $estadoColumnas;
+    }
+    public function getEstadoForanea($tablaRefenciada,$columnaRefenciada){
+        $datos= file_get_contents("../projects/".$this->proyecto."/control/".$tablaRefenciada.".json");
+        $datosTabla = json_decode($datos,true);
+        $estadoColumnas=array();
+        $claves=explode(',',$columnaRefenciada);
+        if(sizeof($claves)>1){
+
+        }else{
+            for($i=0;$i<count($datosTabla);$i++){
+                if($datosTabla[$i]['column_name']==$columnaRefenciada){
+                    if($datosTabla[$i]['rellenado']==true){
+                        $estadoColumnas[0]=true;
+                    }else{
+                        $estadoColumnas[0]=false;
+                    }
+                }
+            }
+        }
+        return $estadoColumnas;
+    }
     protected function getDatosTabla($tabla){
         $datos = file_get_contents("../projects/".$this->proyecto."/dates/".$tabla.".json");
         $datosTabla = json_decode($datos, true);

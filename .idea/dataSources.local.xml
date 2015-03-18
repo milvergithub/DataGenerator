@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - bdtis@localhost" uuid="b2cd4a26-19c9-49ea-acad-fd2d31c60318" />
-    <data-source name="SQLite -" uuid="91755682-f577-49bc-9321-a835c4ccb0c4" />
+    <data-source name="PostgreSQL - ventas@localhost" uuid="6ba7231a-21ed-4f17-9bd5-69f50206cb59">
+      <secret-storage>master_key</secret-storage>
+      <user-name>milver</user-name>
+      <schema-pattern>ventas.pg_catalog ventas.public</schema-pattern>
+      <default-schemas>ventas.pg_catalog ventas.public</default-schemas>
+    </data-source>
   </component>
 </project>

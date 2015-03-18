@@ -2,7 +2,13 @@
     <input type="file" name="archivo" id="archivo" multiple onchange="cargarContenidoTexto()"/>
 </div>
 <div class="control-group">
-    <input class="form-control input-sm" width="50px" type="text" name="separador" id="separador"/>
+    <label for="separador">separador</label>
+    <select class="form-control input-sm" name="separador" id="separador">
+        <option value=".">punto (.)</option>
+        <option value=",">coma (,)</option>
+        <option value=";">punto y coma(;)</option>
+        <option value=":">dos puntos (:)</option>
+    </select>
 </div>
 <input type="hidden" value="indirecto" id="directo">
 <div style="display: none" id="divsubmit">

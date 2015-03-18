@@ -10,6 +10,7 @@ function guardarConfiguracion() {
     datosDetalle.append('es_foranea',document.getElementById('es_foranea').value);
     datosDetalle.append('referencian',document.getElementById('referencian').value);
     datosDetalle.append('tabla',document.getElementById('tabla').value);
+    datosDetalle.append('referenciados',document.getElementById('referenciados').value);
     datosDetalle.append('is_null',document.getElementById('is_null').value);
     datosDetalle.append('constraint_type',document.getElementById('constraint_type').value);
     datosDetalle.append('column_default',document.getElementById('column_default').value);
@@ -44,6 +45,22 @@ function guardarConfiguracion() {
         datosDetalle.append('contenido',document.getElementById('contenidogenerar').value);
         sendTypeLista(datosDetalle);
     }
+    function metodoAlgoritmoText(){
+        datosDetalle.append('algorimoSeleccionado',document.getElementById('algoritmos').value);
+        datosDetalle.append('idiomaSeleccionado',document.getElementById('idioma').value);
+        sendTypeAlgoritmoText(datosDetalle);
+    }
+    function metodoDateTime(){
+        datosDetalle.append('fechaInicial',document.getElementById('fechaInicial').value);
+        datosDetalle.append('fechaFinal',document.getElementById('fechaFinal').value);
+        datosDetalle.append('formularioTipoOrigen',document.getElementById('formularioTipoOrigen').value);
+        sendTypeDateTime(datosDetalle);
+    }
+    function metodoEnterorDecimales(){
+        datosDetalle.append('minimo', document.getElementById('minimo').value);
+        datosDetalle.append('maximo', document.getElementById('maximo').value);
+        sendTypeEnterosDecimales(datosDetalle);
+    }
     var estado=document.getElementById('directo').value;
     if((estado)=="indirecto"){
         var seleccionado=document.getElementById('formularioTipoOrigen').value;
@@ -62,7 +79,7 @@ function guardarConfiguracion() {
                 metodoLista()
                 break;
             case 'algoritmo':
-                alert("algoritmo");
+                metodoAlgoritmoText();
                 break;
             case 'rango':
                 metodoRango();
@@ -71,7 +88,18 @@ function guardarConfiguracion() {
             case 'booleano':
                 metodoBooleano();
                 break;
-
+            case 'Date':
+                metodoDateTime();
+                break;
+            case 'Time':
+                metodoDateTime();
+                break;
+            case 'DateTime':
+                metodoDateTime();
+                break;
+            case 'algoritmosEnteros':
+                metodoEnterorDecimales();
+                break;
         }
     }else{
         metodoForanea();

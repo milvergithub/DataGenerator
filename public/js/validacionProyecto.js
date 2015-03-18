@@ -60,7 +60,7 @@ function verificarEstadoConfiguracion(proyecto){
             bootbox.alert(data, function() {
 
             });
-            $("#mensajeVerificarEstado").html("ESTADO");
+            $("#mensajeVerificarEstado").html("");
         },
         error: function () {
             $("#mensajeVerificarEstado").text("FALLO LA CONEXION...!!!")

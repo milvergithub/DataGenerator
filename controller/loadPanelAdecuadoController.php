@@ -12,6 +12,7 @@
 <input type="hidden" id="es_foranea" value="<?php echo $_POST['es_foranea'] ?>"/>
 <input type="hidden" id="referencian" value="<?php echo $_POST['referencian'] ?>"/>
 <input type="hidden" id="tabla" value="<?php echo $_POST['tabla'] ?>"/>
+<input type="hidden" id="referenciados" value="<?php echo $_POST['referenciados'] ?>"/>
 <input type="hidden" id="is_null" value="<?php echo $_POST['is_null'] ?>"/>
 <input type="hidden" id="constraint_type" value="<?php echo $_POST['constraint_type'] ?>"/>
 <input type="hidden" id="column_default" value="<?php echo $_POST['column_default'] ?>"/>

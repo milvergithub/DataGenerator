@@ -29,13 +29,13 @@ $cantidad=$model->getCantidadDatosTabla($_POST['tablaactual']);
     <div id="fechas" style="display: none">
         <div class="control-group">
             <div class="input-group date form_datetime">
-                <input class="form-control" type="text" value="" name="fechaInicial" id="fechaInicial">
+                <input class="form-control input-sm" type="text" value="" name="fechaInicial" id="fechaInicial">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
         </div>
         <div class="control-group">
             <div class="input-group date form_datetime">
-                <input class="form-control" type="text" value="" name="fechaFinal" id="fechaFinal">
+                <input class="form-control input-sm" type="text" value="" name="fechaFinal" id="fechaFinal">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
         </div>

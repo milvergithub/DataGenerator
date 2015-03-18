@@ -2,6 +2,9 @@
 $cantidadTablas = count($listaTablas);
 $control = false;
 $contador = 0;
+?>
+<div class="panel panel-body test">
+<?php
 echo "<table class='table table-bordered'>";
 echo "<tr class='alert alert-info'><td>en la tabla</td><td>FALTA CONFIGURAR</td></tr>";
 for($i=0;$i<count($listaTablas);$i++){
@@ -20,5 +23,5 @@ for($i=0;$i<count($listaTablas);$i++){
     echo "</tr>";
 }
 echo "</table>";
-
 ?>
+</div>

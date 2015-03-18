@@ -1,4 +1,4 @@
-<select class="form-control" name="modo" id="modo">
+<select class="form-control input-sm" name="modo" id="modo">
     <option value="aleatorio">aleatorio</option>
     <option value="true">true</option>
     <option value="false">false</option>

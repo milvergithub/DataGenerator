@@ -7,6 +7,7 @@
  */
 
 class GeneratorDateTimeModel {
+
     public function __construct(){
 
     }
@@ -60,6 +61,23 @@ class GeneratorDateTimeModel {
             $t1 = strtotime('+1 second', $t1);
             $ind=$ind+1;
             $cont=$cont+1;
+        }
+        return $retorno;
+    }
+    public function getFechas($inicio = '2015-03-02 20:02:03', $final = '2015-03-02 20:04:03', $cant = 100) {
+        $t1 = strtotime($inicio);
+        $t2 = strtotime($final);
+        $retorno = array();
+        $ind = 0;
+        $cont = 0;
+        while ($cont < $cant) {
+            if ($t1 >= $t2) {
+                $t1 = strtotime($inicio);
+            }
+            $retorno[$ind] = date('Y-m-d', $t1);
+            $t1 = strtotime('+1 day', $t1);
+            $ind = $ind + 1;
+            $cont = $cont + 1;
         }
         return $retorno;
     }
