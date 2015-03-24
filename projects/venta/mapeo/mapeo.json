@@ -2,7 +2,7 @@
   {
     "tablename": "categoria",
     "nivel": 0,
-    "cantidad": 0
+    "cantidad": "5"
   },
   {
     "tablename": "persona",

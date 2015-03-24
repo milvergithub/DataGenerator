@@ -1,1 +1,37 @@
-[{"tablename":"roles","nivel":0,"cantidad":0},{"tablename":"usuarios","nivel":0,"cantidad":0},{"tablename":"productos","nivel":0,"cantidad":0},{"tablename":"clientes","nivel":0,"cantidad":0},{"tablename":"usuario_rol","nivel":1,"cantidad":0},{"tablename":"facturas","nivel":1,"cantidad":0},{"tablename":"items","nivel":2,"cantidad":0}]
+[
+  {
+    "tablename": "roles",
+    "nivel": 0,
+    "cantidad": 0
+  },
+  {
+    "tablename": "usuarios",
+    "nivel": 0,
+    "cantidad": 0
+  },
+  {
+    "tablename": "productos",
+    "nivel": 0,
+    "cantidad": 0
+  },
+  {
+    "tablename": "clientes",
+    "nivel": 0,
+    "cantidad": 0
+  },
+  {
+    "tablename": "usuario_rol",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "facturas",
+    "nivel": 1,
+    "cantidad": 0
+  },
+  {
+    "tablename": "items",
+    "nivel": 2,
+    "cantidad": 0
+  }
+]

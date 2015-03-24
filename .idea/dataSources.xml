@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2881805077">
+  <component name="DataSourceManagerImpl" format="xml" hash="271975719">
     <data-source source="LOCAL" name="PostgreSQL - ventas@localhost" uuid="6ba7231a-21ed-4f17-9bd5-69f50206cb59">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/ventas</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - venta@localhost" uuid="751572de-9224-48a1-9906-d15ba7104b91">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/venta</jdbc-url>
       <libraries />
     </data-source>
   </component>

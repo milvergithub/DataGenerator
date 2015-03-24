@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "nombre_categoria": "bebida",
+    "cod_categoria": "1"
+  },
+  {
+    "nombre_categoria": "comidarapida",
+    "cod_categoria": 2
+  },
+  {
+    "nombre_categoria": "enlatados",
+    "cod_categoria": 3
+  },
+  {
+    "nombre_categoria": "especial",
+    "cod_categoria": 4
+  },
+  {
+    "nombre_categoria": "ensaladas",
+    "cod_categoria": 5
+  }
+]

@@ -1,1 +1,22 @@
-[{"column_name":"id_cliente","is_nullable":"NO","rellenado":false},{"column_name":"nombre","is_nullable":"NO","rellenado":false},{"column_name":"ape_pat","is_nullable":"NO","rellenado":false},{"column_name":"ape_mat","is_nullable":"NO","rellenado":false}]
+[
+  {
+    "column_name": "id_cliente",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "nombre",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "ape_pat",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "ape_mat",
+    "is_nullable": "NO",
+    "rellenado": false
+  }
+]

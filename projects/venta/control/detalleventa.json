@@ -1,1 +1,32 @@
-[{"column_name":"cod_producto","is_nullable":"NO","rellenado":false},{"column_name":"cod_cliente","is_nullable":"NO","rellenado":false},{"column_name":"cod_vendedor","is_nullable":"NO","rellenado":false},{"column_name":"cod_detalleventa","is_nullable":"NO","rellenado":false},{"column_name":"cantidad_detalleventa","is_nullable":"NO","rellenado":false},{"column_name":"fecha_detalleventa","is_nullable":"NO","rellenado":false}]
+[
+  {
+    "column_name": "cod_producto",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_cliente",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_vendedor",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "cod_detalleventa",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "cantidad_detalleventa",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "fecha_detalleventa",
+    "is_nullable": "NO",
+    "rellenado": false
+  }
+]
