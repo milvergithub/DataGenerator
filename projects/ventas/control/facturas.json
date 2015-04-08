@@ -1,1 +1,27 @@
-[{"column_name":"id_cliente","is_nullable":"NO","rellenado":false},{"column_name":"id_usuario","is_nullable":"NO","rellenado":false},{"column_name":"id_factura","is_nullable":"NO","rellenado":false},{"column_name":"fecha","is_nullable":"NO","rellenado":false},{"column_name":"total","is_nullable":"NO","rellenado":false}]
+[
+  {
+    "column_name": "id_cliente",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "id_usuario",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "id_factura",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "fecha",
+    "is_nullable": "NO",
+    "rellenado": false
+  },
+  {
+    "column_name": "total",
+    "is_nullable": "NO",
+    "rellenado": false
+  }
+]

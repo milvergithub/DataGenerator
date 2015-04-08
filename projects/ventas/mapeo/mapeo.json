@@ -2,12 +2,12 @@
   {
     "tablename": "roles",
     "nivel": 0,
-    "cantidad": 0
+    "cantidad": "3"
   },
   {
     "tablename": "usuarios",
     "nivel": 0,
-    "cantidad": 0
+    "cantidad": "10"
   },
   {
     "tablename": "productos",
@@ -22,7 +22,7 @@
   {
     "tablename": "usuario_rol",
     "nivel": 1,
-    "cantidad": 0
+    "cantidad": "5"
   },
   {
     "tablename": "facturas",

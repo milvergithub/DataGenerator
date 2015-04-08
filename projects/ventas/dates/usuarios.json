@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "password": "Yipa",
+    "login": "Reraf",
+    "telefono": "70000",
+    "fecha_nacimiento": "Duyu",
+    "email": "scardenas@yahoo.com",
+    "ape_mat": "Vázquez",
+    "ape_pat": "Valdés",
+    "nombres": "Alba",
+    "id_usuario": "1"
+  },
+  {
+    "password": "Lilinot",
+    "login": "Valefig",
+    "telefono": 70001,
+    "fecha_nacimiento": "Velav",
+    "email": "zoe66@jaquez.com",
+    "ape_mat": "Silva",
+    "ape_pat": "Villaseñor",
+    "nombres": "Malak",
+    "id_usuario": 2
+  },
+  {
+    "password": "Pedayoy",
+    "login": "Wiciw",
+    "telefono": 70002,
+    "fecha_nacimiento": "Vawaxuri",
+    "email": "delvalle.adam@lucas.org",
+    "ape_mat": "Miguel",
+    "ape_pat": "Sosa",
+    "nombres": "Martina",
+    "id_usuario": 3
+  },
+  {
+    "password": "Temexiru",
+    "login": "Puju",
+    "telefono": 70003,
+    "fecha_nacimiento": "Tumit",
+    "email": "lteran@gmail.com",
+    "ape_mat": "Carrasco",
+    "ape_pat": "Casárez",
+    "nombres": "Paola",
+    "id_usuario": 4
+  },
+  {
+    "password": "Yoje",
+    "login": "Fopij",
+    "telefono": 70004,
+    "fecha_nacimiento": "Gumewupo",
+    "email": "ariadna.granados@live.com",
+    "ape_mat": "Hernando",
+    "ape_pat": "Ramos",
+    "nombres": "Jesus",
+    "id_usuario": 5
+  },
+  {
+    "password": "Tojim",
+    "login": "Yamumo",
+    "telefono": 70005,
+    "fecha_nacimiento": "Suto",
+    "email": "agracia@hotmail.com",
+    "ape_mat": "Macias",
+    "ape_pat": "Lucero",
+    "nombres": "Isaac",
+    "id_usuario": 6
+  },
+  {
+    "password": "Tobonun",
+    "login": "Yipu",
+    "telefono": 70006,
+    "fecha_nacimiento": "Posijat",
+    "email": "lara35@villa.net",
+    "ape_mat": "Sarabia",
+    "ape_pat": "Hernández",
+    "nombres": "Pau",
+    "id_usuario": 7
+  },
+  {
+    "password": "Tebowonu",
+    "login": "Guse",
+    "telefono": 70007,
+    "fecha_nacimiento": "Pomer",
+    "email": "orodrigo@latinmail.com",
+    "ape_mat": "Águilar",
+    "ape_pat": "Raya",
+    "nombres": "Samuel",
+    "id_usuario": 8
+  },
+  {
+    "password": "Ravuvipa",
+    "login": "Riwiro",
+    "telefono": 70008,
+    "fecha_nacimiento": "Rivigefe",
+    "email": "cadena.gerard@live.com",
+    "ape_mat": "Armendáriz",
+    "ape_pat": "Escobedo",
+    "nombres": "Adria",
+    "id_usuario": 9
+  },
+  {
+    "password": "Tati",
+    "login": "Yotu",
+    "telefono": 70009,
+    "fecha_nacimiento": "Durut",
+    "email": "giron.alexia@urena.com",
+    "ape_mat": "Alemán",
+    "ape_pat": "Bañuelos",
+    "nombres": "Jimena",
+    "id_usuario": 10
+  }
+]

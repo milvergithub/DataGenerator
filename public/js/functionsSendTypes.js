@@ -1,6 +1,18 @@
 /**
  * Created by milver on 02-02-15.
  */
+function progress(e){
+    if(e.lengthComputable){
+        var max = e.total;
+        var current = e.loaded;
+        var Percentage = (current * 100)/max;
+        console.log(Percentage);
+        if(Percentage >= 100)
+        {
+            // process completed
+        }
+    }
+}
 function before(){
     $("#mensajes").html("PROCESANDO...");
     $("#mensajes").show();
@@ -51,6 +63,13 @@ function sendTypeForanea(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
+        xhr: function() {
+            var myXhr = $.ajaxSettings.xhr();
+            if(myXhr.upload){
+                myXhr.upload.addEventListener('progress',progress, false);
+            }
+            return myXhr;
+        },
         beforeSend: before(),
         success: success,
         error:error

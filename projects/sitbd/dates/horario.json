@@ -1,12 +1,1 @@
-[
-  {"hora_hora": "07:10:00"},
-  {"hora_hora": "07:10:01"},
-  {"hora_hora": "07:10:02"},
-  {"hora_hora": "07:10:03"},
-  {"hora_hora": "07:10:04"},
-  {"hora_hora": "07:10:05"},
-  {"hora_hora": "07:10:06"},
-  {"hora_hora": "07:10:07"},
-  {"hora_hora": "07:10:08"},
-  {"hora_hora": "07:10:09"}
-]
+[{"dia_hora":"Mida","cod_hora":"1","cod_grupo":"0","hora_hora":"07:10:00"},{"dia_hora":"Fucow","cod_hora":2,"cod_grupo":"1","hora_hora":"07:10:01"},{"dia_hora":"Jonumi","cod_hora":3,"cod_grupo":"2","hora_hora":"07:10:02"},{"dia_hora":"Mupenafi","cod_hora":4,"cod_grupo":"3","hora_hora":"07:10:03"},{"dia_hora":"Yojac","cod_hora":5,"cod_grupo":"4","hora_hora":"07:10:04"},{"dia_hora":"Wuyopebe","cod_hora":6,"cod_grupo":"5","hora_hora":"07:10:05"},{"dia_hora":"Tevevova","cod_hora":7,"cod_grupo":"6","hora_hora":"07:10:06"},{"dia_hora":"Jobiv","cod_hora":8,"cod_grupo":"7","hora_hora":"07:10:07"},{"dia_hora":"Vutatoy","cod_hora":9,"cod_grupo":"8","hora_hora":"07:10:08"},{"dia_hora":"Giraje","cod_hora":10,"cod_grupo":"9","hora_hora":"07:10:09"}]

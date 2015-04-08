@@ -1,23 +1,25 @@
 <div class="">
 
     <div class="col-lg-14 col-lg-7 col-md-7 col-sm-7 col-xs-7 well full-with">
-        <?php echo '<button onclick="verificarEstadoConfiguracion(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">Paso 1 test</button>'; ?>
+        <?= '<button onclick="verificarEstadoConfiguracion(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">Paso 1 test</button>'; ?>
         <div id="mensajeVerificarEstado"></div>
+        <?= '<h3>PROJECT  <i class="fa fa-angle-right"></i> ' . $_GET[PROYECTO] . '</h3>'?>
+        <?= '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">'?>
         <?php
-        echo '<h3>PROJECT  <i class="fa fa-angle-right"></i> ' . $_GET[PROYECTO] . '</h3>';
-        echo '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">';
         $resultadoPT = $loadTablas->getTablesAndReferencesLoad();
         for ($contador = 1; $contador <= sizeof($resultadoPT); $contador++) {
-            echo '<div id="'.$resultadoPT[$contador - 1]['nivel'].'" class="panel panel-primary nivel' . $resultadoPT[$contador - 1]['nivel'] . ' col-lg-12">
-                    <button class="btn fa fa-th nivelPanel' . $resultadoPT[$contador - 1]['nivel'] . '"> ' . $resultadoPT[$contador - 1]['nivel'] . '</button>
-                    <button class="btn btn-link" id="boton' . $contador . '" onclick="mostrarOcultar(' . $contador . ',\'' . $resultadoPT[$contador - 1]['tablename'] . '\');">' . $resultadoPT[$contador - 1]['tablename'] . '</button>
-                    <div class="" id="tabla' . $contador . '" style="display: none">
-                       <table class="table table-hover">
-                       <tr><th>name</th><th>key</th><th>null</th><th>type</th><th>estado</th></tr>
-                      ' . printDetalleTable($resultadoPT[$contador - 1]['tablename']) . '
-                       </table>
-                    </div>
-                 </div>';
+        ?>
+            <div id="<?=$resultadoPT[$contador - 1]['nivel']?>" class="panel panel-primary nivel<?=$resultadoPT[$contador - 1]['nivel']?>  col-lg-12">
+                <button class="btn fa fa-th nivelPanel<?=$resultadoPT[$contador - 1]['nivel'] ?>"><?= $resultadoPT[$contador - 1]['nivel'] ?></button>
+                <button class="btn btn-link" id="boton<?= $contador ?>" onclick="mostrarOcultar(<?= $contador ?>,'<?=$resultadoPT[$contador - 1]['tablename']?>');"><?=$resultadoPT[$contador - 1]['tablename'] ?></button>
+                <div class="" id="tabla<?=$contador?>" style="display: none">
+                   <table class="table table-hover">
+                   <tr><th>name</th><th>key</th><th>null</th><th>type</th><th>estado</th></tr>
+                  <?= printDetalleTable($resultadoPT[$contador - 1]['tablename'])?>
+                   </table>
+                </div>
+             </div>
+        <?php
         }
         ?>
     </div>
