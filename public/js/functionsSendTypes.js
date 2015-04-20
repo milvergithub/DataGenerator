@@ -20,6 +20,9 @@ function before(){
 function success(data){
         $("#mensajes").html(data);
 }
+function successRellenado(data){
+    $("#mensajeVerificarEstado").html(data);
+}
 function error() {
     $("#mensajes").text("FALLO LA CONEXION...!!!")
 }

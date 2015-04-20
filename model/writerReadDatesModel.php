@@ -37,7 +37,7 @@ class writerReadDatesModel {
         return $datosTabla;
     }
     protected function getDetalleTabla($tabla){
-        $datos = file_get_contents("../projects/".$this->proyecto."/control/".$tabla.".json");
+        $datos = file_get_contents("../projects/".$this->proyecto."/tables/".$tabla.".json");
         $datosTabla = json_decode($datos, true);
         return $datosTabla;
     }

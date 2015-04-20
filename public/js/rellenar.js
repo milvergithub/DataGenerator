@@ -106,3 +106,33 @@ function guardarConfiguracion() {
     }
 
 }
+function llenarDatos(proyecto){
+    var datos = new FormData();
+    datos.append('proyecto',proyecto);
+    $.ajax({
+        type: "POST",
+        url: "controller/rellenarController.php",
+        enctype: 'multipart/form-data',
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        mimeType: 'multipart/form-data',
+        beforeSend: before(),
+        success: successRellenado,
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
+    });
+}

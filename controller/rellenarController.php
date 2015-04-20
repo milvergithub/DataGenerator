@@ -8,7 +8,9 @@
 require "../model/rellenarModel.php";
 $model=new rellenarModel($_POST['proyecto']);
 $listaTablas=$model->getListaTablas();
+echo "<pre>";
 for($i=0;$i<count($listaTablas);$i++){
     $tabla=$listaTablas[$i];
     $model->setRellenarDatos($tabla);
 }
+echo "</pre>";
