@@ -21,7 +21,6 @@ class GeneratorNetworkAddresModel {
             for ($i=0; $i < 8; $i++) {
                 $res []= dechex(mt_rand(0, "65535"));
             }
-
             $retorno[$cont]= join(':', $res);
             $cont=$cont+1;
         }
@@ -41,13 +40,11 @@ class GeneratorNetworkAddresModel {
                 // 192.168.x.x range
                 $ip = long2ip(GeneratorNetworkAddresModel::numberBetween(3232235520, 3232301055));
             }
-
             $retorno[$cont]=$ip;
             $cont=$cont+1;
         }
         return $retorno;
     }
-
     /**
      * @example '32:F1:39:2F:D6:18'
      */

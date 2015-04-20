@@ -1,6 +1,6 @@
 $(document).ready(function () {
+    $('#prog').progressbar({ value: 0 });
     $("#btnQuared").hide();
-
     /*AGREGANDO VALIDADOR DE SOLO PERMITIR NUMEROS MAYORES A CERO y ENTEROS*/
     jQuery.validator.addMethod("numberOnly", function (value, element) {
         return this.optional(element) || /^-?[1-9][0-9]*$/i.test(value);
@@ -54,6 +54,7 @@ function cargarPanelAdecuado(datos) {
         success: function (data) {
             $("#formularioPersonalizado").html(data);
             $("#formularioPersonalizado").show();
+            $('#prog').progressbar({ value: 0 });
         },
         error: function () {
             $("#formularioPersonalizado").text("error")
@@ -83,7 +84,7 @@ function mostrarOcultar(num, tabla) {
             success: function (data) {
                 $("#divtabla").html(data);
                 $("#divtabla").show();
-
+                $('#prog').progressbar({ value: 0 });
             },
             error: function () {
                 $("#divtabla").text("error")
@@ -128,6 +129,19 @@ function cargarConfiguracionTipo(tabla) {
             },
             error: function () {
                 $("#opcionconfiguracion").text("error")
+            },
+            progress: function(e) {
+                if(e.lengthComputable) {
+                    var pct = (e.loaded / e.total) * 100;
+
+                    $('#prog')
+                        .progressbar('option', 'value', pct)
+                        .children('.ui-progressbar-value')
+                        .html(pct.toPrecision(3) + '%')
+                        .css('display', 'block');
+                } else {
+                    console.warn('Content Length not reported!');
+                }
             }
         });
     }
@@ -163,6 +177,19 @@ function cargarContenidoTexto() {
         },
         error: function () {
             $("#contenidogenerar").text("error")
+        },
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
         }
     });
 }
@@ -190,6 +217,19 @@ function cargarColumnasTabla() {
         },
         error: function () {
             $("#columna").text("error")
+        },
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
         }
     });
 }

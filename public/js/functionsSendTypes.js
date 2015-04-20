@@ -35,7 +35,20 @@ function sendTypeRango(datos){
         mimeType: 'multipart/form-data',
         beforeSend:before,
         success: success,
-        error: error
+        error: error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }
 function sendTypeBooleano(datos){
@@ -50,7 +63,20 @@ function sendTypeBooleano(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }
 function sendTypeForanea(datos){
@@ -63,12 +89,18 @@ function sendTypeForanea(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        xhr: function() {
-            var myXhr = $.ajaxSettings.xhr();
-            if(myXhr.upload){
-                myXhr.upload.addEventListener('progress',progress, false);
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
             }
-            return myXhr;
         },
         beforeSend: before(),
         success: success,
@@ -87,7 +119,20 @@ function sendTypeBytea(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }
 function sendTypeLista(datos){
@@ -102,7 +147,20 @@ function sendTypeLista(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }
 function sendTypeAlgoritmoText(datos){
@@ -117,7 +175,20 @@ function sendTypeAlgoritmoText(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }
 function sendTypeDateTime(datos){
@@ -132,7 +203,20 @@ function sendTypeDateTime(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }
 function sendTypeEnterosDecimales(datos){
@@ -147,6 +231,19 @@ function sendTypeEnterosDecimales(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error
+        error:error,
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
+        }
     });
 }

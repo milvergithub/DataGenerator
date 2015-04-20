@@ -37,6 +37,19 @@ function validarArchivos(){
         },
         error: function () {
             $("#mensajeValidacionArchivos").text("error")
+        },
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
         }
     });
 }
@@ -64,6 +77,19 @@ function verificarEstadoConfiguracion(proyecto){
         },
         error: function () {
             $("#mensajeVerificarEstado").text("FALLO LA CONEXION...!!!")
+        },
+        progress: function(e) {
+            if(e.lengthComputable) {
+                var pct = (e.loaded / e.total) * 100;
+
+                $('#prog')
+                    .progressbar('option', 'value', pct)
+                    .children('.ui-progressbar-value')
+                    .html(pct.toPrecision(3) + '%')
+                    .css('display', 'block');
+            } else {
+                console.warn('Content Length not reported!');
+            }
         }
     });
 }

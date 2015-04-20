@@ -18,7 +18,7 @@ class writerReadDatesModel {
         $control = json_decode($datosControl,true);
         $tablas = json_decode($datosTabla,true);
         for($i=0;$i<count($control);$i++){
-            if($tablas[$i]['constraint_type']=='foraneas'){
+            if(($tablas[$i]['constraint_type']=='foraneas')OR($tablas[$i]['constraint_type']=='PRIMARY KEY')){
                 if($control[$i]['rellenado']==false){
                     $estado=false;
                 }

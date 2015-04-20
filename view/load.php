@@ -1,7 +1,7 @@
 <div class="">
-
     <div class="col-lg-14 col-lg-7 col-md-7 col-sm-7 col-xs-7 well full-with">
         <?= '<button onclick="verificarEstadoConfiguracion(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">Paso 1 test</button>'; ?>
+        <?= '<button onclick="llenarDatos(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">Paso 1 test</button>'; ?>
         <div id="mensajeVerificarEstado"></div>
         <?= '<h3>PROJECT  <i class="fa fa-angle-right"></i> ' . $_GET[PROYECTO] . '</h3>'?>
         <?= '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">'?>
@@ -27,6 +27,7 @@
         class="panel panel-success arriba col-lg-offset-6 col-md-offset-6 col-sm-offset-5 col-xs-offset-7 col-lg-4 col-md-3 col-sm-3 col-xs-5"
         id="formularioConfiguracion">
         <div id="NombreTabla" class="h3 alert alert-success"></div>
+        <div id="prog"></div>
         <div id="divtabla" class="panel panel-success">
 
         </div>

@@ -14,9 +14,7 @@ require_once "config/config.php";
         <title>DateGenIdioms</title>
         <!-- Bootstrap core CSS -->
         <link href="public/css/bootstrap.min.css" rel="stylesheet">
-
         <link href="public/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
-
         <!--external css-->
         <link href="public/font-awesome/css/font-awesome.css" rel="stylesheet"/>
         <link href="public/lib/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
@@ -25,11 +23,10 @@ require_once "config/config.php";
         <link href="public/css/style-responsive.css" rel="stylesheet">
         <!--HOJAS DE ESTILO PERSONALIZADo-->
         <link href="public/css/validationEngine.jquery.css" type="text/css" rel="stylesheet"/>
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="public/lib/html5shiv.js"></script>
-        <script src="public/lib/respond.min.js"></script>
-        <![endif]-->
+
+
+        <link rel="stylesheet" href="public/css/jquery-ui.css"/>
+
         <link href="public/css/base.css" rel="stylesheet">
     </head>
     <body>
@@ -75,6 +72,13 @@ require_once "config/config.php";
             </footer>
             <!--footer end-->
         </section>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="public/lib/html5shiv.js"></script>
+        <script src="public/lib/respond.min.js"></script>
+        <![endif]-->
+
         <!-- js placed at the end of the document so the pages load faster -->
         <script src="public/lib/jquery.js"></script>
         <script src="public/lib/jquery-2.1.0.js"></script>
@@ -95,6 +99,10 @@ require_once "config/config.php";
         <script src="public/lib/jquery.validate.js"></script>
         <script src="public/lib/bootbox.js"></script>
         <script src="public/js/app.js"></script>
+
+        <script src="public/lib/jquery-ui.min.js"></script>
+        <script src="public/lib/jquery.ajax-progress.js"></script>
+
         <script src="public/js/rellenar.js"></script>
         <script src="public/js/functionsSendTypes.js"></script>
 
