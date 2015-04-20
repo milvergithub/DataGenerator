@@ -6,6 +6,7 @@
  * Time: 11:08 AM
  */
 require_once "../config/ConexionPG.php";
+require_once "../config/modulos.php";
 class ConecctionModel extends ConexionPG{
 
     function __construct($proyecto){

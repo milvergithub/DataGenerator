@@ -17,20 +17,20 @@ class GeneratorBooleanModel {
                 for($i=0;$i<$cantidad;$i++){
                     $numero=rand(0,1);
                     if($numero==0){
-                        $valores[$i]=false;
+                        $valores[$i]='false';
                     }else{
-                        $valores[$i]=true;
+                        $valores[$i]='true';
                     }
                 }
                 break;
             case'true':
                 for($i=0;$i<$cantidad;$i++){
-                    $valores[$i]=true;
+                    $valores[$i]='true';
                 }
                 break;
             case'false':
                 for($i=0;$i<$cantidad;$i++){
-                    $valores[$i]=false;
+                    $valores[$i]='false';
                 }
                 break;
         }

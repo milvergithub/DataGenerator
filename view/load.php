@@ -2,6 +2,7 @@
     <div class="col-lg-14 col-lg-7 col-md-7 col-sm-7 col-xs-7 well full-with">
         <?= '<button onclick="verificarEstadoConfiguracion(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">Paso 1 test</button>'; ?>
         <?= '<button onclick="llenarDatos(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">Paso 1 test</button>'; ?>
+        <div id="progresoLlenado"></div>
         <div id="mensajeVerificarEstado"></div>
         <?= '<h3>PROJECT  <i class="fa fa-angle-right"></i> ' . $_GET[PROYECTO] . '</h3>'?>
         <?= '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">'?>

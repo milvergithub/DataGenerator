@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $('#prog').progressbar({ value: 0 });
+    $('#progresoLlenado').progressbar({ value: 0 });
     $("#btnQuared").hide();
     /*AGREGANDO VALIDADOR DE SOLO PERMITIR NUMEROS MAYORES A CERO y ENTEROS*/
     jQuery.validator.addMethod("numberOnly", function (value, element) {

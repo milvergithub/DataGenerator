@@ -6,12 +6,15 @@
  * Time: 10:40 AM
  */
 require_once "../model/writerReadDatesModel.php";
-//require_once "../model/ConecctionModel.php";
+require_once "../model/ConecctionModel.php";
 class rellenarModel extends writerReadDatesModel{
-    //private $conexion;
+    private $conexion;
     public function __construct($proyecto){
         parent::__construct($proyecto);
-        //$this->conexion=new ConecctionModel($proyecto);
+        $this->conexion=new ConecctionModel($proyecto);
+        echo "<pre>";
+        print_r($this->conexion);
+        echo "</pre>";
     }
 
     protected function getNombreAtributosTabla($tabla){
