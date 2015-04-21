@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('#prog').progressbar({ value: 0 });
-    $('#progresoLlenado').progressbar({ value: 0 });
+    $('#estadoLlenado').css('width', 0+'%').attr('aria-valuenow', 0);
+    $('#estadoLlenado').text(0+"%");
     $("#btnQuared").hide();
     /*AGREGANDO VALIDADOR DE SOLO PERMITIR NUMEROS MAYORES A CERO y ENTEROS*/
     jQuery.validator.addMethod("numberOnly", function (value, element) {
@@ -14,9 +15,18 @@ $(document).ready(function () {
 
 });
 function estadoNormal() {
+    $("#mensajes").html("");
+    $("#mensajes").show();
     $("#fechas").css({
         display: "none"
     });
+}
+function setProgressEstado(pct){
+    $('#prog')
+        .progressbar('option', 'value', pct)
+        .children('.ui-progressbar-value')
+        .html(pct.toPrecision(3) + '%')
+        .css('display', 'block');
 }
 function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla, referenciados, isnull, constraint_type, column_default, check_clause) {
     estadoNormal();
@@ -56,6 +66,8 @@ function cargarPanelAdecuado(datos) {
             $("#formularioPersonalizado").html(data);
             $("#formularioPersonalizado").show();
             $('#prog').progressbar({ value: 0 });
+            $('.progress-bar').css('width', 0+'%').attr('aria-valuenow', 0);
+            $('.progress-bar').text("");
         },
         error: function () {
             $("#formularioPersonalizado").text("error")

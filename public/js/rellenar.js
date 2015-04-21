@@ -124,12 +124,8 @@ function llenarDatos(proyecto){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#progresoLlenado')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                $('#estadoLlenado').css('width', pct+'%').attr('aria-valuenow', pct);
+                $('#estadoLlenado').text(pct+"%");
             } else {
                 console.warn('Content Length not reported!');
             }

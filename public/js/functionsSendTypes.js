@@ -42,12 +42,7 @@ function sendTypeRango(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -70,12 +65,7 @@ function sendTypeBooleano(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -95,12 +85,9 @@ function sendTypeForanea(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
+                $('.progress-bar').css('width', pct+'%').attr('aria-valuenow', pct);
+                $('.progress-bar').text(pct+"%");
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -126,12 +113,7 @@ function sendTypeBytea(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -154,12 +136,7 @@ function sendTypeLista(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -182,12 +159,7 @@ function sendTypeAlgoritmoText(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -210,12 +182,7 @@ function sendTypeDateTime(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -238,12 +205,7 @@ function sendTypeEnterosDecimales(datos){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }

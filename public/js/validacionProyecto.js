@@ -41,12 +41,7 @@ function validarArchivos(){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
@@ -81,12 +76,7 @@ function verificarEstadoConfiguracion(proyecto){
         progress: function(e) {
             if(e.lengthComputable) {
                 var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
+                setProgressEstado(pct);
             } else {
                 console.warn('Content Length not reported!');
             }
