@@ -12,11 +12,24 @@ while ($archivo = readdir($directorio)){
     }
     else {
         ?>
-        <div class="proyectos well col-xs-3 proyecto">
-            <?php
-            echo "<a href='index.php?".ACTION."=load&".PROYECTO."=".$archivo."' class='badge bg-inverse'>".$archivo."</a>";
-            ?>
-            <a href="controller/removeProjectController.php?<?php echo REMOVE_PROYECTO ?>=<?php echo $archivo?>" class="btn btn-sm btn-danger navbar-right fa fa-trash-o"></a>
+        <div class="col-lg-2">
+            <div class="well darkblue-panel">
+                <div class="row">
+                    <i class="fa fa-4x fa-database text-success"></i>
+                <span class="pull-right">
+                    <a href="controller/removeProjectController.php?<?php echo REMOVE_PROYECTO ?>=<?php echo $archivo?>" class="btn btn-danger btn-sm">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </span>
+                </div>
+                <div class="row">
+                    <span class="badge bg-inverse">
+                    <?php
+                        echo "<a href='index.php?".ACTION."=load&".PROYECTO."=".$archivo."' class=''>".$archivo."</a>";
+                    ?>
+                    </span>
+                </div>
+            </div>
         </div>
     <?php
     }

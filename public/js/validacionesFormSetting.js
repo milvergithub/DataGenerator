@@ -1,6 +1,6 @@
-$(document).ready(function () {
+function initFunctionPlugins(){
+    $(".filestyle").filestyle({buttonName: "btn-primary",size: "sm"});
     $('.form_datetime').datetimepicker({
-        //language:  'fr',
         weekStart: 1,
         todayBtn:  1,
         autoclose: 1,
@@ -8,6 +8,35 @@ $(document).ready(function () {
         startView: 2,
         forceParse: 0,
         showMeridian: 1
+    });
+    jQuery.validator.setDefaults({
+        highlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+            } else {
+                $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+                $(element).closest('.form-group').find('i.fa').remove();
+                $(element).closest('.col-xs-12').append('<i class="fa fa-remove fa-lg form-control-feedback"></i>');
+            }
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            if (element.type === "radio") {
+                this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+            } else {
+                $(element).closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                $(element).closest('.form-group').find('i.fa').remove();
+                $(element).closest('.col-xs-12').append('<i class="fa fa-check fa-lg form-control-feedback"></i>');
+            }
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
     });
     $('#formConfiguracion').validate({
         rules: {
@@ -25,8 +54,7 @@ $(document).ready(function () {
                 number:true
             },
             contenidogenerar:{
-                required:true,
-                lettersOnlyCom:true
+                required:true
             },
             separador:{
                 required:true
@@ -52,34 +80,7 @@ $(document).ready(function () {
             idioma:{
                 required:true
             }
-        },
-        highlight: function(element) {
-            $(element).closest('.control-group').removeClass('has-success').addClass('control-group has-error');
-        },
-        success: function(element) {
-            element
-                .closest('.control-group').removeClass('control-group has-error').addClass('has-success');
         }
     });
-});
-function soloNumeros(event){
-    if(event.shiftKey){
-        event.preventDefault();
-    }
-    if(event.keyCode == 46 || event.keyCode == 8){
-    }
-    else{
-        if(event.keyCode < 95){
-            if(event.keyCode < 48 || event.keyCode > 57){
-                event.preventDefault();
-            }
-        }
-        else{
-            if(event.keyCode < 96 || event.keyCode > 105){
-                event.preventDefault();
-            }
-        }
-    }
-}/**
- * Created by milver on 11-03-15.
- */
+    soloNumeros(event)
+}

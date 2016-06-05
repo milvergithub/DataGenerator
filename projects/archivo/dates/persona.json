@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "foto": "call.png",
+    "nombre": "Jorge",
+    "idpersona": "1"
+  },
+  {
+    "foto": "cap.png",
+    "nombre": "Cristian",
+    "idpersona": 2
+  },
+  {
+    "foto": "dia.pdf",
+    "nombre": "Ainara",
+    "idpersona": 3
+  },
+  {
+    "foto": "call.png",
+    "nombre": "Mireia",
+    "idpersona": 4
+  },
+  {
+    "foto": "cap.png",
+    "nombre": "Sandra",
+    "idpersona": 5
+  },
+  {
+    "foto": "dia.pdf",
+    "nombre": "Sandra",
+    "idpersona": 6
+  },
+  {
+    "foto": "call.png",
+    "nombre": "Oliver",
+    "idpersona": 7
+  },
+  {
+    "foto": "cap.png",
+    "nombre": "Hector",
+    "idpersona": 8
+  },
+  {
+    "foto": "dia.pdf",
+    "nombre": "Mohamed",
+    "idpersona": 9
+  },
+  {
+    "foto": "call.png",
+    "nombre": "Rafael",
+    "idpersona": 10
+  }
+]

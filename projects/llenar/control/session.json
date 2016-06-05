@@ -1,0 +1,1 @@
+[{"column_name":"usuario_id_usuario","is_nullable":"NO","rellenado":false},{"column_name":"id_session","is_nullable":"NO","rellenado":false},{"column_name":"inicio","is_nullable":"YES","rellenado":false},{"column_name":"fin","is_nullable":"YES","rellenado":false}]

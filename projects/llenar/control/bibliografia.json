@@ -1,0 +1,1 @@
+[{"column_name":"plan_global_id_plan_global, plan_global_materia_id_materia","is_nullable":"NO","rellenado":false},{"column_name":"id_bibliografia","is_nullable":"NO","rellenado":false},{"column_name":"descripcion","is_nullable":"YES","rellenado":false}]

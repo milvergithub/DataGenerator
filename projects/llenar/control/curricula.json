@@ -1,0 +1,1 @@
+[{"column_name":"materia_id_materia","is_nullable":"NO","rellenado":false},{"column_name":"carrera_id_carrera","is_nullable":"NO","rellenado":false},{"column_name":"año","is_nullable":"NO","rellenado":false},{"column_name":"periodo","is_nullable":"NO","rellenado":false}]

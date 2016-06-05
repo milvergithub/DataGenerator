@@ -1,6 +1,6 @@
 /*INICIO VALADACION CREAR NUEVO PROYECTO*/
 $(function(){
-    $("#formulariotestconn").validationEngine({promptPosition : "topRight", scroll: true});
+    
     $("#formulariotestconn").validate({
         rules:{
             nombreProyecto:{
@@ -30,17 +30,47 @@ $(function(){
 
         },
         highlight: function(element) {
-            $(element).closest('.control-group').removeClass('has-success').addClass('control-group has-error');
+            var id_attr = "#" + $( element ).attr("id") + "1";
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+        $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove'); 
         },
-        success: function(element) {
-            element
-                .closest('.control-group').removeClass('control-group has-error').addClass('has-success');
-        }
+        unhighlight: function(element) {
+            var id_attr = "#" + $( element ).attr("id") + "1";
+            $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
+        },
+        errorElement: 'span',
+            errorClass: 'help-block',
+            errorPlacement: function(error, element) {
+                if(element.length) {
+                    error.insertAfter(element);
+                } else {
+                error.insertAfter(element);
+                }
+            } 
     });
 
 });
+/*TODO complete test connection*/
 function testConection(){
-    alert("hoal");
+    $.ajax({
+        type: "POST",
+        url: "controller/testConectionController.php",
+        data: $("#formulariotestconn").serialize(),
+        beforeSend: function (dato) {
+
+        },
+        success: function (data) {
+            bootbox.alert(data, function () {
+
+            });
+        },
+        error: function (data) {
+            bootbox.alert('error', function () {
+
+            });
+        }
+    });
 }
 /*FINAL VALADACION CREAR NUEVO PROYECTO*/
 

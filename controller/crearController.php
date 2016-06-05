@@ -13,7 +13,7 @@ if ($basededatos == "PostgreSQL") {
     } else {
         try {
             $conexion=new ConexionPG($_POST['host'],$_POST['puerto'],$_POST['nombrebasedatos'],$_POST['usuario'],$_POST['pass']);
-            $cnx = $conexion->Conectar();
+            $cnx = $conexion->connectDB();
         } catch (Exception $exc) {
 
         }

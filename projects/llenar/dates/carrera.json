@@ -1,0 +1,93 @@
+[
+  {
+    "id_carrera": "1",
+    "periodo": "1",
+    "año": "1970",
+    "activo": "true",
+    "nombre": "ALIMENTOS"
+  },
+  {
+    "id_carrera": 2,
+    "periodo": 2,
+    "año": 1971,
+    "activo": "true",
+    "nombre": "\r\nBIOLOGIA"
+  },
+  {
+    "id_carrera": 3,
+    "periodo": 3,
+    "año": 1972,
+    "activo": "true",
+    "nombre": "\r\nCIVIL"
+  },
+  {
+    "id_carrera": 4,
+    "periodo": 4,
+    "año": 1973,
+    "activo": "true",
+    "nombre": "\r\nELECTRICA"
+  },
+  {
+    "id_carrera": 5,
+    "periodo": 5,
+    "año": 1974,
+    "activo": "true",
+    "nombre": "\r\nELECTROMECANICA"
+  },
+  {
+    "id_carrera": 6,
+    "periodo": "1",
+    "año": 1975,
+    "activo": "true",
+    "nombre": "\r\nELECTRONICA"
+  },
+  {
+    "id_carrera": 7,
+    "periodo": 2,
+    "año": 1976,
+    "activo": "true",
+    "nombre": "\r\nFISICA"
+  },
+  {
+    "id_carrera": 8,
+    "periodo": 3,
+    "año": 1977,
+    "activo": "true",
+    "nombre": "\r\nINDUSTRIAL"
+  },
+  {
+    "id_carrera": 9,
+    "periodo": 4,
+    "año": 1978,
+    "activo": "true",
+    "nombre": "INFORMATICA"
+  },
+  {
+    "id_carrera": 10,
+    "periodo": 5,
+    "año": 1979,
+    "activo": "true",
+    "nombre": "MATEMATICA"
+  },
+  {
+    "id_carrera": 11,
+    "periodo": "1",
+    "año": 1980,
+    "activo": "true",
+    "nombre": "MECANICA"
+  },
+  {
+    "id_carrera": 12,
+    "periodo": 2,
+    "año": 1981,
+    "activo": "true",
+    "nombre": "QUIMICA"
+  },
+  {
+    "id_carrera": 13,
+    "periodo": 3,
+    "año": 1982,
+    "activo": "true",
+    "nombre": "SISTEMAS"
+  }
+]

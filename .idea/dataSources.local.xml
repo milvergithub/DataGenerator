@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - ventas@localhost" uuid="6ba7231a-21ed-4f17-9bd5-69f50206cb59">
-      <secret-storage>master_key</secret-storage>
-      <user-name>milver</user-name>
-      <schema-pattern>ventas.pg_catalog ventas.public</schema-pattern>
-      <default-schemas>ventas.pg_catalog ventas.public</default-schemas>
-    </data-source>
-    <data-source name="PostgreSQL - venta@localhost" uuid="751572de-9224-48a1-9906-d15ba7104b91">
-      <secret-storage>master_key</secret-storage>
-      <user-name>milver</user-name>
-      <schema-pattern>venta.pg_catalog venta.public</schema-pattern>
-      <default-schemas>venta.pg_catalog venta.public</default-schemas>
-    </data-source>
-  </component>
-</project>
+<project version="4" />

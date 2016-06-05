@@ -4,7 +4,7 @@
   <host>localhost</host>
   <puerto>5432</puerto>
   <motor>PostgreSQL</motor>
-  <base>demo</base>
-  <usuario>milver</usuario>
-  <password>milver</password>
+  <base>carlos</base>
+  <usuario>postgres</usuario>
+  <password>postgres</password>
 </conexion>

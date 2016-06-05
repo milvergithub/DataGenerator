@@ -7,7 +7,7 @@ MAIN SIDEBAR MENU
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="index.php"><img src="public/img/circulo.png" class="img-circle" width="100"></a>
+            <p class="centered"><a href="index.php"><img src="public/img/circulo.png" class="img-circle" width="150"></a>
             </p>
             <h5 class="centered">COLORES</h5>
             <?php

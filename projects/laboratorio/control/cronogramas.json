@@ -1,0 +1,1 @@
+[{"column_name":"enfermedad_id","is_nullable":"NO","rellenado":false},{"column_name":"id","is_nullable":"NO","rellenado":false},{"column_name":"tiempo","is_nullable":"NO","rellenado":false},{"column_name":"created_at","is_nullable":"NO","rellenado":false},{"column_name":"updated_at","is_nullable":"NO","rellenado":false}]

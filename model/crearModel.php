@@ -80,7 +80,7 @@ class crearModel{
                                 pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE c.relname !~
                                 'pg_' and c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
                                 AND r.contype = 'f')";
-        $resCAS = $this->conexion->Consultas($sqlCAS);
+        $resCAS = $this->conexion->executeSQL($sqlCAS);
         while ($regCAS = pg_fetch_assoc($resCAS)) {
             $resultadoCAS[] = $regCAS;
         }
@@ -99,7 +99,7 @@ class crearModel{
                               pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE c.relname !~
                               'pg_' and c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
                               AND r.contype = 'f'";
-        $resRF = $this->conexion->Consultas($sqlRef);
+        $resRF = $this->conexion->executeSQL($sqlRef);
         while ($regRef = pg_fetch_assoc($resRF)) {
             $resultadoRef[] = $regRef;
         }
@@ -125,11 +125,11 @@ class crearModel{
                     LEFT OUTER JOIN
                             information_schema.check_constraints AS col_check_constraints
                          ON col_check_constraints.constraint_name = tab_constraints.constraint_name
-                    WHERE   tab_columns.table_name = '" . $tabla . "' AND
+                    WHERE   tab_columns.table_name = '".$tabla ."' AND
                             tab_columns.table_schema = 'public' AND
                             (tab_constraints.constraint_type='PRIMARY KEY' OR tab_constraints.constraint_type='CHECK' OR tab_constraints.constraint_type ISNULL)
                     ORDER BY ordinal_position;";
-        $resFT = $this->conexion->Consultas($sqlDT);
+        $resFT = $this->conexion->executeSQL($sqlDT);
         while ($regFT = pg_fetch_assoc($resFT)) {
             $resultadoDT[] = $regFT;
         }
@@ -232,7 +232,7 @@ class crearModel{
                               AND (SELECT relname FROM pg_catalog.pg_class c LEFT JOIN
                               pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE
                               c.oid=r.conrelid)='" . $tabla . "';";
-        $resRF = $this->conexion->Consultas($sqlRef);
+        $resRF = $this->conexion->executeSQL($sqlRef);
         while ($regRef = pg_fetch_assoc($resRF)) {
             $resultadoRef[] = $regRef;
         }

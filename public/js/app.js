@@ -1,19 +1,38 @@
 $(document).ready(function () {
-    $('#prog').progressbar({ value: 0 });
-    $('#estadoLlenado').css('width', 0+'%').attr('aria-valuenow', 0);
-    $('#estadoLlenado').text(0+"%");
-    $("#btnQuared").hide();
     /*AGREGANDO VALIDADOR DE SOLO PERMITIR NUMEROS MAYORES A CERO y ENTEROS*/
     jQuery.validator.addMethod("numberOnly", function (value, element) {
         return this.optional(element) || /^-?[1-9][0-9]*$/i.test(value);
-    }, '<span style="color: #cd0a0a">ingrese numero mayor a 0</span>')
+    }, 'ingrese numero mayor a 0')
 
     /*AGREGANDO VALIDADOR DE SOLO CARACTERES a execcion de " , " */
     jQuery.validator.addMethod("lettersOnlyCom", function (value, element) {
-        return this.optional(element) || /^[,a-z-0-9]+$/i.test(value);
-    }, '<span style="color: #cd0a0a">ingrese caracteres validos sin espacios</span>')
-
+        return this.optional(element) || /^[ ,a-z-0-9]+$/i.test(value);
+    }, 'ingrese caracteres validos sin espacios')
+    initFunctionPlugins();
 });
+
+$(document).ajaxComplete(function() {
+    initFunctionPlugins();
+});
+function soloNumeros(event){
+    if(event.shiftKey){
+        event.preventDefault();
+    }
+    if(event.keyCode == 46 || event.keyCode == 8){
+    }
+    else{
+        if(event.keyCode < 95){
+            if(event.keyCode < 48 || event.keyCode > 57){
+                event.preventDefault();
+            }
+        }
+        else{
+            if(event.keyCode < 96 || event.keyCode > 105){
+                event.preventDefault();
+            }
+        }
+    }
+}
 function estadoNormal() {
     $("#mensajes").html("");
     $("#mensajes").show();
@@ -21,12 +40,10 @@ function estadoNormal() {
         display: "none"
     });
 }
-function setProgressEstado(pct){
-    $('#prog')
-        .progressbar('option', 'value', pct)
-        .children('.ui-progressbar-value')
-        .html(pct.toPrecision(3) + '%')
-        .css('display', 'block');
+
+function showBeforeSend(idDiv){
+    $(idDiv).html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+    $(idDiv).show();
 }
 function cargarPanelConfiguracion(tablaActual, columna, data_type, esforanea, referencian, tabla, referenciados, isnull, constraint_type, column_default, check_clause) {
     estadoNormal();
@@ -54,13 +71,13 @@ function cargarPanelAdecuado(datos) {
         url: "controller/loadPanelAdecuadoController.php",
         enctype: 'multipart/form-data',
         data: datos,
+        dataType: "html",
         cache: false,
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
         beforeSend: function (dato) {
-            $("#formularioPersonalizado").html("<img src='public/img/ajax-loader.gif' class='img-responsive'/>");
-            $("#formularioPersonalizado").show();
+            showBeforeSend("#formularioPersonalizado");
         },
         success: function (data) {
             $("#formularioPersonalizado").html(data);
@@ -68,6 +85,7 @@ function cargarPanelAdecuado(datos) {
             $('#prog').progressbar({ value: 0 });
             $('.progress-bar').css('width', 0+'%').attr('aria-valuenow', 0);
             $('.progress-bar').text("");
+            initFunctionPlugins();
         },
         error: function () {
             $("#formularioPersonalizado").text("error")
@@ -85,14 +103,14 @@ function mostrarOcultar(num, tabla) {
         datos.append('proyecto', document.getElementById("project").value);
         $.ajax({
             type: "POST",
+            dataType: "html",
             url: "controller/mostrarOcultarController.php",
             data: datos,
             cache: false,
             contentType: false,
             processData: false,
             beforeSend: function (dato) {
-                $("#divtabla").html("cargando");
-                $("#divtabla").show();
+                showBeforeSend("#divtabla");
             },
             success: function (data) {
                 $("#divtabla").html(data);
@@ -111,19 +129,12 @@ function mostrarOcultar(num, tabla) {
 }
 function cargarConfiguracionTipo(tabla) {
     var elegido = $("#formularioTipoOrigen").val();
-    if (elegido == 'Date' || elegido == "Time" || elegido == "DateTime") {
-        $("#fechas").css({
-            display: "show"
-        });
-    } else {
-        $("#fechas").css({
-            display: "none"
-        });
-        var datoConfigTipo = new FormData();
+    var datoConfigTipo = new FormData();
         datoConfigTipo.append("elegido", elegido);
         datoConfigTipo.append("proyecto", $("#project").val())
         $.ajax({
             type: "POST",
+            dataType: "html",
             url: "controller/loadConfigTypeController.php",
             enctype: 'multipart/form-data',
             data: datoConfigTipo,
@@ -132,8 +143,7 @@ function cargarConfiguracionTipo(tabla) {
             processData: false,
             mimeType: 'multipart/form-data',
             beforeSend: function (dato) {
-                $("#opcionconfiguracion").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
-                $("#opcionconfiguracion").show();
+                showBeforeSend("#opcionconfiguracion");
             },
             success: function (data) {
                 $("#opcionconfiguracion").html(data);
@@ -142,22 +152,9 @@ function cargarConfiguracionTipo(tabla) {
             },
             error: function () {
                 $("#opcionconfiguracion").text("error")
-            },
-            progress: function(e) {
-                if(e.lengthComputable) {
-                    var pct = (e.loaded / e.total) * 100;
-
-                    $('#prog')
-                        .progressbar('option', 'value', pct)
-                        .children('.ui-progressbar-value')
-                        .html(pct.toPrecision(3) + '%')
-                        .css('display', 'block');
-                } else {
-                    console.warn('Content Length not reported!');
-                }
             }
         });
-    }
+    initFunctionPlugins();
 }
 
 function cargarContenidoTexto() {
@@ -174,14 +171,13 @@ function cargarContenidoTexto() {
         processData: false,
         mimeType: 'multipart/form-data',
         beforeSend: function (dato) {
-            $("#contenidogenerar").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
-            $("#contenidogenerar").show();
+            showBeforeSend("#contenidogenerar");
         },
         success: function (data) {
             if (data === 'visible') {
                 $("#divsubmit").css("display", "block");
             } else {
-                $("#contenidogenerar").text(data);
+                $("#contenidogenerar").html(data);
                 bootbox.alert(data, function () {
                 });
                 $("#archivo").val(null);
@@ -190,19 +186,6 @@ function cargarContenidoTexto() {
         },
         error: function () {
             $("#contenidogenerar").text("error")
-        },
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
-            } else {
-                console.warn('Content Length not reported!');
-            }
         }
     });
 }
@@ -222,27 +205,13 @@ function cargarColumnasTabla() {
         processData: false,
         mimeType: 'multipart/form-data',
         beforeSend: function (data) {
-            $("#columna").html("<option value=''>CARGANDO...</option>");
-            $("#columna").show();
+            showBeforeSend("#columna");
         },
         success: function (data) {
             $("#columna").html(data);
         },
         error: function () {
             $("#columna").text("error")
-        },
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-
-                $('#prog')
-                    .progressbar('option', 'value', pct)
-                    .children('.ui-progressbar-value')
-                    .html(pct.toPrecision(3) + '%')
-                    .css('display', 'block');
-            } else {
-                console.warn('Content Length not reported!');
-            }
         }
     });
 }

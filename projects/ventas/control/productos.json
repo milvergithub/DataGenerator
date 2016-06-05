@@ -1,1 +1,0 @@
-[{"column_name":"id_producto","is_nullable":"NO","rellenado":true},{"column_name":"nombre","is_nullable":"NO","rellenado":true},{"column_name":"descripcion","is_nullable":"NO","rellenado":true},{"column_name":"cantidad","is_nullable":"NO","rellenado":true},{"column_name":"pu","is_nullable":"NO","rellenado":true},{"column_name":"imagen","is_nullable":"NO","rellenado":true}]

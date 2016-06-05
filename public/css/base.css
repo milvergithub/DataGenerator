@@ -1,6 +1,19 @@
-.test{
-    max-height: 450px;
-    overflow-y: auto;
+.help-block {
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+.form-group {
+    margin-bottom: 5px;
+}
+.has-feedback .form-control-feedback {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 30px;
+    text-align: center;
 }
 #formConfiguracion{
     margin: 5px;
@@ -36,8 +49,6 @@
     height: 5em;
     background-color: rgba(32, 173, 115, 0.83);
     background-size: 70% 70%;
-    background-image: url("../../public/img/base-datos.png");
-    background-repeat: no-repeat;
     box-shadow: #245269 5px 5px 20px 5px;
     border-radius: 0.2em;
     border: solid 1px #101010;
@@ -48,7 +59,6 @@
     height: 5em;
     background-color: rgba(39, 140, 85, 0.89);
     background-size: 100% 100%;
-    background-image: url("../../public/img/base-datos.png");
     box-shadow: #222222 5px 5px 20px 7px;
     border-radius: 0.2em;
     border: dashed 1px #101010;
@@ -57,8 +67,10 @@
     -ms-transition:all .5s ease-out;
     -o-transition:all .5s ease-out
 }
+.well{
+    padding-left: 2px;
+}
 .arriba{
-    background-color: #245269;
     position: fixed;
     float: right;
 }
@@ -70,16 +82,20 @@
 .error-actions {margin-top:15px;margin-bottom:15px;}
 .error-actions .btn { margin-right:10px; }
 .nivel0{
-    border: solid 1px rgb(233, 75, 59);
+    border: solid 1px #01a689;
+    border-right: solid 5px #01a689;
 }
 .nivel1{
-    border: solid 1px rgb(249, 142, 51);
+    border: solid 1px #fc9f01;
+    border-right: solid 5px #fc9f01;
 }
 .nivel2{
-    border: solid 1px rgb(255, 182, 28);
+    border: solid 1px #fd4401;
+    border-right: solid 5px #fd4401;
 }
 .nivel3{
-    border: solid 1px rgb(35, 174, 137);
+    border: solid 1px #f80101;
+    border-right: solid 5px #f80101;
 }
 .nivel4{
     border: solid 1px rgb(46, 193, 204);
@@ -94,77 +110,84 @@
     border: solid 1px rgb(106, 85, 194);
 }
 .nivelPanel0{
-    background-color:  rgb(233, 75, 59);
+    background: #01a689;
     color: #ffffff;
 }
 .nivelPanel1{
-    background-color:  rgb(249, 142, 51);
+    background: #fc9f01;
     color: #ffffff;
 }
 .nivelPanel2{
-    background-color: rgb(255, 182, 28);
+    background: #fd4401;
     color: #ffffff;
 }
 .nivelPanel3{
-    background-color:  rgb(35, 174, 137);
+    background: #f80101;
     color: #ffffff;
 }
 .nivelPanel4{
-    background-color:  rgb(46, 193, 204);
+    background: #de0161;
     color: #ffffff;
 }
 .nivelPanel5{
-    background-color:  rgb(68, 157, 213);
+    background: #b501a7;
     color: #ffffff;
 }
 .nivelPanel6{
-    background-color:  rgb(28, 126, 187);
+    background: #aa01fd;
     color: #ffffff;
 }
 .nivelPanel7{
-    background-color:  rgb(106, 85, 194);
+    background: #5601fd;
     color: #ffffff;
 }
 /*APARIENCIA PARA INDICADORES DE NIVELES*/
 .nivelPanelNiv0{
-    background-color:  rgb(233, 75, 59);
+    background:  #01a689;
     color: #ffffff;
     border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv1{
-    background-color:  rgb(249, 142, 51);
+    background:  #fc9f01;
+    border-radius: 5px;
     color: #ffffff;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv2{
-    background-color: rgb(255, 182, 28);
+    background: #fd4401;
     color: #ffffff;
+    border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv3{
-    background-color:  rgb(35, 174, 137);
+    background:  #f80101;
     color: #ffffff;
+    border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv4{
-    background-color:  rgb(46, 193, 204);
+    background:  #de0161;
     color: #ffffff;
+    border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv5{
-    background-color:  rgb(68, 157, 213);
+    background:  #b501a7;
     color: #ffffff;
+    border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv6{
-    background-color:  rgb(28, 126, 187);
+    background:  #aa01fd;
     color: #ffffff;
+    border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .nivelPanelNiv7{
-    background-color:  rgb(106, 85, 194);
+    background:  #5601fd;
     color: #ffffff;
+    border-radius: 5px;
     border: solid 1px #ffffff;
 }
 .identificador{

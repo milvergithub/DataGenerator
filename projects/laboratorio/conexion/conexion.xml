@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conexion>
+  <nombre>laboratorio</nombre>
+  <host>localhost</host>
+  <puerto>5432</puerto>
+  <motor>PostgreSQL</motor>
+  <base>laboratorio</base>
+  <usuario>postgres</usuario>
+  <password>postgres</password>
+</conexion>

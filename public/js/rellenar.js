@@ -70,7 +70,6 @@ function guardarConfiguracion() {
                 break;
             case 'bytea':
                 metodoBytea();
-                alert("bytea");
                 break;
             case 'tabla':
                 alert("tabla");
@@ -118,17 +117,8 @@ function llenarDatos(proyecto){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        beforeSend: before(),
+        beforeSend: showBeforePopulate(),
         success: successRellenado,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                $('#estadoLlenado').css('width', pct+'%').attr('aria-valuenow', pct);
-                $('#estadoLlenado').text(pct+"%");
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }

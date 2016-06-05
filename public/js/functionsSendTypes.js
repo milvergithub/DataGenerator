@@ -1,26 +1,19 @@
 /**
  * Created by milver on 02-02-15.
  */
-function progress(e){
-    if(e.lengthComputable){
-        var max = e.total;
-        var current = e.loaded;
-        var Percentage = (current * 100)/max;
-        console.log(Percentage);
-        if(Percentage >= 100)
-        {
-            // process completed
-        }
-    }
-}
 function before(){
-    $("#mensajes").html("PROCESANDO...");
+    $("#mensajes").html('<div class="text-center"><i class="fa fa-cog fa-spin fa-5x"></i></div>');
     $("#mensajes").show();
+}
+function showBeforePopulate(){
+    $("#showBeforePopulate").html('<div class="text-center"><i class="fa fa-cog fa-spin fa-3x"></i></div>');
+    $("#showBeforePopulate").show();
 }
 function success(data){
         $("#mensajes").html(data);
 }
 function successRellenado(data){
+    $("#showBeforePopulate").html('<div class="text-center text-success"><i class="fa fa-check fa-2x"></i></div>');
     $("#mensajeVerificarEstado").html(data);
 }
 function error() {
@@ -38,15 +31,7 @@ function sendTypeRango(datos){
         mimeType: 'multipart/form-data',
         beforeSend:before,
         success: success,
-        error: error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error: error
     });
 }
 function sendTypeBooleano(datos){
@@ -61,15 +46,7 @@ function sendTypeBooleano(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }
 function sendTypeForanea(datos){
@@ -82,16 +59,6 @@ function sendTypeForanea(datos){
         contentType: false,
         processData: false,
         mimeType: 'multipart/form-data',
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-                $('.progress-bar').css('width', pct+'%').attr('aria-valuenow', pct);
-                $('.progress-bar').text(pct+"%");
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        },
         beforeSend: before(),
         success: success,
         error:error
@@ -109,15 +76,7 @@ function sendTypeBytea(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }
 function sendTypeLista(datos){
@@ -132,15 +91,7 @@ function sendTypeLista(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }
 function sendTypeAlgoritmoText(datos){
@@ -155,15 +106,7 @@ function sendTypeAlgoritmoText(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }
 function sendTypeDateTime(datos){
@@ -178,15 +121,7 @@ function sendTypeDateTime(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }
 function sendTypeEnterosDecimales(datos){
@@ -201,14 +136,6 @@ function sendTypeEnterosDecimales(datos){
         mimeType: 'multipart/form-data',
         beforeSend: before(),
         success: success,
-        error:error,
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
-        }
+        error:error
     });
 }

@@ -1,1 +1,0 @@
-[{"column_name":"id_cliente","is_nullable":"NO","rellenado":true},{"column_name":"id_usuario","is_nullable":"NO","rellenado":true},{"column_name":"id_factura","is_nullable":"NO","rellenado":true},{"column_name":"fecha","is_nullable":"NO","rellenado":true},{"column_name":"total","is_nullable":"NO","rellenado":true}]

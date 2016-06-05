@@ -18,4 +18,8 @@ class createDirModel {
         $fileMaping = fopen($ruta, $permiso);
         chmod($ruta, 0777);
     }
+    public function crearFileSQL($ruta, $permiso){
+        $fileSQLFill = fopen($ruta, $permiso);
+        chmod($ruta, 0777);
+    }
 } 

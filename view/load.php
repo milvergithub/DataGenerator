@@ -1,14 +1,18 @@
 <div class="">
-    <div class="col-lg-14 col-lg-7 col-md-7 col-sm-7 col-xs-7 well full-with">
-        <?= '<button onclick="verificarEstadoConfiguracion(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">test</button>'; ?>
-        <?= '<button onclick="llenarDatos(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">populate</button>'; ?>
-        <div class="progress">
-            <div id="estadoLlenado" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                0%
+    <div class="col-lg-14 col-lg-7 col-md-7 col-sm-7 col-xs-7 full-with ">
+        <div class="row col-xs-12">
+            <?= '<button onclick="verificarEstadoConfiguracion(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">test</button>'; ?>
+            <?= '<button onclick="llenarDatos(\'' . $_GET[PROYECTO] . '\')" class="btn btn-theme03">populate</button>'; ?>
+            <div id="showBeforePopulate" class="pull-right">
+
             </div>
         </div>
+        <div class="clearfix"></div>
         <div id="mensajeVerificarEstado"></div>
-        <?= '<h3>PROJECT  <i class="fa fa-angle-right"></i> ' . $_GET[PROYECTO] . '</h3>' ?>
+        <?= '<legend>
+                PROJECT  <i class="fa fa-angle-right"></i> ' . $_GET[PROYECTO] . '
+
+             </legend>' ?>
         <?= '<input type="hidden" value="' . $_GET[PROYECTO] . '" id="project">' ?>
         <?php
         $resultadoPT = $loadTablas->getTablesAndReferencesLoad();
@@ -17,7 +21,7 @@
             <div id="<?= $resultadoPT[$contador - 1]['nivel'] ?>"
                  class="panel panel-primary nivel<?= $resultadoPT[$contador - 1]['nivel'] ?>  col-lg-12">
                 <button
-                    class="btn fa fa-th nivelPanel<?= $resultadoPT[$contador - 1]['nivel'] ?>"><?= $resultadoPT[$contador - 1]['nivel'] ?></button>
+                    class="btn fa-lg fa fa-table nivelPanel<?= $resultadoPT[$contador - 1]['nivel'] ?>"> <?= $resultadoPT[$contador - 1]['nivel'] ?></button>
                 <button class="btn btn-link" id="boton<?= $contador ?>"
                         onclick="mostrarOcultar(<?= $contador ?>,'<?= $resultadoPT[$contador - 1]['tablename'] ?>');"><?= $resultadoPT[$contador - 1]['tablename'] ?></button>
                 <div class="" id="tabla<?= $contador ?>" style="display: none">
@@ -38,15 +42,9 @@
         ?>
     </div>
     <div
-        class="panel panel-success arriba col-lg-offset-6 col-md-offset-6 col-sm-offset-5 col-xs-offset-7 col-lg-4 col-md-3 col-sm-3 col-xs-5"
+        class="darkblue-panel arriba col-lg-offset-6 col-md-offset-6 col-sm-offset-5 col-xs-offset-7 col-lg-4 col-md-3 col-sm-3 col-xs-5"
         id="formularioConfiguracion">
         <div id="NombreTabla" class="h3 alert alert-success"></div>
-        <div id="prog"></div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                0%
-            </div>
-        </div>
         <div id="divtabla" class="panel panel-success">
 
         </div>
@@ -60,7 +58,7 @@ function printDetalleTable($tabla)
     $resultadoPDT = $loadDetalle->printDetalleTableLoad($tabla);
     for ($contador = 0; $contador < sizeof($resultadoPDT); $contador++) {
         $var .= "<tr>"
-            . "<td><button class='btn btn-link'onclick=\"
+            . "<td><button class='btn btn-link' onclick=\"
                                               cargarPanelConfiguracion('" . $tabla . "','"
             . $resultadoPDT[$contador]['column_name'] . "','"
             . $resultadoPDT[$contador]['data_type'] . "','"

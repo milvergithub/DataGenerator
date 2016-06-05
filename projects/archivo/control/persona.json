@@ -1,1 +1,1 @@
-[{"column_name":"idpersona","is_nullable":"NO","rellenado":false},{"column_name":"nombre","is_nullable":"YES","rellenado":false},{"column_name":"foto","is_nullable":"YES","rellenado":false}]
+[{"column_name":"idpersona","is_nullable":"NO","rellenado":true},{"column_name":"nombre","is_nullable":"YES","rellenado":true},{"column_name":"foto","is_nullable":"YES","rellenado":true}]

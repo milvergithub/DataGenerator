@@ -19,7 +19,7 @@ function validarArchivos(){
         processData: false,
         mimeType: 'multipart/form-data',
         beforeSend: function (dato) {
-            $("#mensajeValidacionArchivos").html("<img src='public/img/loadingblue.gif' class='img-responsive'/>");
+            $("#mensajeValidacionArchivos").html('<i class="fa fa-spinner fa-spin fa-4x"></i>');
             $("#mensajeValidacionArchivos").show();
         },
         success: function (data) {
@@ -28,7 +28,7 @@ function validarArchivos(){
                 $("#mensajeValidacionArchivos").html('');
                 $("#mensajeValidacionArchivos").show();
             }else{
-                $("#mensajeValidacionArchivos").text(data);
+                $("#mensajeValidacionArchivos").html(data);
                 bootbox.alert(data, function () {
                 });
                 $("#archivos").val(null);
@@ -37,14 +37,6 @@ function validarArchivos(){
         },
         error: function () {
             $("#mensajeValidacionArchivos").text("error")
-        },
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
         }
     });
 }
@@ -61,7 +53,7 @@ function verificarEstadoConfiguracion(proyecto){
         processData: false,
         mimeType: 'multipart/form-data',
         beforeSend: function (data) {
-            $("#mensajeVerificarEstado").html("PROCESANDO...");
+            $("#mensajeVerificarEstado").html('<i class="fa fa-cog fa-spin"></i>');
             $("#mensajeVerificarEstado").show();
         },
         success: function (data) {
@@ -72,14 +64,6 @@ function verificarEstadoConfiguracion(proyecto){
         },
         error: function () {
             $("#mensajeVerificarEstado").text("FALLO LA CONEXION...!!!")
-        },
-        progress: function(e) {
-            if(e.lengthComputable) {
-                var pct = (e.loaded / e.total) * 100;
-                setProgressEstado(pct);
-            } else {
-                console.warn('Content Length not reported!');
-            }
         }
     });
 }

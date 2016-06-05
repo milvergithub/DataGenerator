@@ -1,0 +1,1 @@
+[{"column_name":"id_materia","is_nullable":"NO","rellenado":true},{"column_name":"nombre","is_nullable":"YES","rellenado":true},{"column_name":"activo","is_nullable":"YES","rellenado":true},{"column_name":"año","is_nullable":"YES","rellenado":true},{"column_name":"periodo","is_nullable":"YES","rellenado":true}]

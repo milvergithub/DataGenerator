@@ -22,7 +22,7 @@ class columnasModel {
     }
     function printTables() {
         $sqlPT="SELECT tablename FROM pg_tables WHERE schemaname = 'public'";
-        $resPT= $this->conexion->Consultas($sqlPT);
+        $resPT= $this->conexion->executeSQL($sqlPT);
         return $resPT;
     }
     public function printColumnasTabla($tabla) {
@@ -31,7 +31,7 @@ class columnasModel {
     }
     function detalleTabla($tabla) {
         $sqlDT="SELECT column_name,column_default,is_nullable,column_default AS llave,data_type FROM information_schema.columns WHERE table_name = '".$tabla."';";
-        $resFT=  $this->conexion->Consultas($sqlDT);
+        $resFT=  $this->conexion->executeSQL($sqlDT);
         return $resFT;
     }
 } 

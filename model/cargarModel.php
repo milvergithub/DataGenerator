@@ -25,7 +25,7 @@ class cargarModel {
     function printTables() {
         $resultado = array();
         $sqlPT = "SELECT tablename FROM pg_tables WHERE schemaname = 'public'";
-        $resPT = $this->conexion->Consultas($sqlPT);
+        $resPT = $this->conexion->executeSQL($sqlPT);
         while ($reg = pg_fetch_assoc($resPT)) {
             $resultado[] = $reg;
         }
@@ -69,7 +69,7 @@ class cargarModel {
                         tab_columns.table_schema = 'public' AND
                         (tab_constraints.constraint_type='PRIMARY KEY' OR tab_constraints.constraint_type ISNULL)
                 ORDER BY ordinal_position;";
-        $resFT = $this->conexion->Consultas($sqlDT);
+        $resFT = $this->conexion->executeSQL($sqlDT);
         while ($regFT = pg_fetch_assoc($resFT)) {
             $resultadoDT[] = $regFT;
         }
@@ -93,10 +93,6 @@ class cargarModel {
         }
         return $this->getTableEstructurado($tablaAum, $res);
     }
-
-    /* ( [column_name],[data_type],[character_maximum_length],[es_foranea],[referenciado],[tabla],[referenciados],
-      [numeric_precision],[is_nullable],[constraint_type]) */
-
     function getTableEstructurado($tabla, $referencias) {
         $retorno = array();
         for ($i = 0; $i < sizeof($referencias); $i++) {
@@ -153,7 +149,7 @@ class cargarModel {
                               AND (SELECT relname FROM pg_catalog.pg_class c LEFT JOIN
                               pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE
                               c.oid=r.conrelid)='" . $tabla . "';";
-        $resRF = $this->conexion->Consultas($sqlRef);
+        $resRF = $this->conexion->executeSQL($sqlRef);
         while ($regRef = pg_fetch_assoc($resRF)) {
             $resultadoRef[] = $regRef;
         }
@@ -173,7 +169,7 @@ class cargarModel {
                               pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE c.relname !~
                               'pg_' and c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
                               AND r.contype = 'f'";
-        $resRF = $this->conexion->Consultas($sqlRef);
+        $resRF = $this->conexion->executeSQL($sqlRef);
         while ($regRef = pg_fetch_assoc($resRF)) {
             $resultadoRef[] = $regRef;
         }
@@ -194,7 +190,7 @@ class cargarModel {
                                 pg_catalog.pg_namespace n ON n.oid = c.relnamespace WHERE c.relname !~
                                 'pg_' and c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
                                 AND r.contype = 'f')";
-        $resCAS = $this->conexion->Consultas($sqlCAS);
+        $resCAS = $this->conexion->executeSQL($sqlCAS);
         while ($regCAS = pg_fetch_assoc($resCAS)) {
             $resultadoCAS[] = $regCAS;
         }
@@ -235,9 +231,6 @@ class cargarModel {
                 $general[$posiscion] = $nuevoFila;
                 $cantidad++;
             }
-            //print_r($general);
-            //echo "--------------------------------------------------------";
-            //print_r(array_reverse($this->getRemoveRepeticion($general)));
         }
         return array_reverse($this->getRemoveRepeticion($general));
     }
@@ -247,7 +240,7 @@ class cargarModel {
         $ind = 0;
         for ($i = count($ordenadoCRT); $i > 0; $i--) {
             for ($j = 0; $j < count($ordenadoCRT[$i - 1]); $j++) {
-                if (!($this->busacarExistencia($ordenadoSRT, $ordenadoCRT[$i - 1][$j]))) {
+                if (!($this->buscarExistencia($ordenadoSRT, $ordenadoCRT[$i - 1][$j]))) {
                     $tablaArray = ["tablename" => $ordenadoCRT[$i - 1][$j], "nivel" => ($i - 1)];
                     $ordenadoSRT[$ind] = $tablaArray;
                     $ind++;
@@ -257,7 +250,7 @@ class cargarModel {
         return $ordenadoSRT;
     }
 
-    public function busacarExistencia($ordenado, $tabla) {
+    public function buscarExistencia($ordenado, $tabla) {
         $respuesta = false;
         for ($i = 0; $i < count($ordenado); $i++) {
             if ($ordenado[$i]["tablename"] == $tabla) {
@@ -287,6 +280,5 @@ class cargarModel {
         }
         return $cantidad;
     }
-
 }
 ?>

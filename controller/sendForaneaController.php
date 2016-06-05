@@ -7,6 +7,7 @@
  */
 require_once "../model/writerReadDatesModel.php";
 $model=new writerReadDatesModel($_POST['proyecto']);
+
 if($model->getEstadoForanea($_POST['tabla'],$_POST['referenciados'])){
     //print_r($_REQUEST);
     $model->setProccessTablaWithForeing($_POST['referencian'],$_POST['referenciados'],$_POST['tablaActual'],$_POST['tabla'],$_POST['cantidad']);
